@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/Article" lang="en" class="js wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE">
+<meta name="viewport" content="width=960">
+<title>Logic Noise: Sawing Away with Analog Waveforms | Hackaday</title>
+<script async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/analytics.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/5266e87c5dd5ca039c00002d.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lidar.js"></script><script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://s0.wp.com/wp-content/themes/vip/hackaday-2/favicon.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://hackaday.com/xmlrpc.php">
+<link href="http://google.com/+hackaday" rel="publisher">
+
+<!--[if lt IE 9]>
+    <script src="https://s0.wp.com/wp-content/themes/vip/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+		<script src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Hackaday » Feed" href="http://hackaday.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Comments Feed" href="http://hackaday.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Logic Noise: Sawing Away with Analog Waveforms Comments Feed" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel="stylesheet" id="all-css-0" href="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/hackaday.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackadaycom.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Ask Hackaday: The Many Uses of Microwaves" href="http://hackaday.com/2015/03/09/ask-hackaday-the-many-uses-of-microwaves/">
+<link rel="next" title="Execution Tracing on Cortex-M3 Microcontrollers" href="http://hackaday.com/2015/03/09/execution-tracing-on-cortex-m-microcontrollers/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">
+<link rel="shortlink" href="http://wp.me/pk3lN-CEa">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F09%2Flogic-noise-sawing-away-with-analog-waveforms%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F09%2Flogic-noise-sawing-away-with-analog-waveforms%2F&amp;for=wpcom-auto-discovery"><link rel="openid.server" href="http://hackadaycom.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://hackadaycom.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://hackaday.com/osd.xml" title="Hackaday">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta property="og:title" content="Logic Noise: Sawing Away with Analog Waveforms">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-cantelope-dreams.jpg?w=600&amp;h=600">
+<meta property="og:url" content="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">
+<meta property="og:description" content="Today we&#39;ll take a journey into less noisy noise, and leave behind the comfortable digital world that we&#39;ve been living in. The payoff? Smoother sounds, because today we start our trip into analog.
+
+...">
+<meta property="og:site_name" content="Hackaday">
+
+<link rel="image_src" href="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-cantelope-dreams.jpg?w=600&amp;h=600">
+<meta itemprop="name" content="Logic Noise: Sawing Away with Analog Waveforms">
+<meta itemprop="description" content="Today we&#39;ll take a journey into less noisy noise, and leave behind the comfortable digital world that we&#39;ve been living in. The payoff? Smoother sounds, because today we start our trip into analog.
+
+...">
+<meta itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-cantelope-dreams.jpg?w=600&amp;h=600">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hackaday">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Hackaday"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fresh hacks every day"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://hackaday.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4f3e6b6daa090af416a1ba595885efd1?s=16"><style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(2)">
+		
+<script src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/mpm6gph.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/l" media="all"><script>try{Typekit.load();}catch(e){}</script>
+<!-- Supplyframe Ads -->
+<!--<script type='text/javascript' src='http://ads.supplyframe.com/openads/www/delivery/spcjs.php?id=31&amp;block=1'></script>-->
+<script type="text/javascript">
+function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|468")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://ads.supplyframe.com/openads/www/delivery/spc.php":"http://ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+</script><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/spc.php"></script><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/fl.js"></script>
+
+
+<script src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(3)" id="cannedbanners_pixel"></script><script type="text/javascript" async="" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/tagjs"></script><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg(1)" width="1" height="1" border="0" scale="0"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg(2)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(6)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg(3)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(7)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(8)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/seg(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(9)" width="1" height="1" border="0" scale="0"></head>
+
+<body class="single single-post postid-148562 single-format-standard mp6 customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+    <div id="leaderboard">
+        <script type="text/javascript">
+            /* [id426] 728x90 */
+            OA_show(426);
+        </script><script language="JavaScript1.1" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ck.php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_1132994561"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsurETuGggotT-Fmxh8DWRP_DUK88bvohxhX3Eip80Y6njZDq3KEpjXmiRPiX5RqEqEhNJDh0ef89ys3-jFFm5Sxi3fCjIKu&amp;sig=Cg0ArKJSzLiYwSRh8wAg&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120873__zoneid%3D426__cb%3Dabfad24836__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120873%2526value3%253D641%2526zone%253D426%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253Dabfad24836%257Ch_value%253D1f760aa1a719f5d41456622574%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.15255948162842%257Cbpf%253D0.12758878725942%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D426%2526url%253Dhttp://www.ti.com/pwr-bms-wlpc-bq50002-bs-pf-null-wwe"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/PWR_BMS_WLPC_BQ50002_728x90st.gif" alt="Advertisement" border="0" width="728" height="90" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120873__zoneid=426__cb=abfad24836__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120873%26value3%3D641%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Dabfad24836%7Ch_value%3D1f760aa1a719f5d41456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919509%3Bsz%3D728x90%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919509;sz=728x90;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120873__zoneid=426__cb=abfad24836__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120873%26value3%3D641%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Dabfad24836%7Ch_value%3D1f760aa1a719f5d41456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3D;ord=abfad24836;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=728 HEIGHT=90 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_abfad24836" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(10)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <a class="skip-link screen-reader-text" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="http://hackaday.com/" rel="home">
+                <img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+            </a>
+            <h1 class="site-title">
+                <a href="http://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu nav-menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="http://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="http://hackaday.io/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-97770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97770"><a href="http://store.hackaday.com/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Store</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="http://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="http://hackaday.com/about/">About</a></li>
+</ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">February 27, 2016</label><div class="calendar_table_wrap"><table id="wp-calendar">
+	<caption>March 2015</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://hackaday.com/2015/02/">« Feb</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://hackaday.com/2015/04/">Apr »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td><a href="http://hackaday.com/2015/03/01/" aria-label="Posts published on March 1, 2015">1</a></td><td><a href="http://hackaday.com/2015/03/02/" aria-label="Posts published on March 2, 2015">2</a></td><td><a href="http://hackaday.com/2015/03/03/" aria-label="Posts published on March 3, 2015">3</a></td><td><a href="http://hackaday.com/2015/03/04/" aria-label="Posts published on March 4, 2015">4</a></td><td><a href="http://hackaday.com/2015/03/05/" aria-label="Posts published on March 5, 2015">5</a></td><td><a href="http://hackaday.com/2015/03/06/" aria-label="Posts published on March 6, 2015">6</a></td><td><a href="http://hackaday.com/2015/03/07/" aria-label="Posts published on March 7, 2015">7</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/08/" aria-label="Posts published on March 8, 2015">8</a></td><td><a href="http://hackaday.com/2015/03/09/" aria-label="Posts published on March 9, 2015">9</a></td><td><a href="http://hackaday.com/2015/03/10/" aria-label="Posts published on March 10, 2015">10</a></td><td><a href="http://hackaday.com/2015/03/11/" aria-label="Posts published on March 11, 2015">11</a></td><td><a href="http://hackaday.com/2015/03/12/" aria-label="Posts published on March 12, 2015">12</a></td><td><a href="http://hackaday.com/2015/03/13/" aria-label="Posts published on March 13, 2015">13</a></td><td><a href="http://hackaday.com/2015/03/14/" aria-label="Posts published on March 14, 2015">14</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/15/" aria-label="Posts published on March 15, 2015">15</a></td><td><a href="http://hackaday.com/2015/03/16/" aria-label="Posts published on March 16, 2015">16</a></td><td><a href="http://hackaday.com/2015/03/17/" aria-label="Posts published on March 17, 2015">17</a></td><td><a href="http://hackaday.com/2015/03/18/" aria-label="Posts published on March 18, 2015">18</a></td><td><a href="http://hackaday.com/2015/03/19/" aria-label="Posts published on March 19, 2015">19</a></td><td><a href="http://hackaday.com/2015/03/20/" aria-label="Posts published on March 20, 2015">20</a></td><td><a href="http://hackaday.com/2015/03/21/" aria-label="Posts published on March 21, 2015">21</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/22/" aria-label="Posts published on March 22, 2015">22</a></td><td><a href="http://hackaday.com/2015/03/23/" aria-label="Posts published on March 23, 2015">23</a></td><td><a href="http://hackaday.com/2015/03/24/" aria-label="Posts published on March 24, 2015">24</a></td><td><a href="http://hackaday.com/2015/03/25/" aria-label="Posts published on March 25, 2015">25</a></td><td><a href="http://hackaday.com/2015/03/26/" aria-label="Posts published on March 26, 2015">26</a></td><td><a href="http://hackaday.com/2015/03/27/" aria-label="Posts published on March 27, 2015">27</a></td><td><a href="http://hackaday.com/2015/03/28/" aria-label="Posts published on March 28, 2015">28</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/29/" aria-label="Posts published on March 29, 2015">29</a></td><td><a href="http://hackaday.com/2015/03/30/" aria-label="Posts published on March 30, 2015">30</a></td><td><a href="http://hackaday.com/2015/03/31/" aria-label="Posts published on March 31, 2015">31</a></td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            
+<article itemscope="" itemtype="http://schema.org/Article" id="post-148562" class="post-148562 post type-post status-publish format-standard has-post-thumbnail hentry category-digital-audio-hacks category-featured tag-cd4040 tag-cmos tag-logic-noise tag-music tag-sound tag-synthesizer">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">Logic Noise: Sawing Away with Analog Waveforms</h1>
+        <div class="entry-meta">
+            <a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comments" class="comments-counts"><span class="icon-hackaday icon-hackaday-comment"></span>
+                12 Comments            </a>
+            <ul class="meta-authors vcard author">
+                <li>by:</li>
+                <span class="fn"><a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a></span>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-meta entry-meta-last">
+            <span class="entry-date published updated" itemprop="datePublished" content="March 9, 2015"><a href="http://hackaday.com/2015/03/09/" title="March 9, 2015 - 10:01 am">March 9, 2015</a></span>
+            <ul class="share-post">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F09%2Flogic-noise-sawing-away-with-analog-waveforms%2F" target="_blank"><span class="icon-hackaday icon-hackaday-facebook"></span></a></li>
+               <li><a href="https://twitter.com/intent/tweet?text=Logic+Noise%3A+Sawing+Away+with+Analog+Waveforms%20via%20@hackaday&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F09%2Flogic-noise-sawing-away-with-analog-waveforms%2F" target="_blank"><span class="icon-hackaday icon-hackaday-twitter"></span></a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F09%2Flogic-noise-sawing-away-with-analog-waveforms%2F&amp;h1=en-US" target="_blank"><span class="icon-hackaday icon-hackaday-google"></span></a></li>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-featured-image"><img itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-cantelope-dreams.jpg?w=600&amp;h=600" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/logic-noise-cantelope-dreams.jpg" alt="" originalw="800" width="800" height="412" src-orig="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-cantelope-dreams.jpg?w=800" scale="2"></div>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content" itemprop="articleBody">
+        <p>Today we’ll take a journey into less noisy noise, and leave behind the comfortable digital world that we’ve been living in. The payoff? Smoother sounds, because today we start our trip into analog.</p>
+<p>If you remember back to <a href="http://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/">our first session</a> when I was explaining how the basic oscillator loads and unloads a capacitor, triggering the output high or low when it crosses two different thresholds. At the time, we pointed out that there was a triangle waveform being generated, but that you’d have a hard time amplifying it without buffering. Today we buffer, and get that triangle wave out to our amplifiers.</p>
+<p><img class="alignright wp-image-148564 size-medium" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/triangle_square.png" alt="triangle_square" width="400" height="276" originalw="400" originalh="276" src-orig="https://hackadaycom.files.wordpress.com/2015/03/triangle_square.png?w=400&amp;h=276" scale="2"></p>
+<p>But as long as we’re amplifying, we might as well overdrive the amps and head off to the land of distortion. We’ll do just that and build up a triangle-wave oscillator that can morph into a square wave, passing through a rounded-over kinda square wave along the way. The triangle sounds nice and mellow, and the square wave sounds bright and noisy. (You should be used to them by now…) And we get everything in between.</p>
+<p>And while we’re at it, we might as well turn the triangle wave into a sawtooth for that nice buzzy-bass sound. Then we can turn the fat sawtooth into a much brighter sounding pulse wave, a near cousin of the square wave above.</p>
+<p>What’s making all this work for us? Some dead-boring amplification with negative feedback, and the (mis-)use of a logic chip to get it. After the break I’ll&nbsp;introduce our Chip of the Day: the 4069UB.</p>
+<p>If you somehow missed them, here are the first three installments of Logic Noise:</p>
+<ul>
+<li><a href="http://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/">Sweet Oscillator Sounds</a></li>
+<li><a href="http://hackaday.com/2015/02/17/logic-noise-8-bits-of-glorious-sounds/">8-Bits of Glorious Sound</a></li>
+<li><a href="http://hackaday.com/2015/02/23/logic-noise-the-switching-sequencer/">Switching Sequencer has the Beat</a></li>
+</ul>
+<p><span id="more-148562"></span></p>
+<h2>The 4069UB</h2>
+<p><img class=" wp-image-148565 size-medium alignright" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/4069ub_pinout.png" alt="4069ub_pinout" width="385" height="400" originalw="385" originalh="400" src-orig="https://hackadaycom.files.wordpress.com/2015/03/4069ub_pinout.png?w=385&amp;h=400" scale="2">The 4069UB is a hex (unbuffered) inverter. In fact, if you can remember the pinout of the 40106, this should look very familiar to you.&nbsp;The only difference is the lack of hysteresis (and the little squiggly symbols) in the inverters. But what a difference that makes! The lack of buffering and hysteresis in the inverter lets us use the individual amplifiers for analog purposes rather than digital / logic.</p>
+<p>Remember that the “UB” part is mandatory for all of this to work. It stands for unbuffered, and that essentially means that there’s no special attempt made to convert the output into something digital inside the chip. (Some end in “UBE” or “UBF” or whatever. As long as there’s a “UB” somewhere, you’re set.) And it turns out that an unbuffered inverter is nothing more than a push-pull CMOS amplifier pair. Each “inverter” cell looks like this:</p>
+<p><img class=" wp-image-148566 size-medium alignleft" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cd4069ub_inverters_schematic.png" alt="cd4069ub_inverters_schematic" width="400" height="231" originalw="400" originalh="231" src-orig="https://hackadaycom.files.wordpress.com/2015/03/cd4069ub_inverters_schematic.png?w=400&amp;h=231" scale="2"></p>
+<p>Ignoring the input-protection diodes, you can see that it’s basically just two transistors: an N-channel FET connected between output and ground and a P-channel FET connected between output and the power rail. (That’s the Complementary MOS pair that gives CMOS chips their name.)</p>
+<p>If you’re not brushed up on your MOSFETs, the N-channel conducts when the input gate is pulled to a high voltage, and the P-channel conducts when the input gate is pulled low. This means that when the input voltage is low, the bottom FET doesn’t conduct and the top FET does, pulling the output voltage high. And vice-versa for a high input voltage. This makes a rudimentary logic inverter. Hooray!</p>
+<p>But what happens in-between? At mid-supply voltages, both of the transistors will be turned on to varying degrees. This makes an output voltage that’s continuous, analog, and the “opposite” of the input. In order to give the chip a decent logic output, it needs to have a high gain through this middle zone so that voltages that are just a bit higher than the midpoint result in outputs that are clearly a logic zero.</p>
+<p><img class="aligncenter wp-image-148567" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cd4069ub_transfer_function.png" alt="cd4069ub_transfer_function" width="800" height="704" originalw="800" originalh="704" src-orig="https://hackadaycom.files.wordpress.com/2015/03/cd4069ub_transfer_function.png?w=800&amp;h=704" scale="2"></p>
+<p>The beauty of this chip for our purposes is the soft clipping effect that you get from the S-shaped gain curve above. That is, the gain rolls off (the line is less steep) near VCC and GND. This makes for a pleasing overdrive sound as we crank the amplifier up, and lets us control the amount of fuzz on the output by controlling the input volume and gain.</p>
+<h2>Buffers and Feedback</h2>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/PgMHj3hAD1o.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>As we said above, the naked 4096UB chip has a very high gain right around the midpoint voltage, which is what makes it useful as a logic chip. To make it useful for amplifiying analog audio, we’ll use (negative) feedback to calm this gain down a little bit. By controlling the ratio of input signal to feedback, we can vary the output from nearly completely silent to distorted out to the limits of the voltage supply.</p>
+<p>For starters, let’s aim to get a voltage gain of -1. That is, the output signal is just as big as the input signal but opposite in sign around the mid-point. This is an “inverting unity gain buffer” if you’re an electrical engineer. And buffers will allow us to listen in to signals that our amplifier’s input circuitry would otherwise swamp out.</p>
+<p>Remember when we said that there was a triangle wave on the input terminals of the 40106 inverter? Did you try to plug them up to your amplifier? If so, it probably didn’t work although you can see it clear as day on the oscilloscope. Even when I can get it to work, there’s still a pitch shift that depends on the volume knob settings on my amplifier. Strange stuff! Clearly, the amplifier’s input circuitry is coupling with the oscillator. Putting a buffer circuit in-between will let the oscillator oscillate and the amplifier amplify without interacting with each other. That’s what buffers do. Let’s build.</p>
+<p><img class="alignleft wp-image-148568" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/buffer_schematic.png" alt="buffer_schematic" width="499" height="308" originalw="499" originalh="308" src-orig="https://hackadaycom.files.wordpress.com/2015/03/buffer_schematic.png?w=499&amp;h=308" scale="2"></p>
+<p>The unity-gain buffer circuit is as simple as connecting the input through a resistor and then connecting another resistor with that same value in feedback between the output and the input. For intuition on how this works, let’s dig briefly into negative feedback amplifiers.</p>
+<p>The intuition for this circuit (and all negative feedback topologies) involves first realizing that where the input signal and negative feedback meet, there can’t be any net signal voltage above or below the chip’s neutral voltage. If there were positive net signal, the inverter output would go negative until the feedback brought the junction of the two back down to neutral. If the input is negative with respect to neutral, the output will go positive and pull it back up. When the feedback path is working as intended, it’ll hold the input at the neutral voltage level.</p>
+<p>A quick word about this neutral voltage. If you’re familiar with op amps, the neutral voltage is whatever’s present on the positive terminal. In our case, the chip switches from high to low around the mid-rail voltage, half of VCC, so that’s our neutral point. You can demonstrate this by unplugging the input and measuring what voltage level the output (and input) settle at with no signal present. It’ll be around VCC/2.</p>
+<p><img class=" wp-image-148569 size-medium alignright" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/triangle_buffered.png" alt="triangle_buffered" width="400" height="276" originalw="400" originalh="276" src-orig="https://hackadaycom.files.wordpress.com/2015/03/triangle_buffered.png?w=400&amp;h=276" scale="2">So the first basic premise is that the feedback exactly cancels out the net signal where they meet up at the input of the inverter. This cancellation means that whatever signal current comes in through the input resistor has to get pulled on out through the feedback resistor. If you think of voltage as the force required to push a given current through a resistor, the output only has to work as hard as the input when the two resistors are equal. That is, when the input voltage is 0.1 volts above neutral, the output will be 0.1 volts below neutral because both are “fighting” the same resistance.</p>
+<p>And there you have it: an “amplifier” with a gain of negative one. It doesn’t make the signal louder, but now you can plug the output of the buffer stage directly into your audio output and give it a listen without interference. And just for fun, this picture shows&nbsp;the input and output on the scope. Working as intended.</p>
+<h2>Amplifiers and Overdrive</h2>
+<p>Great. Now we’ve got a nice clean triangle wave oscillator. You’d think we were done here, but we&nbsp;still have&nbsp;five inverter gates sitting unused on the 4069UB. What could we do with five more amplifiers? Five more amplifiers that have a nice smooth rolloff much like old-school tube preamps do? Crank it up to 11 and see how it sounds!</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/Njiw1mFwhAg.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>To go from buffer circuit to amplifier circuit, we can either let the input signal flow in more easily (reduce the input resistance) or force the output to work harder (increase the feedback resistance). Either way, the goal is to increase the ratio of feedback resistor to input resistor, and thus the voltage gain.</p>
+<p>So let’s build up another buffer circuit, but instead of a 100k Ohm resistor on the input, let’s use a 100k potentiometer so that we can let more signal in. Now it’s an amplifier, with the gain controlled by the ratio of the feedback resistor (at 100k Ohms) divided by whatever resistance we dial in on the input potentiometer. (You could use a larger pot than feedback resistor, and you’d be able to make the circuit quieter as well. But that’s boring.)</p>
+<p>As you drop the input resistance down to zero, you’d naively expect the amplification gain to head off to infinity. Instead, we see that the gain reduces gradually as the output voltage approaches the GND or VCC power rails. What happens is that real-world effects like the chip’s amplification rolloff take over. Is this a bad thing? Not if you want a nice soft-clipping amplifier overdrive sound added to our triangle wave. Woot.</p>
+<p><img class="aligncenter size-large wp-image-148570" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/buffer_overdrive_schematic.png" alt="buffer_overdrive_schematic" width="800" height="315" originalw="800" originalh="315" src-orig="https://hackadaycom.files.wordpress.com/2015/03/buffer_overdrive_schematic.png?w=800&amp;h=315" scale="2"></p>
+<p>Now as long as we have a bunch of free inverters sitting around, let’s take the output from the overdrive sound and re-amplify it again. The IC’s built-in soft clipping will limit the volume gain, but we’ll get something that’s ever more like a square wave as we keep passing the signal through further amplification stages. Note that the fuzz stage runs at full gain — without negative feedback. We’re going for fuzz distortion here. For my liking, a single extra amp stage suffices to get a nice fuzz tone, but you could chain up as many stages with and without feedback as you want. Heck, half of the chip is still sitting there unused, go nuts.</p>
+<p><img class="aligncenter size-large wp-image-148571" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/buffer_fuzz_schematic.png" alt="buffer_fuzz_schematic" width="800" height="257" originalw="800" originalh="257" src-orig="https://hackadaycom.files.wordpress.com/2015/03/buffer_fuzz_schematic.png?w=800&amp;h=257" scale="2"></p>
+<p>Here are some example waveforms from the first-stage amplifier and the second. At the low-gain end of things, you can see that the first-stage triangle wave, in yellow, is not very distorted yet. But as we turn up the gain, the points get rounded over on top and it approaches a round square wave. (“Round square”?) The second-stage output, in green, starts off pretty much squared-out and gets more so. Between the two outputs, you&nbsp;have&nbsp;mild overdrive and full fuzz. Can’t complain about that.</p>
+<p>The scope traces below show the overdrive output in yellow and the fuzz output in green with the volume knob turned increasingly up. You can see that the as you increase the gain, the fuzz channel takes off essentially where the overdrive channel leaves off.</p>
+<p><img class="aligncenter size-large wp-image-148572" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/triangle_montage.png" alt="triangle_montage" width="800" height="184" originalw="800" originalh="184" src-orig="https://hackadaycom.files.wordpress.com/2015/03/triangle_montage.png?w=800&amp;h=184" scale="2"></p>
+<p>And don’t hesitate to feed other audio sources into this chip. A version of this circuit dates back to the late 1970’s, known as [Craig Anderton’s] “Tube Sound Fuzz” from his book&nbsp;<a href="http://www.amazon.com/Electronic-Projects-Musicians-Craig-Anderton/dp/0825695023" target="_blank"><em>Electronic Projects for Musicians</em></a>. My wasted youth doesn’t look so wasted anymore, huh?</p>
+<h2>Sawtooth Waves</h2>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/E4LYzop9BLQ.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>OK, so we’ve got a nice variable overdrive version of the triangle wave oscillator. What else can we do with our newfound analog powers? Here, the most bang for our breadboard buck is to add a diode into the feedback path of the oscillator, turning the triangle wave into a sawtooth.</p>
+<p><img class="aligncenter size-large wp-image-148573" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/buffer_sawtooth_schematic.png" alt="buffer_sawtooth_schematic" width="800" height="256" originalw="800" originalh="256" src-orig="https://hackadaycom.files.wordpress.com/2015/03/buffer_sawtooth_schematic.png?w=800&amp;h=256" scale="2"></p>
+<p>How does that work? Well, instead of charging and discharging the timing capacitor through the feedback resistor as we’ve been doing, we charge it much faster through the diode. This makes the input voltage jump up, setting the output low almost instantly. The diode only conducts in the charging direction, so the capacitor has to discharge slowly through the feedback resistor. This goes on until it hits the threshold value where the output goes high again and charges up the capacitor very quickly through the diode again. In short, we’ll end up with a voltage waveform on the input here in yellow, and on the output here in green:</p>
+<p><img class="alignright wp-image-148574 size-medium" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saw_pulse_scope.png" alt="saw_pulse_scope" width="400" height="276" originalw="400" originalh="276" src-orig="https://hackadaycom.files.wordpress.com/2015/03/saw_pulse_scope.png?w=400&amp;h=276" scale="2"></p>
+<p>Now all that’s left to do is pass this sawtooth through the buffer amplifier above. That’s that raspy, bowed-string sound that a sawtooth wave makes. Played down low, you get the classic acid-house bassline. Go nuts. But wait, there’s more. We&nbsp;have&nbsp;a sawtooth plus overdrive, plus full-on fuzz.</p>
+<p>Below is the scope trace from medium and full gain for the overdrive output in yellow and the fuzz output in green. With the sawtooth wave, the fuzz ends up converting the sawtooth into a kind of&nbsp;pulse wave. It’s not symmetrically square both because our sawtooth isn’t perfectly straight and because there’s some DC offset voltage propagating through the three stages that we haven’t been careful with. If you want to remove that, you can insert something like 0.1uF blocking capacitors between the stages, but I feel you lose some of the gritty character of this thing by doing so.</p>
+<p><img class="aligncenter size-large wp-image-148575" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/sawtooth_montage.png" alt="sawtooth_montage" width="800" height="276" originalw="800" originalh="276" src-orig="https://hackadaycom.files.wordpress.com/2015/03/sawtooth_montage.png?w=800&amp;h=276" scale="2"></p>
+<h2>Next Installment: Filters and Drums</h2>
+<p>Now that we&nbsp;have&nbsp;some classic analog synth waveforms under our belts, it’s time to add some filter effects and drums. To do so, we’ll continue down the analog path that we started this time, so if you don’t already have a couple of 4069UBs at hand, you&nbsp;have&nbsp;another week to scrounge some up.</p>
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/digital-audio-hacks/" rel="category tag">digital audio hacks</a>, <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/cd4040/" rel="tag">cd4040</a>, <a href="http://hackaday.com/tag/cmos/" rel="tag">cmos</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/music/" rel="tag">music</a>, <a href="http://hackaday.com/tag/sound/" rel="tag">sound</a>, <a href="http://hackaday.com/tag/synthesizer/" rel="tag">synthesizer</a></span><meta itemprop="url" content="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+            	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://hackaday.com/2015/03/09/ask-hackaday-the-many-uses-of-microwaves/" rel="prev"><span class="meta-nav">←</span>&nbsp;Ask Hackaday: The Many Uses of Microwaves</a></div><div class="nav-next"><a href="http://hackaday.com/2015/03/09/execution-tracing-on-cortex-m-microcontrollers/" rel="next">Execution Tracing on Cortex-M3 Microcontrollers&nbsp;<span class="meta-nav">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+            <div class="content-ads-holder">
+                <script type="text/javascript">
+                    /* [id429] 300x250 */
+                    OA_show(429);
+                </script><script language="JavaScript1.1" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ck(1).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_3718152148"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvcENC2U1I_kGMKC_nGn4caDPXvR1c_Mg9tIDAOlEiyQw9G3I_OhmsdmVGwyR85oCypyNJWJjMBx-AEg0fVAh00TKHhGuF4&amp;sig=Cg0ArKJSzMvUnNdnS6xA&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120874__zoneid%3D429__cb%3D8112a107ba__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120874%2526value3%253D641%2526zone%253D429%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253D8112a107ba%257Ch_value%253Db712c684d2b456c71456622574%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.73051277974433%257Cbpf%253D0.00022965015474183%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D429%2526url%253Dhttp://www.ti.com/pwr-lp-ldo-ldo2016highcurrentlownoise-bs-lp-apps-wwe"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/PWR_LP_LDO_High_Current_Low_Noise_LDO_300_250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=429__cb=8112a107ba__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D8112a107ba%7Ch_value%3Db712c684d2b456c71456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.73051277974433%7Cbpf%3D0.00022965015474183%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919511%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919511;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=429__cb=8112a107ba__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D8112a107ba%7Ch_value%3Db712c684d2b456c71456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.73051277974433%7Cbpf%3D0.00022965015474183%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3D;ord=8112a107ba;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_8112a107ba" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lg(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(11)" width="0" height="0" alt="" style="display:none">
+
+            </div>
+
+            
+<div id="comments" class="comments-area">
+
+    
+            <h2 class="comments-title">
+            12 thoughts on “<span>Logic Noise: Sawing Away with Analog Waveforms</span>”        </h2>
+
+        
+        <ol class="comment-list">
+            	<li id="comment-2471431" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2471431" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">tiopepe</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2471431">
+						<time datetime="2015-03-09T11:54:52+00:00">
+							March 9, 2015 at 11:54 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>its more powerfull 4049</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2471431"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2471431&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2471431&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2471431#respond" onclick="return addComment.moveForm( &quot;div-comment-2471431&quot;, &quot;2471431&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to tiopepe">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2471492" class="comment byuser comment-author-jaromirs odd alt thread-odd thread-alt depth-1 parent  highlander-comment">
+		<article id="div-comment-2471492" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="https://hackaday.io/hacker/2648-jaromirsukuba" rel="external nofollow" class="url">jaromirs</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2471492">
+						<time datetime="2015-03-09T12:37:19+00:00">
+							March 9, 2015 at 12:37 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>It would be nice to have some kind of sound reference at the beginning of the video.<br>
+I hit the play button on the video, saw subtitles and expected spoken word as well, but I couldn’t hear anything, so I cranked up the volume on amplifier. Then, when you connected oscillator, it made beep so loud I almost pissed my pants.</p>
+<p>Anyway, I love this original HaD content.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2471492"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2471492&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2471492&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2471492#respond" onclick="return addComment.moveForm( &quot;div-comment-2471492&quot;, &quot;2471492&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to jaromirs">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2471662" class="comment byuser comment-author-hexagon5un comment-author-is-site-member bypostauthor even depth-2   highlander-comment">
+		<article id="div-comment-2471662" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Elliot Williams</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2471662">
+						<time datetime="2015-03-09T15:03:01+00:00">
+							March 9, 2015 at 3:03 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>That’s a great idea, especially for the intro videos.  Will do that for next installment!  Thanks.</p>
+<p>And the reason that they’re totally quiet to start, and the reason that I’m using subtitles, is that the audio you hear is a direct feed into my laptop’s line in.  So there’s no background noise at all, and it sounds great on good headphones.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2471662"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2471662&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2471662&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2471662#respond" onclick="return addComment.moveForm( &quot;div-comment-2471662&quot;, &quot;2471662&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to Elliot Williams">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2471667" class="comment odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2471667" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">RoyTheReaper</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2471667">
+						<time datetime="2015-03-09T15:06:44+00:00">
+							March 9, 2015 at 3:06 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>About 1 minute into the sawtooth video it sounds like an .049 airplane engine.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2471667"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2471667&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2471667&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2471667#respond" onclick="return addComment.moveForm( &quot;div-comment-2471667&quot;, &quot;2471667&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to RoyTheReaper">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2472678" class="comment even thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2472678" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">mlagana</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2472678">
+						<time datetime="2015-03-10T05:48:45+00:00">
+							March 10, 2015 at 5:48 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>i was just thinking today about putting the square wave into an integrating op amp to make a saw wave. And maybe if you offset the square wave down it could be a triangle wave, i’m not really sure if that’s how the integrating op amps work. Then i see this! I am really loving this series.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2472678"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2472678&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2472678&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2472678#respond" onclick="return addComment.moveForm( &quot;div-comment-2472678&quot;, &quot;2472678&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to mlagana">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2472743" class="comment byuser comment-author-hexagon5un comment-author-is-site-member bypostauthor odd alt thread-even depth-1 parent  highlander-comment">
+		<article id="div-comment-2472743" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Elliot Williams</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2472743">
+						<time datetime="2015-03-10T06:49:33+00:00">
+							March 10, 2015 at 6:49 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Yeah.  That’s essentially the classic sawtooth oscillator: constant current source into an integrator, and clear the cap when the voltage hits some threshold.  </p>
+<p>When you’re trying to get precise pitches, the time it takes to reset the cap is important (you want it nearly instantaneous) and getting good voltage-control over the input current is key.   The third image down here (<a href="http://www.analogcreations.com/vco.html" rel="nofollow" target="_blank">http://www.analogcreations.com/vco.html</a>) is the classic sawtooth core.  It uses a JFET instead of the diode to do the resetting, and the circuit is designed around +/- voltage supply, but it’s basically the same idea.</p>
+<p>But for quick-and-dirty?  I’m saying this is about the best bang-for-buck around.  Maybe you could gang up several oscillators together on the 40106 to push more current through the diode or use a schottky diode to speed up the fall time.  But meh.  Good enough!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2472743"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2472743&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2472743&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2472743#respond" onclick="return addComment.moveForm( &quot;div-comment-2472743&quot;, &quot;2472743&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to Elliot Williams">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2475142" class="comment even depth-2 parent  highlander-comment">
+		<article id="div-comment-2475142" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">mlagana</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2475142">
+						<time datetime="2015-03-11T21:32:46+00:00">
+							March 11, 2015 at 9:32 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Ah thanks for the link i will hopefully be able to understand these circuits sometime soon. If i put a square wave into two integrators i guess i would get a sine wave too. Also i will be trying your way too, this is the first of your chips not available at my local jaycar (sydney Aus) but they do seem to have a few UB inverters so i’m going to have a look at them all and try one. Or i could order it online…</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2475142"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2475142&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2475142&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2475142#respond" onclick="return addComment.moveForm( &quot;div-comment-2475142&quot;, &quot;2475142&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to mlagana">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2475146" class="comment odd alt depth-3 parent  highlander-comment">
+		<article id="div-comment-2475146" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">mlagana</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2475146">
+						<time datetime="2015-03-11T21:33:51+00:00">
+							March 11, 2015 at 9:33 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>ah yes that website has triangle – sine at the bottom.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2475146"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2475146&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2475146&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2475146#respond" onclick="return addComment.moveForm( &quot;div-comment-2475146&quot;, &quot;2475146&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to mlagana">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2475323" class="comment even depth-4   highlander-comment">
+		<article id="div-comment-2475323" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">mlagana</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2475323">
+						<time datetime="2015-03-12T00:35:03+00:00">
+							March 12, 2015 at 12:35 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Correction jay car do have it just no UB in the part number</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2475323"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2475323&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2475323&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2475323#respond" onclick="return addComment.moveForm( &quot;div-comment-2475323&quot;, &quot;2475323&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to mlagana">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2474195" class="comment odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2474195" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://skwegg.com/members-2/nellwasedyllpv/" rel="external nofollow" class="url">ZelmaManey</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2474195">
+						<time datetime="2015-03-11T08:00:46+00:00">
+							March 11, 2015 at 8:00 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Our laboratory has taken and imported it.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2474195"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2474195&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2474195&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2474195#respond" onclick="return addComment.moveForm( &quot;div-comment-2474195&quot;, &quot;2474195&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to ZelmaManey">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2474870" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2474870" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://zinc-healthcare.org/get-the-delicious-juice-from-hamilton-juice-extractor.html" rel="external nofollow" class="url">KareemDozier</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2474870">
+						<time datetime="2015-03-11T17:37:50+00:00">
+							March 11, 2015 at 5:37 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>This procedure involves the burning of the top layer of skin to promote new collagen production. A good majority move down from the cold up north to our beautiful, white sandy beaches. Of course, the traditional winter recipes work well too and the advantage for me of having a large slow cooker for our small family is that I can double the quantities and make two meals, one of which I can freeze for another day.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2474870"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2474870&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2474870&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2474870#respond" onclick="return addComment.moveForm( &quot;div-comment-2474870&quot;, &quot;2474870&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to KareemDozier">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2626568" class="comment odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2626568" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Synthboy</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-2626568">
+						<time datetime="2015-06-28T14:30:32+00:00">
+							June 28, 2015 at 2:30 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Can you explain how to connect a CV in to the circuit?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2626568"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2626568&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2626568&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/?replytocom=2626568#respond" onclick="return addComment.moveForm( &quot;div-comment-2626568&quot;, &quot;2626568&quot;, &quot;respond&quot;, &quot;148562&quot; )" aria-label="Reply to Synthboy">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+
+        
+    
+    
+    				<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://hackaday.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="aa904be304"><input type="hidden" name="_wp_http_referer" value="/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 19.6px; width: 778px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 39px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+		</li></ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" scale="0">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="148562" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0dd1b7def5"></p>
+<input type="hidden" name="genseq" value="1456622574">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1456622575490"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+</div><!-- #comments -->
+
+        
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id428] 300x250 */
+            OA_show(428);
+        </script><script language="JavaScript1.1" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ck(2).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_1579970425"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvtk98lsaKK3EoEJz3itcq6lXA8C38hT-sX8wFj_dabtkFP1V_wr2WroH46VFCvA1OKjYbnt60Cs-5U-CwEBUI4VnrccN41&amp;sig=Cg0ArKJSzP-ajJ2TgbpH&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120874__zoneid%3D428__cb%3D3009618571__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120874%2526value3%253D641%2526zone%253D428%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253D3009618571%257Ch_value%253D4a79b3a3b2ed76e01456622574%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.50279945626859%257Cbpf%253D0.7979797979798%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D428%2526url%253Dhttp://www.ti.com/pwr-lp-ldo-ldo2016highcurrentlownoise-bs-lp-apps-wwe"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/PWR_LP_LDO_High_Current_Low_Noise_LDO_300_250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=428__cb=3009618571__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D3009618571%7Ch_value%3D4a79b3a3b2ed76e01456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.50279945626859%7Cbpf%3D0.7979797979798%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919511%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919511;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=428__cb=3009618571__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D3009618571%7Ch_value%3D4a79b3a3b2ed76e01456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.50279945626859%7Cbpf%3D0.7979797979798%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3D;ord=3009618571;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_3009618571" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lg(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(12)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <!-- store ad -->
+    <iframe class="sidebar-store-ad" scrolling="no" frameborder="0" align="top" marginwidth="0" marginheight="0" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/-search term-.html"></iframe>
+
+    <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="http://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/routerbot-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/">FCC Locks Down Router Firmware</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 89 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/detective-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/">Dr Noirimetla, Private Failure Investigator and the Mystery of Galileo’s Pillars</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 111 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/internet_radio_wrt54g-shot0008_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/">Frackers: Inside the Mind of the Junk Hacker</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 103 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/rect4423.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/">Hackaday Prize Worldwide: Dallas</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 11 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/utilitypole-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/">A Field Guide to the North American Utility Pole</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 115 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><label class="screen-reader-text" for="cat">Categories</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="33199679">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="23971598">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="24483654">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="78428">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="3923181">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="6310599">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="79">hardware</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="2708">how-to</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="10969055">laser hacks</option>
+	<option class="level-0" value="18020716">led hacks</option>
+	<option class="level-0" value="10626">lifehacks</option>
+	<option class="level-0" value="729674">linux hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">macs hacks</option>
+	<option class="level-0" value="2377605">major tom</option>
+	<option class="level-0" value="11284667">Medical hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">misc hacks</option>
+	<option class="level-0" value="18020730">multitouch hacks</option>
+	<option class="level-0" value="22652725">musical hacks</option>
+	<option class="level-0" value="18020722">netbook hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">news</option>
+	<option class="level-0" value="1861880">nintendo ds hacks</option>
+	<option class="level-0" value="114555425">nintendo gameboy hacks</option>
+	<option class="level-0" value="18020685">nintendo hacks</option>
+	<option class="level-0" value="4992726">nintendo wii hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="114556430">palm pre hacks</option>
+	<option class="level-0" value="245123">parts</option>
+	<option class="level-0" value="10969081">peripherals hacks</option>
+	<option class="level-0" value="16325149">phone hacks</option>
+	<option class="level-0" value="10969088">playstation hacks</option>
+	<option class="level-0" value="2060">podcasts</option>
+	<option class="level-0" value="10969096">portable audio hacks</option>
+	<option class="level-0" value="10969099">portable video hacks</option>
+	<option class="level-0" value="588444">psp hacks</option>
+	<option class="level-0" value="23971578">radio hacks</option>
+	<option class="level-0" value="47">rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">repair hacks</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="309">reviews</option>
+	<option class="level-0" value="10969101">robots hacks</option>
+	<option class="level-0" value="30302">roundup</option>
+	<option class="level-0" value="10969111">security hacks</option>
+	<option class="level-0" value="268522">slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">software hacks</option>
+	<option class="level-0" value="10969116">solar hacks</option>
+	<option class="level-0" value="10969121">tablet pcs hacks</option>
+	<option class="level-0" value="3075183">teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">tool hacks</option>
+	<option class="level-0" value="25277004">toy hacks</option>
+	<option class="level-0" value="10969134">transportation hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="3184456">video hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">weapons hacks</option>
+	<option class="level-0" value="12552193">wearable hacks</option>
+	<option class="level-0" value="39510952">Weekly roundup</option>
+	<option class="level-0" value="4891215">wireless hacks</option>
+	<option class="level-0" value="7079455">xbox hacks</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://hackaday.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/hacklet-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/">Hacklet 97 – Camera Projects</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/">Adding Spice to Your Workbench</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 41 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/foldinglaundry-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/">The Challenges of A Laundry Folding Robot</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 51 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/attiny45.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/">When Are 8 Bits More Than 32?</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 148 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/" class="recent-image">
+						<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/a32.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/">ARM Unveils New, High Efficency CPU</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 40 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1>				<ul id="recentcomments">
+											<li class="recentcomments">
+							<a href="http://keithfromcanada.wordpress.com/" rel="external nofollow" class="url">keithfromcanada</a> on <a href="http://hackaday.com/2016/02/27/trash-can-cnc-gets-a-stepper-upgrade/#comment-2936719">Trash Can CNC Gets a Stepper Upgrade</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936717">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936716">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://localroger.com/" rel="external nofollow" class="url">localroger</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936714">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://localroger.com/" rel="external nofollow" class="url">localroger</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936711">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							Doug on <a href="http://hackaday.com/2016/02/26/passive-wifi-on-microwatts/#comment-2936706">Passive WiFi On Microwatts</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://the-biologist-is-in.blogspot.com/" rel="external nofollow" class="url">darren</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936703">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							Chris friberg on <a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/#comment-2936700">Hacklet 97 – Camera Projects</a>						</li>
+
+												<li class="recentcomments">
+							tekkieneet on <a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/#comment-2936694">Adding Spice to Your Workbench</a>						</li>
+
+												<li class="recentcomments">
+							tekkieneet on <a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/#comment-2936691">Adding Spice to Your Workbench</a>						</li>
+
+										</ul>
+				</aside><aside id="hackadayfeed-2" class="widget widget-hackaday-feed"><h1 class="widget-title">Now on Hackaday.io</h1>
+			<ul>
+									<li><a href="http://www.hackaday.io/project/5861/log/32834">illwill has added a new log for Raspberry Pi Home Automation.</a></li>
+										<li><a href="http://www.hackaday.io/project/9876/log/32833">Jaime García has added a new log for Sunrise - DLP 3D Printer, printable..</a></li>
+										<li><a href="http://www.hackaday.io/project/5596-EM-Drive#j-discussion-48698">electronnja wrote a reply on EM-Drive.</a></li>
+										<li><a href="http://www.hackaday.io/project/9829-Linear%20CCD%20module#j-discussion-48697">Films4You wrote a comment on Linear CCD module.</a></li>
+										<li><a href="http://www.hackaday.io/project/9829-Linear%20CCD%20module">Films4You gave a skull to Linear CCD module.</a></li>
+										<li><a href="http://www.hackaday.io/project/7178-Portable%202-Axis%20Solar%20Tracker#j-discussion-48696">fred frazelle wrote a comment on Portable 2-Axis Solar Tracker.</a></li>
+										<li><a href="http://www.hackaday.io/project/9359-hackaday-la-meetup">Jasmine Brackett has added wbk as a contributor to Hackaday LA Meetup.</a></li>
+										<li><a href="http://www.hackaday.io/project/9890-Dextra">Alvaro Villoslada has updated the project titled Dextra.</a></li>
+										<li><a href="http://www.hackaday.io/project/9078/log/32832">iobtoolkit has added a new log for I/O Blocks Toolkit.</a></li>
+										<li><a href="http://www.hackaday.io/project/7656-nWatch">Catalin Anesia gave a skull to nWatch.</a></li>
+						</ul>
+	</aside>
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id427] 160x600 */
+            OA_show(427);
+        </script><script language="JavaScript1.1" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ck(3).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2549746173"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssWbgSYPwtASLyMfX92os5iwxq0GwF6L5pN4IqmrcEBUOA5eXGVaV0gKd22c97aOd0tWl-tWiwL7CNnijaSIvT-1L9g_8Ir&amp;sig=Cg0ArKJSzHxpvS_2vroJ&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120875__zoneid%3D427__cb%3Db748b6f4f0__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120875%2526value3%253D641%2526zone%253D427%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253Db748b6f4f0%257Ch_value%253Db6a139dbeddfbe4f1456622574%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.15255948162842%257Cbpf%253D0.12758878725942%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D427%2526url%253Dhttp://www.ti.com/pwr-bms-mnp-bq76pl455aq1-bs-pf-bq76pl455aq1-wwe"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/PWR_BMS_MNP_BQ76PL455A-Q1_160x600_st.gif" alt="Advertisement" border="0" width="160" height="600" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120875__zoneid=427__cb=b748b6f4f0__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120875%26value3%3D641%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Db748b6f4f0%7Ch_value%3Db6a139dbeddfbe4f1456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919507%3Bsz%3D160x600%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919507;sz=160x600;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120875__zoneid=427__cb=b748b6f4f0__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120875%26value3%3D641%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Db748b6f4f0%7Ch_value%3Db6a139dbeddfbe4f1456622574%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3D;ord=b748b6f4f0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=160 HEIGHT=600 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_b748b6f4f0" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/lg(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<script type="text/javascript">
+(function() {
+window._pa = window._pa || {};
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5266e87c5dd5ca039c00002d.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})();
+window.onload=function(){
+_pa.track('category_0');
+_pa.track('zone_427');
+if ('us'!='cn') {
+_pa.track('geo_notChina');
+} else {
+_pa.track('geo_isChina');
+}
+}
+</script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/fc.php"></script><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(13)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+</div><!-- #secondary -->
+
+    </div><!-- #content -->
+
+</div><iframe src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="http://hackaday.com/" rel="home">
+            <img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141410"><a href="http://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io/">Hackaday.io</a></li>
+<li id="menu-item-141413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141413"><a href="http://store.hackaday.com/">Store</a></li>
+<li id="menu-item-141414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141414"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="http://hackaday.com/submit-a-tip/">Submit a tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackadaycom.wordpress.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="http://hackaday.com/contact-us/">Contact us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside>
+       <!-- Begin MailChimp Signup Form -->
+
+        <form role="subscribe" action="http://hackaday.us9.list-manage.com/subscribe/post?u=dfadb71b0b15629cef5abf016&amp;id=f37880df9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+                <span>Subscribe to newsletter</span>
+                <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required="">
+            </label>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfadb71b0b15629cef5abf016_f37880df9f" tabindex="-1" value=""></div>
+            <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+            </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+
+        <div class="site-info">
+            Copyright © 2016            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <br>Powered by <a href="https://vip.wordpress.com/" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/impression" id="hdTrack" class="trackImg" scale="0"><iframe src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42734042-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-cc6zkdHuZwUDM"
+};
+</script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/quant.js"></script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-cc6zkdHuZwUDM.gif"
+style="display: none;" border="0" height="1" width="1"
+alt="Quantcast"/&gt;
+</noscript>
+
+<!-- wpcom_wp_footer -->
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/hackadaycom.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/hackadaycom.wordpress.com\/wp-login.php?action=logout&_wpnonce=9527f3c43d","homeURL":"http:\/\/hackaday.com\/","postID":"148562","gravDefault":"mystery","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(14)"></script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(15)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'4779443','blog_tz':'-8','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'4779443','v':'wpcom','tz':'-8','user_id':'0','post':'148562','subd':'hackadaycom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=4779443&v=wpcomvt&tz=-8&user_id=0&post=148562&subd=hackadaycom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdkRXFNdWdRL28yNk8rbmNjbWVqU35PYUcuJnlOQ3EmcVpVVis9T2dqY0ZHNjNNQVt3eEFCL2QyMzMmS0xiSTMmR1YrW1B+bjYuPXRHPXdNRHBbW3lDQ1QtZUlzJi56eUtjYmp0R0E4X1plemU2T3puUHFUZUd2cCZ2SWNkL2ZKQWZ8W0EzMUxEJk9BZmxFVyZYV2RNQVpbN05DUCVFWUtGanddX11rR0o1SzQrfitGRyZGUFk3aEowXUV4VF84S2Z4QzhWZHlIb0c1bzh5UDdTaExYdFomLXh+eGc2dGwvX2lseDlbN2x3X2hwJTF2RGwwdTVuQSY='}]);
+_stq.push([ 'clickTrackerInit', '4779443', '148562' ]);
+	</script>
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/g.gif" id="wpstats" scale="0"><img src="./Logic Noise_04_ Sawing Away with Analog Waveforms _ Hackaday_files/saved_resource(16)" width="1" height="1" style="display: none;" scale="0"></body></html>

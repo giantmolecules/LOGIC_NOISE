@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/Article" lang="en" class="js wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE">
+<meta name="viewport" content="width=960">
+<title>Logic Noise: Filters and Drums | Hackaday</title>
+<script async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/analytics.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/5266e87c5dd5ca039c00002d.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lidar.js"></script><script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://s0.wp.com/wp-content/themes/vip/hackaday-2/favicon.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://hackaday.com/xmlrpc.php">
+<link href="http://google.com/+hackaday" rel="publisher">
+
+<!--[if lt IE 9]>
+    <script src="https://s0.wp.com/wp-content/themes/vip/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+		<script src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Hackaday » Feed" href="http://hackaday.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Comments Feed" href="http://hackaday.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Logic Noise: Filters and Drums Comments Feed" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel="stylesheet" id="all-css-0" href="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/hackaday.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Logic Noise_05_ Filters and Drums _ Hackaday_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackadaycom.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Prove Your Design; Prove Your Market; Earn Six-Digits of Cash" href="http://hackaday.com/2015/03/25/best-product/">
+<link rel="next" title="Mustachioed Nintendo Virtual Boy Gone Augmented Reality" href="http://hackaday.com/2015/03/25/mustache-mayhem/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/">
+<link rel="shortlink" href="http://wp.me/pk3lN-D8q">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F25%2Flogic-noise-filters-and-drums%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F25%2Flogic-noise-filters-and-drums%2F&amp;for=wpcom-auto-discovery"><link rel="openid.server" href="http://hackadaycom.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://hackadaycom.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://hackaday.com/osd.xml" title="Hackaday">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta property="og:title" content="Logic Noise: Filters and Drums">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-colorblind-red.jpg?w=600&amp;h=600">
+<meta property="og:url" content="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/">
+<meta property="og:description" content="Filters and Drums
+Logic Noise is an exploration of building raw synthesizers with CMOS logic chips. This session, we continue to abuse the 4069UB as an amplifier. We&#39;ll turn the simple unity-gain buf...">
+<meta property="og:site_name" content="Hackaday">
+
+<link rel="image_src" href="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-colorblind-red.jpg?w=600&amp;h=600">
+<meta itemprop="name" content="Logic Noise: Filters and Drums">
+<meta itemprop="description" content="Filters and Drums
+Logic Noise is an exploration of building raw synthesizers with CMOS logic chips. This session, we continue to abuse the 4069UB as an amplifier. We&#39;ll turn the simple unity-gain buf...">
+<meta itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-colorblind-red.jpg?w=600&amp;h=600">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hackaday">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Hackaday"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fresh hacks every day"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://hackaday.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4f3e6b6daa090af416a1ba595885efd1?s=16"><style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(2)">
+		
+<script src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/mpm6gph.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Logic Noise_05_ Filters and Drums _ Hackaday_files/l" media="all"><script>try{Typekit.load();}catch(e){}</script>
+<!-- Supplyframe Ads -->
+<!--<script type='text/javascript' src='http://ads.supplyframe.com/openads/www/delivery/spcjs.php?id=31&amp;block=1'></script>-->
+<script type="text/javascript">
+function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|468")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://ads.supplyframe.com/openads/www/delivery/spc.php":"http://ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+</script><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/spc.php"></script><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/fl.js"></script>
+
+
+<script src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(3)" id="cannedbanners_pixel"></script><script type="text/javascript" async="" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/tagjs"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg(1)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg(2)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(6)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg(3)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(7)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(8)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/seg(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(9)" width="1" height="1" border="0" scale="0"></head>
+
+<body class="single single-post postid-150438 single-format-standard mp6 customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+    <div id="leaderboard">
+        <script type="text/javascript">
+            /* [id426] 728x90 */
+            OA_show(426);
+        </script><script language="JavaScript1.1" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ck.php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_4165836585"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuYvX1EeeM0F9dZR3LWD5guvADq4IvtvYT38vqMKck_o7Rih79yKZQyBx__s4glxoCG_2uJWAhz040ZToFNVdO98eh7siOa&amp;sig=Cg0ArKJSzEfQRbQFVHPE&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120873__zoneid%3D426__cb%3D7516830447__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120873%2526value3%253D641%2526zone%253D426%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253D7516830447%257Ch_value%253D70599b2b6f74062c1456623881%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.15255948162842%257Cbpf%253D0.12758878725942%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D426%2526url%253Dhttp://www.ti.com/pwr-bms-wlpc-bq50002-bs-pf-null-wwe"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/PWR_BMS_WLPC_BQ50002_728x90st.gif" alt="Advertisement" border="0" width="728" height="90" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120873__zoneid=426__cb=7516830447__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120873%26value3%3D641%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D7516830447%7Ch_value%3D70599b2b6f74062c1456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919509%3Bsz%3D728x90%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919509;sz=728x90;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120873__zoneid=426__cb=7516830447__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120873%26value3%3D641%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D7516830447%7Ch_value%3D70599b2b6f74062c1456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3D;ord=7516830447;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=728 HEIGHT=90 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_7516830447" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(10)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <a class="skip-link screen-reader-text" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="http://hackaday.com/" rel="home">
+                <img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+            </a>
+            <h1 class="site-title">
+                <a href="http://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu nav-menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="http://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="http://hackaday.io/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-97770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97770"><a href="http://store.hackaday.com/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Store</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="http://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="http://hackaday.com/about/">About</a></li>
+</ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">February 27, 2016</label><div class="calendar_table_wrap"><table id="wp-calendar">
+	<caption>March 2015</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://hackaday.com/2015/02/">« Feb</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://hackaday.com/2015/04/">Apr »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td><a href="http://hackaday.com/2015/03/01/" aria-label="Posts published on March 1, 2015">1</a></td><td><a href="http://hackaday.com/2015/03/02/" aria-label="Posts published on March 2, 2015">2</a></td><td><a href="http://hackaday.com/2015/03/03/" aria-label="Posts published on March 3, 2015">3</a></td><td><a href="http://hackaday.com/2015/03/04/" aria-label="Posts published on March 4, 2015">4</a></td><td><a href="http://hackaday.com/2015/03/05/" aria-label="Posts published on March 5, 2015">5</a></td><td><a href="http://hackaday.com/2015/03/06/" aria-label="Posts published on March 6, 2015">6</a></td><td><a href="http://hackaday.com/2015/03/07/" aria-label="Posts published on March 7, 2015">7</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/08/" aria-label="Posts published on March 8, 2015">8</a></td><td><a href="http://hackaday.com/2015/03/09/" aria-label="Posts published on March 9, 2015">9</a></td><td><a href="http://hackaday.com/2015/03/10/" aria-label="Posts published on March 10, 2015">10</a></td><td><a href="http://hackaday.com/2015/03/11/" aria-label="Posts published on March 11, 2015">11</a></td><td><a href="http://hackaday.com/2015/03/12/" aria-label="Posts published on March 12, 2015">12</a></td><td><a href="http://hackaday.com/2015/03/13/" aria-label="Posts published on March 13, 2015">13</a></td><td><a href="http://hackaday.com/2015/03/14/" aria-label="Posts published on March 14, 2015">14</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/15/" aria-label="Posts published on March 15, 2015">15</a></td><td><a href="http://hackaday.com/2015/03/16/" aria-label="Posts published on March 16, 2015">16</a></td><td><a href="http://hackaday.com/2015/03/17/" aria-label="Posts published on March 17, 2015">17</a></td><td><a href="http://hackaday.com/2015/03/18/" aria-label="Posts published on March 18, 2015">18</a></td><td><a href="http://hackaday.com/2015/03/19/" aria-label="Posts published on March 19, 2015">19</a></td><td><a href="http://hackaday.com/2015/03/20/" aria-label="Posts published on March 20, 2015">20</a></td><td><a href="http://hackaday.com/2015/03/21/" aria-label="Posts published on March 21, 2015">21</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/22/" aria-label="Posts published on March 22, 2015">22</a></td><td><a href="http://hackaday.com/2015/03/23/" aria-label="Posts published on March 23, 2015">23</a></td><td><a href="http://hackaday.com/2015/03/24/" aria-label="Posts published on March 24, 2015">24</a></td><td><a href="http://hackaday.com/2015/03/25/" aria-label="Posts published on March 25, 2015">25</a></td><td><a href="http://hackaday.com/2015/03/26/" aria-label="Posts published on March 26, 2015">26</a></td><td><a href="http://hackaday.com/2015/03/27/" aria-label="Posts published on March 27, 2015">27</a></td><td><a href="http://hackaday.com/2015/03/28/" aria-label="Posts published on March 28, 2015">28</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/03/29/" aria-label="Posts published on March 29, 2015">29</a></td><td><a href="http://hackaday.com/2015/03/30/" aria-label="Posts published on March 30, 2015">30</a></td><td><a href="http://hackaday.com/2015/03/31/" aria-label="Posts published on March 31, 2015">31</a></td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            
+<article itemscope="" itemtype="http://schema.org/Article" id="post-150438" class="post-150438 post type-post status-publish format-standard has-post-thumbnail hentry category-digital-audio-hacks category-featured category-musical-hacks tag-active-filter tag-filters tag-logic-noise tag-low-pass-filter tag-osillator">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">Logic Noise: Filters and Drums</h1>
+        <div class="entry-meta">
+            <a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comments" class="comments-counts"><span class="icon-hackaday icon-hackaday-comment"></span>
+                9 Comments            </a>
+            <ul class="meta-authors vcard author">
+                <li>by:</li>
+                <span class="fn"><a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a></span>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-meta entry-meta-last">
+            <span class="entry-date published updated" itemprop="datePublished" content="March 25, 2015"><a href="http://hackaday.com/2015/03/25/" title="March 25, 2015 - 7:01 am">March 25, 2015</a></span>
+            <ul class="share-post">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F25%2Flogic-noise-filters-and-drums%2F" target="_blank"><span class="icon-hackaday icon-hackaday-facebook"></span></a></li>
+               <li><a href="https://twitter.com/intent/tweet?text=Logic+Noise%3A+Filters+and+Drums%20via%20@hackaday&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F25%2Flogic-noise-filters-and-drums%2F" target="_blank"><span class="icon-hackaday icon-hackaday-twitter"></span></a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fhackaday.com%2F2015%2F03%2F25%2Flogic-noise-filters-and-drums%2F&amp;h1=en-US" target="_blank"><span class="icon-hackaday icon-hackaday-google"></span></a></li>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-featured-image"><img itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-colorblind-red.jpg?w=600&amp;h=600" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/logic-noise-colorblind-red.jpg" alt="" originalw="800" width="800" height="412" src-orig="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-colorblind-red.jpg?w=800" scale="2"></div>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content" itemprop="articleBody">
+        <h2>Filters and Drums</h2>
+<p><a href="http://hackaday.com/tag/logic-noise/">Logic Noise</a> is an exploration of building raw synthesizers with CMOS logic chips. This session, we continue to abuse the 4069UB as an amplifier. We’ll turn the simple unity-gain buffer of <a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">last session</a> into a single-pole active lowpass filter with a single part. (Spoiler: it’s a capacitor.)</p>
+<p>While totally useful, this simple filter is a bit boring and difficult to make dynamic. So we’ll look into an entirely different filter, the Twin-T notch filter, that turns out to be sharp enough to build a sine-wave oscillator on, and tweakable enough that we’ll make a damped-oscillator drum sound out of it.</p>
+<p>Here’s a quick demo of where we’re heading. Read on to see how we get there.</p>
+<p><span id="more-150438"></span></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/8r_tpvt4-Jo.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>Filters</h2>
+<p>Last session, we built an amplifier and played around with the gain: the ratio of how much voltage swing is output relative to how much is input. An <a href="http://en.wikipedia.org/wiki/Active_filter" target="_blank">active filter</a> is an amplifier where this gain depends on the frequency of the incoming signal. This lets us carve out different frequency ranges that we’d either like more or less of. (In general, though, you don’t need an amplifier to filter. See <a href="http://en.wikipedia.org/wiki/Passivity_%28engineering%29#Passive_filter" target="_blank">passive filters</a> versus active filters.)</p>
+<p>When you pluck a string on a guitar, for instance, all sorts of frequencies are produced. But over time the string vibrations are damped out by the wood that the guitar is made of, and within a half-second or so, most of the vibrations left are related to the string’s fundamental vibrational frequency (determined by where your finger is on the frets). The higher frequency vibrations are the first to go. This suggests a sound synthesis strategy to make “natural” sounding instruments: generate all sorts of frequencies and then filter out the higher ones.</p>
+<h2>Single-pole Lowpass Filter</h2>
+<p>Given that we’ve already made a few simple amplifier circuits <a href="http://hackaday.com/2015/03/09/logic-noise-sawing-away-with-analog-waveforms/">last time</a>, it’s a quick step to understand the simplest of all filters: the single-pole filter. Here’s the circuit diagram:</p>
+<p><img class="aligncenter size-large wp-image-150441" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/filter-sch.png" alt="filter.sch" width="800" height="280" originalw="800" originalh="280" src-orig="https://hackadaycom.files.wordpress.com/2015/03/filter-sch.png?w=800&amp;h=280" scale="2"></p>
+<p>Yeah, that’s an added capacitor. That’s all there is to it. But have a listen to the difference:</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/FMi54WlW-mU.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>Remember the intuition about the negative-feedback amplifier from last time. We had two resistors, one between the input and the 4069, and the other in feedback between the (inverted) output and the input. When the input voltage wiggled around the 4069’s neutral voltage, the output wiggled in the opposite direction. And the ratio of the voltage swings, the gain, depends on how hard the feedback path has to work to cancel out the incoming signal current.</p>
+<p>The same intuition works for the filter, as long as you understand one thing about capacitors. Capacitors pass current through them only reluctantly. The amount of current a capacitor passes before it’s “charged up” to a voltage that resists any further incoming current is referred to as its capacitance. Or, in electro-math: C = Q/V or V = Q/C, where Q is the charge on the capacitor, which is also the current (charge per second) summed up over time.</p>
+<p>In short, the more charge you put into a capacitor, the higher voltage it develops to resist putting more charge into it. And how quickly this voltage ramps up is proportional to one over the capacitance and directly proportional to the current passing through.</p>
+<p>For us, this means that it’s easy to pass a given current through a capacitor for a short while, harder to pass the same current through for a longer time, and impossible to get current through forever without increasing the input voltage to overcome the capacitor’s “charged-up” voltage. Or put another way: capacitors let high frequency current vibrations through easily, resist middle frequencies, and deny constant-voltage direct current.</p>
+<p>So what happens when we put a capacitor in the feedback path of our unity-gain feedback amplifier? Since the capacitor nearly blocks very low frequencies, all of them have to pass through the resistor, and we get unity gain. As we increase the frequency, some of the current starts to pass through the capacitor and the total feedback resistance is lowered. This means that the output has an easier job cancelling out the input, and thus less gain at middle frequencies. At very high frequencies, the capacitor will pass currents so easily that almost none will even need to go through the resistor, and the gain drops even lower.</p>
+<p>Put more succinctly, the capacitor resists lower frequencies more than higher ones. In a negative feedback amplifier, output gain increases when it’s harder to push current through the feedback path. So by putting a capacitor in the feedback path, we make an amplifier with more gain in the low frequencies and less gain for higher frequencies. Voila, a lowpass filter!</p>
+<h3>Variable Cutoff Lowpass Filter</h3>
+<p>What if we want to vary the cutoff frequency? In math, the cutoff frequency for a single pole lowpass filter like this is 1/(2 * pi * R * C). Practically, we can vary the cutoff frequency by changing the capacitor or by changing the input current through the resistor. So we’ll set the basic range by picking a capacitor value and vary the filter’s frequency response by turning a potentiometer. For the circuit here, the cutoff frequency ranges from 160 Hz at 100k ohms to 1600 Hz at 10k ohms.</p>
+<p>But there’s one catch with varying the input resistor; we also change the overall gain which depends on the ratio of feedback resistor to input resistor. So if you’re going to be changing the frequency response by changing the input resistor a lot, you might also want to change the feedback resistor at the same time to track it, holding the overall (passband) gain roughly constant. For that, you’ll need a stereo / dual potentiometer, which is simply two potentiometers linked to the same shaft. With one knob, you control two identical resistors.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/Va0Rhlxpcsc.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>Before we leave the single pole filter, you can convert the lowpass filter here into a highpass filter simply by moving the capacitor out from the feedback loop and sticking it in front of the input resistor. Give it a shot!</p>
+<h2>Twin-T Filter</h2>
+<p>Our story gets significantly more interesting if we toss a more complicated filtering element in the feedback path, and one of our favorite filters is the Twin T. Instead of being a lowpass filter like the one above, the Twin T is a <a href="http://en.wikipedia.org/wiki/Band-stop_filter" target="_blank">notch filter</a>. Notch filters pass both high and low frequencies, but are tuned to knock out a particular frequency in the middle.</p>
+<p>In its raw form, the Twin T filter is fairly useful for killing a specific nuisance frequency in a signal. Maybe you want to knock out power line noise (60Hz in the USA, 50Hz in Europe). Toss a Twin T filter that’s tuned to 60Hz into the chain, and you’ll get rid of most of the noise without damping down the rest of your signal very much. To see why it’s called a Twin T, have a look at the circuit diagram:</p>
+<p><img class="aligncenter size-large wp-image-150442" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/twint-sch.png" alt="twint.sch" width="800" height="422" originalw="800" originalh="422" src-orig="https://hackadaycom.files.wordpress.com/2015/03/twint-sch.png?w=800&amp;h=422" scale="2"></p>
+<p>The Twin T works by combining two signal paths, each one T-shaped. The T with two resistors and a capacitor to ground is a simple lowpass filter, essentially a passive version of the one we made above. The other T with the series capacitors and resistor to ground is a highpass filter.</p>
+<p>Highpass and lowpass sounds like everything should get through, right? Yes, but. At the frequency that the filter is tuned for (the “cutoff” frequency) the two outputs are exactly 90 degrees out of phase from the input, but in opposite directions. In theory, if both Ts are tuned to the same frequency the two paths exactly cancel each other out at the cutoff frequency and none that cutoff frequency makes it through at all. In reality, you can actually get the two branches fairly close to each other and get very good, but not perfect, cancellation of the tuned frequency.</p>
+<p>What happens when we put a Twin T filter into the feedback path of an amplifier? Remember that the negative feedback logic requires the output to create more voltage the harder it is to push current back through the feedback path. So instead of knocking out the frequency that the filter is tuned to, we get that one particular frequency amplified. If there’s a little bit of noise entering the input at our tuned frequency, it’ll get amplified a lot and all of the other frequencies will get attenuated. And suddenly you’ve got a sine-wave oscillator.</p>
+<h2>Drums</h2>
+<p>Which brings us to today’s killer circuit, and a little bit of a refinement on the above explanation. The short version is that we detune the Twin T filter a little bit so that it only rings when it’s given an impulse and then dies out.</p>
+<p>First let’s play a little bit and build up the Twin-T and 4069UB amplifier part of the circuit. It’s just the Twin-T filter from above set up in the feedback path of a 4069UB inverter stage, and then sent out directly through another 4069UB inverter as a buffer. It’s overdriven and you’ll hear the clicks of the trigger bleeding through, but it’s a start.</p>
+<p><img class="aligncenter size-large wp-image-150451" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/drums_simple-sch.png" alt="drums_simple.sch" width="800" height="554" originalw="800" originalh="554" src-orig="https://hackadaycom.files.wordpress.com/2015/03/drums_simple-sch.png?w=800&amp;h=554" scale="2"></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/OYIHsXgqpYY.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h3>Refinements</h3>
+<p>With the basic circuit working, let’s expand on it in two different ways. First, we’ll drive the drum with another oscillator circuit. Then, we’ll pass the audio out through a lowpass filter to knock off some of the trigger pulse bleedthrough.</p>
+<p>Here’s the final circuit:</p>
+<p><img class="aligncenter size-large wp-image-150444" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/drums-sch.png" alt="drums.sch" width="800" height="395" originalw="800" originalh="395" src-orig="https://hackadaycom.files.wordpress.com/2015/03/drums-sch.png?w=800&amp;h=395" scale="2"></p>
+<p>Starting on the left, we have a very low frequency oscillator set up on the 40106 and buffered using another 40106 stage. This simply puts out a nice reliable square wave. The signal then passes through a capacitor, which again has the effect of letting only the higher frequencies pass through. What makes it through looks basically like a quick pulse (in green).</p>
+<p><img class="aligncenter size-large wp-image-150449" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/drum_square_to_trigger.png" alt="drum_square_to_trigger" width="800" height="552" originalw="800" originalh="552" src-orig="https://hackadaycom.files.wordpress.com/2015/03/drum_square_to_trigger.png?w=800&amp;h=552" scale="2"></p>
+<p>The trigger signal pulse is inserted into the feedback loop of the Twin T. It’s actually not crucial where you attach the trigger, but it’ll couple less with the Twin T section if you connect it here.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/Qx_vgkgQllE.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>And finally, we’ll pass the signal through a lowpass filter to remove the clicky noise that comes from the raw trigger signal feeding through to the output.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/gjAa2gu5hDI.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h3>Range</h3>
+<p>What values should we use for capacitors and resistors? Try to pick the component values so that the single capacitor in the lowpass T is twice as large as the two capacitors (2 C) and the single resistor is half as large as the paired resistors (1/2 R). This makes both Ts tune to the same frequency, given again by 1/(2*pi*R*C) where R and C are the values of the paired resistors and capacitors respectively.</p>
+<p>In practice, try to get factor-of-two capacitors and leave the resistors adjustable wherever possible. Since we’ll be de-tuning the circuit on purpose to make the oscillations die out slowly, there’s not a reliable formula for the resistances. You’ll just have to pick capacitors and tweak the knobs until it works. That said, if you find you want frequencies outside of the range that you’re currently getting, don’t hesitate to swap out the capacitors.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/S5Vy8JVRRdw.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h3>Tweaking and Tuning</h3>
+<p>Detuning the Twin-T section is the secret to making this circuit work as a drum rather than as a sine-wave oscillator, and the approach you’ll have to take is a bit experimental, so let’s talk about tuning this circuit. If you align the two halves of the Twin T perfectly, as we mentioned before, only the one single frequency will be blocked, and thus only that one frequency will be amplified by the negative feedback circuit. You’ll get a very nice sine wave oscillator, but not drums.</p>
+<p>If you detune the two halves of the Twin T from each other, especially if you do so by raising the cutoff frequency of the highpass filter so that it’s higher than the lowpass filter, a wider and wider band of frequencies are blocked by the Twin T, and thus receive the extra gain from the amplifier.</p>
+<p>But as you spread the gain over a wider and wider band of frequencies, you get less gain at any given frequency. As you continue to detune the Ts from each other, you’ll reach a point where the circuit no longer amplifies any single frequency enough to oscillate indefinitely by itself. However, and this is the key here, the filter will oscillate for a while if you provide it with a strong enough impulse signal. And that’s exactly what we’re doing with the square wave coupled through the capacitor coming from the tempo oscillator. It’s nice to watch the damped waveforms on a scope if you’ve got one.</p>
+<p><img class="aligncenter size-large wp-image-150445" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/drum_trigger_and_pulse.png" alt="drum_trigger_and_pulse" width="800" height="552" originalw="800" originalh="552" src-orig="https://hackadaycom.files.wordpress.com/2015/03/drum_trigger_and_pulse.png?w=800&amp;h=552" scale="2"></p>
+<p>So here’s a procedure for getting close to your desired sound. To enable oscillation over a wide range of frequencies, set the decay potentiometer as low as it will go. This sets the highpass leg of the T to a very high cutoff frequency, which means that it’s passing nearly nothing. This frees up the lowpass T section to determine the pitch, and for most of the tuning potentiometer’s range you’ll get oscillations. Pick the rough pitch you want by listening to the oscillator. Now you can tune up the decay pot until the oscillations are just damped out and you’ll be set.</p>
+<p>But notice that the two potentiometers influence each other a little bit. That’s because the two legs of the T are simply electrically connected. So as you increase the decay to go from oscillator to drum, be ready to also tweak the frequency potentiometer to keep the drum tone at your desired pitch and decay rate.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/MF4CCoiy6Hw.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>Extensions</h2>
+<p>If you’re interested in exploring more active filter designs than just the single pole lowpass shown here, have a look at <a href="http://sound.westhost.com/articles/active-filters.htm" target="_blank">Rod Elliott’s great writeup on active filters</a>. You can either break down and use op-amps and dual power supplies, or you can keep hacking and replace any of the op-amps in his circuits with a 4069UB stage as long as they only use negative feedback and have the op-amp’s positive terminal connected to ground. In particular, have a look at the multiple feedback topology and the biquad.</p>
+<p>If you don’t need synth drums, you can simply tune the Twin T up and use the circuit as a sine wave oscillator. For a single set of capacitors it’s not very widely adjustable, but if all you need is a single frequency you can pick the right capacitors and you’re set. It’s not the best sine wave oscillator out there, but it’s hard to beat a one-chip build with a few passive components thrown in.</p>
+<p>But don’t take our word for it: here’s a scope shot. The yellow line is the produced sine wave, and the purple is a FFT of the signal. Vertical bars are 20dBV, or a factor of ten. The first peak, at 150Hz is our sine wave, and the second peak is down in voltage by about a factor of 100. It’s not lab equipment, but it’s pretty solid for the abuse of a CMOS logic chip.</p>
+<p><img class="aligncenter size-large wp-image-150446" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/scope_0.png" alt="scope_0" width="800" height="552" originalw="800" originalh="552" src-orig="https://hackadaycom.files.wordpress.com/2015/03/scope_0.png?w=800&amp;h=552" scale="2"></p>
+<p>And there’s nothing stopping you from feeding the circuit with audio-frequency trigger pulses if you want to freak out. The result is very similar to the sync oscillator we <a href="http://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds">built before</a> but it’s a lot mellower because the waveforms involved are fundamentally sine waves here.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/aZ8-gXdEulQ.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>Have fun!</p>
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/digital-audio-hacks/" rel="category tag">digital audio hacks</a>, <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a>, <a href="http://hackaday.com/category/musical-hacks/" rel="category tag">musical hacks</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/active-filter/" rel="tag">active filter</a>, <a href="http://hackaday.com/tag/filters/" rel="tag">filters</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/low-pass-filter/" rel="tag">low pass filter</a>, <a href="http://hackaday.com/tag/osillator/" rel="tag">osillator</a></span><meta itemprop="url" content="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+            	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://hackaday.com/2015/03/25/best-product/" rel="prev"><span class="meta-nav">←</span>&nbsp;Prove Your Design; Prove Your Market; Earn Six-Digits of Cash</a></div><div class="nav-next"><a href="http://hackaday.com/2015/03/25/mustache-mayhem/" rel="next">Mustachioed Nintendo Virtual Boy Gone Augmented Reality&nbsp;<span class="meta-nav">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+            <div class="content-ads-holder">
+                <script type="text/javascript">
+                    /* [id429] 300x250 */
+                    OA_show(429);
+                </script><script language="JavaScript1.1" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ck(1).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2082636821"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstoFm8rMttXCgYQVitnl6R--b_Zjr6gmBQ1fg3tbZDvpCsouzbQg-g4ge_1ILlOGfW17nyH3UlO8kE1icA47PtSz689l0K5&amp;sig=Cg0ArKJSzCAyHT76hNza&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120874__zoneid%3D429__cb%3Dde003a9425__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120874%2526value3%253D641%2526zone%253D429%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253Dde003a9425%257Ch_value%253Dd09a8d5b2bb1260e1456623881%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.26948722025567%257Cbpf%253D0.000085199627826486%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D429%2526url%253Dhttp://www.ti.com/pwr-alps-lpdc-tps630hotrod-bs-pf-null-wwe"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/PWR_ALPS_LDPC_TPS630K_300x250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=429__cb=de003a9425__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Dde003a9425%7Ch_value%3Dd09a8d5b2bb1260e1456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.26948722025567%7Cbpf%3D0.000085199627826486%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919511%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919511;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120874__zoneid=429__cb=de003a9425__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120874%26value3%3D641%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Dde003a9425%7Ch_value%3Dd09a8d5b2bb1260e1456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.26948722025567%7Cbpf%3D0.000085199627826486%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3D;ord=de003a9425;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_de003a9425" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lg(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(11)" width="0" height="0" alt="" style="display:none">
+
+            </div>
+
+            
+<div id="comments" class="comments-area">
+
+    
+            <h2 class="comments-title">
+            9 thoughts on “<span>Logic Noise: Filters and Drums</span>”        </h2>
+
+        
+        <ol class="comment-list">
+            	<li id="comment-2495852" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2495852" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://elecurls.tripod.com/" rel="external nofollow" class="url">pixster</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2495852">
+						<time datetime="2015-03-25T08:10:03+00:00">
+							March 25, 2015 at 8:10 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Truly enjoy this series.  Keep it up!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2495852"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2495852&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2495852&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2495852#respond" onclick="return addComment.moveForm( &quot;div-comment-2495852&quot;, &quot;2495852&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to pixster">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2495872" class="comment byuser comment-author-ragooman odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2495872" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">ragooman</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2495872">
+						<time datetime="2015-03-25T08:26:13+00:00">
+							March 25, 2015 at 8:26 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>great project !!<br>
+Reminds me of the old days with hacking on CMOS logic</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2495872"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2495872&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2495872&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2495872#respond" onclick="return addComment.moveForm( &quot;div-comment-2495872&quot;, &quot;2495872&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to ragooman">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2496142" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2496142" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">rj</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2496142">
+						<time datetime="2015-03-25T12:03:59+00:00">
+							March 25, 2015 at 12:03 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I always look forward to each of these!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2496142"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2496142&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2496142&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2496142#respond" onclick="return addComment.moveForm( &quot;div-comment-2496142&quot;, &quot;2496142&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to rj">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2496203" class="comment odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2496203" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://hackaday.io/hacker/4501" rel="external nofollow" class="url">The Big One</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2496203">
+						<time datetime="2015-03-25T13:01:08+00:00">
+							March 25, 2015 at 1:01 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Very nice series, keep up the great work!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2496203"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2496203&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2496203&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2496203#respond" onclick="return addComment.moveForm( &quot;div-comment-2496203&quot;, &quot;2496203&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to The Big One">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2497128" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2497128" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Roel</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2497128">
+						<time datetime="2015-03-26T02:47:35+00:00">
+							March 26, 2015 at 2:47 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great series, great sounds, great quality content!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2497128"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2497128&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2497128&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2497128#respond" onclick="return addComment.moveForm( &quot;div-comment-2497128&quot;, &quot;2497128&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to Roel">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2500498" class="comment odd alt thread-odd thread-alt depth-1 parent  highlander-comment">
+		<article id="div-comment-2500498" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">villevisnen</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2500498">
+						<time datetime="2015-03-28T00:04:19+00:00">
+							March 28, 2015 at 12:04 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Cool stuff! Now we’re really getting somewhere, transcending “noise” territory. Bass drum sounds great, very 808-ty. I’d love to implement pitch envelope to get snappier attack. How would I go about that?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2500498"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2500498&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2500498&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2500498#respond" onclick="return addComment.moveForm( &quot;div-comment-2500498&quot;, &quot;2500498&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to villevisnen">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2502762" class="comment byuser comment-author-hexagon5un comment-author-is-site-member bypostauthor even depth-2   highlander-comment">
+		<article id="div-comment-2502762" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Elliot Williams</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2502762">
+						<time datetime="2015-03-29T13:39:06+00:00">
+							March 29, 2015 at 1:39 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Have a look at the <a href="http://www.ericarcher.net/wp-content/uploads/2014/07/808-svc-man.pdf" rel="nofollow" target="_blank">service manual for the 808</a>  if you’re serious.  Oh heck, have a look either way, because the 808 is a classic bass drum.  The circuit is on the right-hand side of page 9.  </p>
+<p>In the center of the circuit is an op-amp (Pins 1,2,3 of IC 12) with one T from a twin-T in its feedback loop (C41, C42, R166, R165).  Instead of a variable resistor to ground, as we used, there’s a transistor (Q43) between the resistors to ground.  When this transistor is on, it shorts out one of the resistors (R165) making the effective resistance lower, and the pitch higher.  </p>
+<p>Then envelope for all that must be in the Q41/Q42 branch that leads into that, but I’m just looking the schema over now, and I’ve never built it.  My guess is that the capacitor (C38) is charged up suddenly on a trigger event and slowly bleeds out through Q42, which in turn opens up Q43 to raise the pitch.  (And additionally sends a pulse on through to the decay / volume envelope at the other op-amp on IC 12.)</p>
+<p>But yeah, as long as we’re working through this, capacitor C40 is just like the cap we use to pass the trigger pulse through, only they use a diode (D53) so that it only triggers on the positive-going flank of the input rather than both as we did.  All that stuff to the left of C40 is input-conditioning for triggering and voice selection.  BD set high enables the bass drum which plays on the common trigger.</p>
+<p>The last bit from R171 through Q44 looks like an amplifier and passive lowpass filter (C48 &amp; R175) to knock off some of the click.  Not unlike what I ended up doing with the lowpass filter on our example.</p>
+<p>I should really build this up.  Oh man, there’s a brief overview of the circuit on the bottom of page 5 that I didn’t notice until I wrote this post.  TLDR read that instead of my description.  They don’t make service manuals like that anymore….</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2502762"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2502762&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2502762&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2502762#respond" onclick="return addComment.moveForm( &quot;div-comment-2502762&quot;, &quot;2502762&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to Elliot Williams">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2507222" class="comment odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2507222" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://moowiki.joelpt.net/User:FaustinChau" rel="external nofollow" class="url">din 7/16 female connector</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2507222">
+						<time datetime="2015-04-01T06:46:06+00:00">
+							April 1, 2015 at 6:46 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>MIL-STD-202F, Technique 213B Cond.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2507222"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2507222&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2507222&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2507222#respond" onclick="return addComment.moveForm( &quot;div-comment-2507222&quot;, &quot;2507222&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to din 7/16 female connector">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2724947" class="comment even thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2724947" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">OIP</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-2724947">
+						<time datetime="2015-09-22T00:15:20+00:00">
+							September 22, 2015 at 12:15 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>haha, i have run across this series again!  many thanks for great explanations.  i came to this in a roundabout way by looking up the 808 drum circuit and then trying it, semi-failing and googling around looking to try again.  i made a bridged T circuit with the TL072 IC based on 808 schematics and people discussing that.  and just fiddled with it without fully understanding what was going on (results here: <a href="https://www.youtube.com/watch?v=LLK7r4GY7NM" rel="nofollow" target="_blank">https://www.youtube.com/watch?v=LLK7r4GY7NM</a>).  had issues with the triggering which was cobbled up with a 555 timer, and i used my own amp to cheat in a low pass filter.  but i’ll try building it up again from scratch.  would love to have a little cheap and even vaguely useable drum module from a few parts.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2724947"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2724947&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2724947&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/?replytocom=2724947#respond" onclick="return addComment.moveForm( &quot;div-comment-2724947&quot;, &quot;2724947&quot;, &quot;respond&quot;, &quot;150438&quot; )" aria-label="Reply to OIP">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+
+        
+    
+    
+    				<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://hackaday.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="aa904be304"><input type="hidden" name="_wp_http_referer" value="/2015/03/25/logic-noise-filters-and-drums/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 19.6px; width: 778px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 39px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+		</li></ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" scale="0">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/03/25/logic-noise-filters-and-drums/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="150438" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2920dc0420"></p>
+<input type="hidden" name="genseq" value="1456623880">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1456623881862"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+</div><!-- #comments -->
+
+        
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id428] 300x250 */
+            OA_show(428);
+        </script><script language="JavaScript1.1" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ck(2).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_919896811"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstvkHtaFypK6fV7talpHf6f3ts_lpwuiLzopP6FA9EAWAnn6Wur9gC08hO0VtvAb0uiabvfSi4YOmsONIdgkt-Tzw4OJ_1W&amp;sig=Cg0ArKJSzKb4PP_3LrTj&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120871__zoneid%3D428__cb%3Ddb665f8896__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120871%2526value3%253D608%2526zone%253D428%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253Ddb665f8896%257Ch_value%253D30bd010ec489f6d11456623881%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.50279945626859%257Cbpf%253D0.7979797979798%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D428%2526url%253Dhttp://www.ti.com/product/tas2555%253FDCMP%253Dtas2555%2526HQS%253Dhpa-aap-lpaa-tas2555-bs-pf-tas2555-wwe"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/HPA_AIP_AUD_TAS2555_300x250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120871__zoneid=428__cb=db665f8896__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120871%26value3%3D608%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Ddb665f8896%7Ch_value%3D30bd010ec489f6d11456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.50279945626859%7Cbpf%3D0.7979797979798%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261904.125783650%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261904.125783650;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120871__zoneid=428__cb=db665f8896__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120871%26value3%3D608%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Ddb665f8896%7Ch_value%3D30bd010ec489f6d11456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.50279945626859%7Cbpf%3D0.7979797979798%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3D;ord=db665f8896?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_db665f8896" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lg(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(12)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <!-- store ad -->
+    <iframe class="sidebar-store-ad" scrolling="no" frameborder="0" align="top" marginwidth="0" marginheight="0" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/-search term-.html"></iframe>
+
+    <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="http://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/routerbot-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/">FCC Locks Down Router Firmware</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 89 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/detective-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/">Dr Noirimetla, Private Failure Investigator and the Mystery of Galileo’s Pillars</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 111 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/internet_radio_wrt54g-shot0008_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/">Frackers: Inside the Mind of the Junk Hacker</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 103 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/rect4423.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/">Hackaday Prize Worldwide: Dallas</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 11 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/utilitypole-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/">A Field Guide to the North American Utility Pole</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 115 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><label class="screen-reader-text" for="cat">Categories</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="33199679">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="23971598">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="24483654">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="78428">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="3923181">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="6310599">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="79">hardware</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="2708">how-to</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="10969055">laser hacks</option>
+	<option class="level-0" value="18020716">led hacks</option>
+	<option class="level-0" value="10626">lifehacks</option>
+	<option class="level-0" value="729674">linux hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">macs hacks</option>
+	<option class="level-0" value="2377605">major tom</option>
+	<option class="level-0" value="11284667">Medical hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">misc hacks</option>
+	<option class="level-0" value="18020730">multitouch hacks</option>
+	<option class="level-0" value="22652725">musical hacks</option>
+	<option class="level-0" value="18020722">netbook hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">news</option>
+	<option class="level-0" value="1861880">nintendo ds hacks</option>
+	<option class="level-0" value="114555425">nintendo gameboy hacks</option>
+	<option class="level-0" value="18020685">nintendo hacks</option>
+	<option class="level-0" value="4992726">nintendo wii hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="114556430">palm pre hacks</option>
+	<option class="level-0" value="245123">parts</option>
+	<option class="level-0" value="10969081">peripherals hacks</option>
+	<option class="level-0" value="16325149">phone hacks</option>
+	<option class="level-0" value="10969088">playstation hacks</option>
+	<option class="level-0" value="2060">podcasts</option>
+	<option class="level-0" value="10969096">portable audio hacks</option>
+	<option class="level-0" value="10969099">portable video hacks</option>
+	<option class="level-0" value="588444">psp hacks</option>
+	<option class="level-0" value="23971578">radio hacks</option>
+	<option class="level-0" value="47">rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">repair hacks</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="309">reviews</option>
+	<option class="level-0" value="10969101">robots hacks</option>
+	<option class="level-0" value="30302">roundup</option>
+	<option class="level-0" value="10969111">security hacks</option>
+	<option class="level-0" value="268522">slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">software hacks</option>
+	<option class="level-0" value="10969116">solar hacks</option>
+	<option class="level-0" value="10969121">tablet pcs hacks</option>
+	<option class="level-0" value="3075183">teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">tool hacks</option>
+	<option class="level-0" value="25277004">toy hacks</option>
+	<option class="level-0" value="10969134">transportation hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="3184456">video hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">weapons hacks</option>
+	<option class="level-0" value="12552193">wearable hacks</option>
+	<option class="level-0" value="39510952">Weekly roundup</option>
+	<option class="level-0" value="4891215">wireless hacks</option>
+	<option class="level-0" value="7079455">xbox hacks</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://hackaday.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/hacklet-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/">Hacklet 97 – Camera Projects</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/">Adding Spice to Your Workbench</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 41 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/foldinglaundry-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/">The Challenges of A Laundry Folding Robot</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 51 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/attiny45.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/">When Are 8 Bits More Than 32?</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 148 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/" class="recent-image">
+						<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/a32.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/">ARM Unveils New, High Efficency CPU</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 40 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1>				<ul id="recentcomments">
+											<li class="recentcomments">
+							DV82XL on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936731">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							Whatnot on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936730">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							DV82XL on <a href="http://hackaday.com/2016/02/27/trash-can-cnc-gets-a-stepper-upgrade/#comment-2936729">Trash Can CNC Gets a Stepper Upgrade</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://keithfromcanada.wordpress.com/" rel="external nofollow" class="url">keithfromcanada</a> on <a href="http://hackaday.com/2016/02/27/trash-can-cnc-gets-a-stepper-upgrade/#comment-2936719">Trash Can CNC Gets a Stepper Upgrade</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936717">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936716">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://localroger.com/" rel="external nofollow" class="url">localroger</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936714">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://localroger.com/" rel="external nofollow" class="url">localroger</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936711">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							Doug on <a href="http://hackaday.com/2016/02/26/passive-wifi-on-microwatts/#comment-2936706">Passive WiFi On Microwatts</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://the-biologist-is-in.blogspot.com/" rel="external nofollow" class="url">darren</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936703">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+										</ul>
+				</aside><aside id="hackadayfeed-2" class="widget widget-hackaday-feed"><h1 class="widget-title">Now on Hackaday.io</h1>
+			<ul>
+									<li><a href="http://www.hackaday.io/project/9775-StickScope">Alex Rich gave a skull to StickScope.</a></li>
+										<li><a href="http://www.hackaday.io/project/9636-DDR%20pad%20using%20Arduino%20Capacitive%20Sensors">wgoforth has updated the project titled DDR pad using Arduino Capacitive Sensors.</a></li>
+										<li><a href="http://www.hackaday.io/project/5507-XORYA%20-%20extremely%20low%20cost%20game%20console%20on%20PIC32">umbraerr0r404 gave a skull to XORYA - extremely low cost game console on PIC32.</a></li>
+										<li><a href="http://www.hackaday.io/project/9795/log/32835">Alexander Shabarshin has added a new log for NEDONAND homebrew computer.</a></li>
+										<li><a href="http://www.hackaday.io/project/129-Arduino%20-%20Home%20Automation%20Server">nuttakorn gave a skull to Arduino - Home Automation Server.</a></li>
+										<li><a href="http://www.hackaday.io/project/5861/log/32834">illwill has added a new log for Raspberry Pi Home Automation.</a></li>
+										<li><a href="http://www.hackaday.io/project/9876/log/32833">Jaime García has added a new log for Sunrise - DLP 3D Printer, printable..</a></li>
+										<li><a href="http://www.hackaday.io/project/5596-EM-Drive#j-discussion-48698">electronnja wrote a reply on EM-Drive.</a></li>
+										<li><a href="http://www.hackaday.io/project/9829-Linear%20CCD%20module#j-discussion-48697">Films4You wrote a comment on Linear CCD module.</a></li>
+										<li><a href="http://www.hackaday.io/project/9829-Linear%20CCD%20module">Films4You gave a skull to Linear CCD module.</a></li>
+						</ul>
+	</aside>
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id427] 160x600 */
+            OA_show(427);
+        </script><script language="JavaScript1.1" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ck(3).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_1220812279"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvsSEO3w2pDBF_EX3g3D5hfUdaIuNQvfnvd45BIxnfo8ltDVJXral051v0G3s3f-7hV-cpOuFaZjmfsI_EzxPT_aZiXQ6fW&amp;sig=Cg0ArKJSzMXiQTdJWXtr&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120875__zoneid%3D427__cb%3D7bbf265c8f__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120875%2526value3%253D641%2526zone%253D427%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%257Ccb%253D7bbf265c8f%257Ch_value%253D264f4184259aec751456623881%257Ch_crc%253D2518922424%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.15255948162842%257Cbpf%253D0.12758878725942%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D427%2526url%253Dhttp://www.ti.com/pwr-bms-mnp-bq76pl455aq1-bs-pf-bq76pl455aq1-wwe"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/PWR_BMS_MNP_BQ76PL455A-Q1_160x600_st.gif" alt="Advertisement" border="0" width="160" height="600" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120875__zoneid=427__cb=7bbf265c8f__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120875%26value3%3D641%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D7bbf265c8f%7Ch_value%3D264f4184259aec751456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261639.125919507%3Bsz%3D160x600%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261639.125919507;sz=160x600;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120875__zoneid=427__cb=7bbf265c8f__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120875%26value3%3D641%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D7bbf265c8f%7Ch_value%3D264f4184259aec751456623881%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.15255948162842%7Cbpf%3D0.12758878725942%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3D;ord=7bbf265c8f;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=160 HEIGHT=600 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_7bbf265c8f" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/lg(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<script type="text/javascript">
+(function() {
+window._pa = window._pa || {};
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5266e87c5dd5ca039c00002d.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})();
+window.onload=function(){
+_pa.track('category_0');
+_pa.track('zone_427');
+if ('us'!='cn') {
+_pa.track('geo_notChina');
+} else {
+_pa.track('geo_isChina');
+}
+}
+</script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/fc.php"></script><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(13)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+</div><!-- #secondary -->
+
+    </div><!-- #content -->
+
+</div><iframe src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="http://hackaday.com/" rel="home">
+            <img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141410"><a href="http://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io/">Hackaday.io</a></li>
+<li id="menu-item-141413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141413"><a href="http://store.hackaday.com/">Store</a></li>
+<li id="menu-item-141414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141414"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="http://hackaday.com/submit-a-tip/">Submit a tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackadaycom.wordpress.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="http://hackaday.com/contact-us/">Contact us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside>
+       <!-- Begin MailChimp Signup Form -->
+
+        <form role="subscribe" action="http://hackaday.us9.list-manage.com/subscribe/post?u=dfadb71b0b15629cef5abf016&amp;id=f37880df9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+                <span>Subscribe to newsletter</span>
+                <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required="">
+            </label>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfadb71b0b15629cef5abf016_f37880df9f" tabindex="-1" value=""></div>
+            <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+            </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+
+        <div class="site-info">
+            Copyright © 2016            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <br>Powered by <a href="https://vip.wordpress.com/" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/impression" id="hdTrack" class="trackImg" scale="0"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42734042-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-cc6zkdHuZwUDM"
+};
+</script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/quant.js"></script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-cc6zkdHuZwUDM.gif"
+style="display: none;" border="0" height="1" width="1"
+alt="Quantcast"/&gt;
+</noscript>
+
+<!-- wpcom_wp_footer -->
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/hackadaycom.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/hackadaycom.wordpress.com\/wp-login.php?action=logout&_wpnonce=9527f3c43d","homeURL":"http:\/\/hackaday.com\/","postID":"150438","gravDefault":"mystery","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(14)"></script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(15)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'4779443','blog_tz':'-8','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'4779443','v':'wpcom','tz':'-8','user_id':'0','post':'150438','subd':'hackadaycom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=4779443&v=wpcomvt&tz=-8&user_id=0&post=150438&subd=hackadaycom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdkRXFNdWdRL28yNk8rbmNjbWVqU35PYUcuJnlOQ3EmcVpVVis9T2dqY0ZHanpNQVt3eEFCL2QyMzMmS0xiSTMmR1YrW1B+bjYuPXRHPXdNRHBbW3lDQ1QtZUlzJi56eUtjYmp0R0E4X1plemU2T3puUHFUZUd2cCZ2SWNkL2ZKQWZ8W0EzMUxEJk9BZmxFVyZYV2RNQVpbN05DUCVFU0RZbm5LMEFiLTNNfEJjXXd+OWRZWV9SP0JFYkM4WUZzLjhrY1MyRVpLPTNCUjMrdTNwLFNwTjFTRnhdUXZvZFA='}]);
+_stq.push([ 'clickTrackerInit', '4779443', '150438' ]);
+	</script>
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/g.gif" id="wpstats" scale="0"><img src="./Logic Noise_05_ Filters and Drums _ Hackaday_files/saved_resource(16)" width="1" height="1" style="display: none;" scale="0"></body></html>

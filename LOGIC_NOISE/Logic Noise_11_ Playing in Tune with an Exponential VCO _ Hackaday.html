@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://hackaday.com/tag/logic-noise/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="en" class="js wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE">
+<meta name="viewport" content="width=960">
+<title>logic noise | Hackaday</title>
+<script async="" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/analytics.js"></script><script type="text/javascript" async="" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/5266e87c5dd5ca039c00002d.js"></script><script type="text/javascript" async="" src="http://tpc.googlesyndication.com/sodar/sbhK2lTE.js"></script><script type="text/javascript" async="" src="http://pagead2.googlesyndication.com/pagead/js/lidar.js"></script><script type="text/javascript" async="" src="http://tpc.googlesyndication.com/sodar/sbhK2lTE.js"></script><script type="text/javascript" async="" src="http://pagead2.googlesyndication.com/pagead/js/lidar.js"></script><script type="text/javascript" async="" src="http://tpc.googlesyndication.com/sodar/sbhK2lTE.js"></script><script type="text/javascript" async="" src="http://pagead2.googlesyndication.com/pagead/js/lidar.js"></script><script type="text/javascript" async="" src="http://tpc.googlesyndication.com/sodar/sbhK2lTE.js"></script><script type="text/javascript" async="" src="http://pagead2.googlesyndication.com/pagead/js/lidar.js"></script><script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://s0.wp.com/wp-content/themes/vip/hackaday-2/favicon.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://hackaday.com/xmlrpc.php">
+<link href="http://google.com/+hackaday" rel="publisher">
+
+<!--[if lt IE 9]>
+    <script src="https://s0.wp.com/wp-content/themes/vip/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+		<script src="https://r-login.wordpress.com/remote-login.php?action=js&amp;host=hackaday.com&amp;id=4779443&amp;t=1457141312&amp;back=http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Hackaday » Feed" href="http://hackaday.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Comments Feed" href="http://hackaday.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » logic noise Tag Feed" href="http://hackaday.com/tag/logic-noise/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel="stylesheet" id="all-css-0" href="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/hackaday.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(1)"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackadaycom.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress.com">
+<link rel="openid.server" href="http://hackadaycom.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://hackadaycom.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://hackaday.com/osd.xml" title="Hackaday">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Hackaday"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fresh hacks every day"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://hackaday.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4f3e6b6daa090af416a1ba595885efd1?s=16"><style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(2)">
+		
+<script src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/mpm6gph.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/l" media="all"><script>try{Typekit.load();}catch(e){}</script>
+<!-- Supplyframe Ads -->
+<!--<script type='text/javascript' src='http://ads.supplyframe.com/openads/www/delivery/spcjs.php?id=31&amp;block=1'></script>-->
+<script type="text/javascript">
+function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|468")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://ads.supplyframe.com/openads/www/delivery/spc.php":"http://ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+</script><script type="text/javascript" src="http://ads.supplyframe.com/openads/www/delivery/spc.php?zones=426%7C427%7C428%7C429%7C468&amp;source=&amp;r=4479345&amp;%3Bblock=1&amp;charset=UTF-8&amp;loc=http%3A//hackaday.com/tag/logic-noise/"></script><script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/fl.js"></script>
+
+
+<script src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(3)" id="cannedbanners_pixel"></script><script type="text/javascript" async="" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/tagjs"></script><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(4)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(5)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg(1)" width="1" height="1" border="0"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg(2)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(6)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg(3)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(7)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg(4)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(8)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/seg(5)" width="1" height="1" border="0"><img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/saved_resource(9)" width="1" height="1" border="0"></head>
+
+<body class="archive tag tag-logic-noise tag-324801702 mp6 customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+    <div id="leaderboard">
+        <script type="text/javascript">
+            /* [id426] 728x90 */
+            OA_show(426);
+        </script><script language="JavaScript1.1" src="https://ad.doubleclick.net/ddm/adj/N5744.1822344.HACKADAY.COM/B9275705.125874158;sz=728x90;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120894__zoneid=426__cb=aa0a2c4137__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120894%26value3%3D652%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Daa0a2c4137%7Ch_value%3D90ed14e11787ec0c1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3D;ord=aa0a2c4137;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2548866694"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvoJhdzRjy7exX0NxU2sbdUCTE44-840zFJnL4tlN_EWS2KaKjTmEgFxOSOpCzFciGZQbzLmcsGZex3sU4CfxZnWtbdJ-1w&amp;sig=Cg0ArKJSzFn68RpEGoqO&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120894__zoneid%3D426__cb%3Daa0a2c4137__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120894%2526value3%253D652%2526zone%253D426%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253Daa0a2c4137%257Ch_value%253D90ed14e11787ec0c1457141313%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.0035546492469244%257Cbpf%253D0.00000000046566128752523%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D426%2526url%253Dhttp://www.ti.com/epd-mcu-msp-captivate-bs-pf-fr2633-wwe"><img src="https://s0.2mdn.net/viewad/5167093/MCU_MSP_CapTIvate_Technology_728x90_st.gif" alt="Advertisement" border="0" width="728" height="90" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120894__zoneid=426__cb=aa0a2c4137__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120894%26value3%3D652%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Daa0a2c4137%7Ch_value%3D90ed14e11787ec0c1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9275705.125874158%3Bsz%3D728x90%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9275705.125874158;sz=728x90;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120894__zoneid=426__cb=aa0a2c4137__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120894%26value3%3D652%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Daa0a2c4137%7Ch_value%3D90ed14e11787ec0c1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3D;ord=aa0a2c4137;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=728 HEIGHT=90 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_aa0a2c4137" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.supplyframe.com/openads/www/delivery/lg.php?bannerid=120894&amp;campaignid=5711&amp;zoneid=426&amp;loc=1&amp;referer=http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F&amp;cb=aa0a2c4137" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="http://analytics.supplyframe.com/trackingservlet/impression/?action=adImpression&amp;&amp;value2=120894&amp;value3=652&amp;extra=contextualmatch=nolimitation|livetax=0|cookietax=413,190|cb=aa0a2c4137|h_value=90ed14e11787ec0c1457141313|h_crc=2485905944|geo=us|cnt=na|bp=0.0035546492469244|bpf=0.00000000046566128752523|cp=10|h_i=y&amp;zone=426" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <a class="skip-link screen-reader-text" href="http://hackaday.com/tag/logic-noise/#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="http://hackaday.com/" rel="home">
+                <img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+            </a>
+            <h1 class="site-title">
+                <a href="http://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu nav-menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="http://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="http://hackaday.io/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-97770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97770"><a href="http://store.hackaday.com/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Store</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="http://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="http://hackaday.com/about/">About</a></li>
+</ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">March 4, 2016</label><div class="calendar_table_wrap"><table id="wp-calendar">
+	<caption>March 2016</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://hackaday.com/2016/02/">« Feb</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td><a href="http://hackaday.com/2016/03/01/" aria-label="Posts published on March 1, 2016">1</a></td><td><a href="http://hackaday.com/2016/03/02/" aria-label="Posts published on March 2, 2016">2</a></td><td><a href="http://hackaday.com/2016/03/03/" aria-label="Posts published on March 3, 2016">3</a></td><td id="today"><a href="http://hackaday.com/2016/03/04/" aria-label="Posts published on March 4, 2016">4</a></td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <section id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            <header class="page-header">
+                <h1 class="page-title">
+                    logic noise                </h1>
+                            </header><!-- .page-header -->
+
+                                    
+            
+<article id="post-184632" class="post-184632 post type-post status-publish format-standard has-post-thumbnail hentry category-cons category-how-to category-musical-hacks tag-logic-noise tag-oscillators tag-performance-art">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2016/01/03/32c3-20-oscillators-in-20-minutes/" style="background-image: url(https://hackadaycom.files.wordpress.com/2016/01/twenty_oscillators-shot0007_featured.png?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2016/01/03/32c3-20-oscillators-in-20-minutes/" rel="bookmark">32C3: 20 Oscillators in 20 Minutes</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2016/01/03/" title="January 3, 2016 - 1:01 pm">January 3, 2016</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2016/01/03/32c3-20-oscillators-in-20-minutes/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                25 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>In terms of implausible stand-up comedy, [Darsha]’s <a href="https://media.ccc.de/v/32c3-7549-20_oscillators_in_20_minutes#video" target="_blank">“20 Oscillators in 20 Minutes” is pretty far out</a> there. First of all, she’s sitting down, with googly eyes on her multimeter, and five breadboards and a mess of 9V batteries laid out in front of her. “Has anybody built electronics before? Has anybody built electronics in front of this many people before? Yeah, so you’d better f**king be nice.” And she’s off!</p>
+<p><a href="https://hackadaycom.files.wordpress.com/2016/01/twenty_oscillators-shot0012.jpg" rel="attachment wp-att-184634" target="_blank"><img class="size-medium wp-image-184634 alignright" src="https://hackadaycom.files.wordpress.com/2016/01/twenty_oscillators-shot0012.jpg?w=800&amp;h=450" alt="twenty_oscillators-shot0012" width="400" height="225" originalw="400" originalh="225" src-orig="https://hackadaycom.files.wordpress.com/2016/01/twenty_oscillators-shot0012.jpg?w=400&amp;h=225" scale="2"></a>“Square waves are really good for your speakers.” And a few seconds later, a lub-dub beat-frequency oscillator filled the hall. And then there’s the stand-up clichés: “Anyone in the audience from Norway?!” And “Anyone know what chip I’m using here?” (The 555.) A heckler, or participant, shouts up “What are you doing?” She responds “Building this!” and shows a sketch of the basic layout.</p>
+<p>She baits the audience — “Do you want to ask me about duty cycles?” — and tells stories: “And then one time the solder fell in my lap and burned through my crappy jeggings. Who knows what jeggings are? Whooo!!” All the while the clicking gets louder and more complicated.</p>
+<p>Then there’s the suspense. “11 minutes left? Shit, I dunno if I’m going to make it this time!” She’s visibly panicked. A question: “How do you protect the outputs from overvoltage?” “I don’t. (pause, laughter) I use some filter caps and just, well, hope that you guys have good insurance.”</p>
+<p>Nearing the home stretch, there’s this quasi-rhythmic ticking and pulsing slowly building up in the background. She plugs in another capacitor, and the crowd spontaneously applauds. A little bit later, she shouts “Is it loud enough?” over the din and turns it down. At the end, the timing’s getting really tight, and she calls up someone to help from the audience.</p>
+<p>We won’t spoil it, naturally. You’ll just have to watch it run to the end. We laughed, we cried. It was better than Schroedinger’s cats.</p>
+<p>(We’d use <a href="http://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/">hex inverters</a>.)</p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/cons/" rel="category tag">cons</a>, <a href="http://hackaday.com/category/how-to/" rel="category tag">how-to</a>, <a href="http://hackaday.com/category/musical-hacks/" rel="category tag">musical hacks</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/oscillators/" rel="tag">oscillators</a>, <a href="http://hackaday.com/tag/performance-art/" rel="tag">performance art</a></span><meta itemprop="url" content="http://hackaday.com/2016/01/03/32c3-20-oscillators-in-20-minutes/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            
+<article id="post-175978" class="post-175978 post type-post status-publish format-standard has-post-thumbnail hentry category-hackaday-columns category-musical-hacks tag-dac tag-digital-to-analog-converter tag-logic-noise tag-r-2r tag-r2r tag-voltage-divider">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/11/logic-noise1-gold.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/" rel="bookmark">Logic Noise: Digital to Analog with an R-2R DAC</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/11/05/" title="November 5, 2015 - 10:01 am">November 5, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                20 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>Making sound with digital logic usually calls for&nbsp;a Digital to Analog converter. Building one can be very simple, and the sound quality out of an R-2R Ladder is actually pretty good.</p>
+<p>In the last edition of Logic Noise, we <a href="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/">built up a (relatively) simple VCO</a> — voltage-controlled oscillator — that had roughly one-volt-per-octave response. I even demonstrated it working mostly in tune with another synth’s keyboard.&nbsp;But what if you don’t have a control-voltage keyboard sitting around or you want to combine all of the logic-based circuits that we’ve been building with other circuits under voltage control? That’s where the&nbsp;digital to analog (DAC) voltage converter comes in.</p>
+<p> <a href="http://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/#more-175978" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: Digital to Analog with an R-2R DAC”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/hackaday-columns/" rel="category tag">Hackaday Columns</a>, <a href="http://hackaday.com/category/musical-hacks/" rel="category tag">musical hacks</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/dac/" rel="tag">dac</a>, <a href="http://hackaday.com/tag/digital-to-analog-converter/" rel="tag">digital to analog converter</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/r-2r/" rel="tag">r-2r</a>, <a href="http://hackaday.com/tag/r2r/" rel="tag">r2r</a>, <a href="http://hackaday.com/tag/voltage-divider/" rel="tag">voltage divider</a></span><meta itemprop="url" content="http://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            
+<article id="post-168273" class="post-168273 post type-post status-publish format-standard has-post-thumbnail hentry category-hackaday-columns tag-cmos tag-logic-noise tag-synthesizer tag-vco">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/01/logic-noise-blogview.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/" rel="bookmark">Logic Noise: Playing in Tune with an Exponential VCO</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/09/11/" title="September 11, 2015 - 10:00 am">September 11, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                15 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>Last session, we use the cheap and cheerful <a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">4046 Phase-locked Loop chip as a simple voltage-controlled oscillator (VCO)</a>. It was dead simple, in fact, because the chip has a VCO already built in. There’s one big drawback of the 4046’s VCO; the pitch changes linearly with the control voltage. Ideally, as we’ll discuss in the next sections, we’d like the frequency to be an exponential function of the control voltage (CV), and that’s going to mean a little bit of analog circuitry.</p>
+<p><a href="http://www.schmitzbits.de/vco4069.html" target="_blank">René Schmitz has a fantastic exponential VCO design</a> that’s almost a perfect fit for the Logic Noise series — it’s built with a minimum of parts, it’s a little bit rough around the edges, and at its core is a 4000-series CMOS chip that’s normally used for digital logic applications. The only drawback, from our perspective, is that it uses a dual (positive and negative) power supply. We’ll hack our way around that, and ignore some of René’s otherwise worthwhile refinements in the name of doing something truly quick and dirty. We’ll get 95% of the results with 70% of the work, although it’s easy enough to add on the rest if it strikes your fancy.</p>
+<p> <a href="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/#more-168273" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: Playing in Tune with an Exponential VCO”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/hackaday-columns/" rel="category tag">Hackaday Columns</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/cmos/" rel="tag">cmos</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/synthesizer/" rel="tag">synthesizer</a>, <a href="http://hackaday.com/tag/vco/" rel="tag">vco</a></span><meta itemprop="url" content="http://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            
+<article id="post-163851" class="post-163851 post type-post status-publish format-standard has-post-thumbnail hentry category-hackaday-columns tag-logic-noise tag-phase-locked-loop tag-vco tag-voltage-controlled-oscillator">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/01/logic-noise-blogview.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/" rel="bookmark">Logic Noise: 4046 Voltage-Controlled Oscillator, Part One</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/08/07/" title="August 7, 2015 - 7:01 am">August 7, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                14 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>In this session of Logic Noise, we’ll be playing around with the <a href="https://en.wikipedia.org/wiki/Voltage-controlled_oscillator" target="_blank">voltage-controlled oscillator</a> from a 4046 phase-locked loop chip, and using it to make “musical” pitches. It’s a lot of bang for the buck, and sets us on the path toward much more interesting circuits in the future. So watch the intro video right after the break, and we’ll dig straight in.</p>
+<p> <a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#more-163851" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: 4046 Voltage-Controlled Oscillator, Part One”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/hackaday-columns/" rel="category tag">Hackaday Columns</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/phase-locked-loop/" rel="tag">phase-locked loop</a>, <a href="http://hackaday.com/tag/vco/" rel="tag">vco</a>, <a href="http://hackaday.com/tag/voltage-controlled-oscillator/" rel="tag">voltage controlled oscillator</a></span><meta itemprop="url" content="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                    <div class="content-ads-holder">
+                        <script type="text/javascript">
+                            /* [id429] 300x250 */
+                            OA_show(429);
+                        </script><script language="JavaScript1.1" src="https://ad.doubleclick.net/ddm/adj/N5744.1822344.HACKADAY.COM/B9275705.125874396;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=429__cb=8bdacfd98d__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D8bdacfd98d%7Ch_value%3Db16ced1454f72abf1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128752458%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3D;ord=8bdacfd98d;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_855526235"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuWkQ_mM2O9kpcjmsPfGsDEjsvuvCqlARCSV_TfOL-WjudM8ZLApPNplHYYESkNMOfxY4YnKhTk1Fb26VJIqbL_B4ONehiz&amp;sig=Cg0ArKJSzL-oNTIEUe-s&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120895__zoneid%3D429__cb%3D8bdacfd98d__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120895%2526value3%253D652%2526zone%253D429%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253D8bdacfd98d%257Ch_value%253Db16ced1454f72abf1457141313%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D1%257Cbpf%253D0.00000000046566128752458%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D429%2526url%253Dhttp://www.ti.com/epd-mcu-msp-buildautomation-bs-whip-slay040-wwe"><img src="https://s0.2mdn.net/viewad/5167093/MCU_MSP_Building_Automation_300x250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=429__cb=8bdacfd98d__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D8bdacfd98d%7Ch_value%3Db16ced1454f72abf1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128752458%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9275705.125874396%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9275705.125874396;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=429__cb=8bdacfd98d__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D8bdacfd98d%7Ch_value%3Db16ced1454f72abf1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128752458%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3D;ord=8bdacfd98d;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_8bdacfd98d" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.supplyframe.com/openads/www/delivery/lg.php?bannerid=120895&amp;campaignid=5711&amp;zoneid=429&amp;loc=1&amp;referer=http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F&amp;cb=8bdacfd98d" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="http://analytics.supplyframe.com/trackingservlet/impression/?action=adImpression&amp;&amp;value2=120895&amp;value3=652&amp;extra=contextualmatch=nolimitation|livetax=0|cookietax=413,190|cb=8bdacfd98d|h_value=b16ced1454f72abf1457141313|h_crc=2485905944|geo=us|cnt=na|bp=1|bpf=0.00000000046577497436235|cp=10|h_i=y&amp;zone=429" width="0" height="0" alt="" style="display:none">
+
+                    </div>
+
+                
+                
+            
+            
+<article id="post-160389" class="post-160389 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-hardware category-misc-hacks category-slider tag-2031530 tag-cmos tag-logic-noise tag-mixer">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/07/02/logic-noise-ping-pong-stereo-mixers-and-more/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/01/logic-noise-blogview.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/07/02/logic-noise-ping-pong-stereo-mixers-and-more/" rel="bookmark">Logic Noise: Ping-pong Stereo, Mixers, and More</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/07/02/" title="July 2, 2015 - 7:01 am">July 2, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/07/02/logic-noise-ping-pong-stereo-mixers-and-more/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                14 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>So far on Logic Noise, we’ve <a href="http://hackaday.com/2015/02/17/logic-noise-8-bits-of-glorious-sounds/">built up a bunch</a> of <a href="http://hackaday.com/2015/04/10/logic-noise-more-cmos-cowbell/">sound-making voices</a> and played around with <a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/">sequencing them</a>. The few times that we’ve <a href="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/">combined voices together</a>, we’ve done so using the simplest possible passive mixer — a bunch of resistors. And while that can work, we’ve mostly just gotten lucky. In this session, we’ll take our system’s output a little bit more seriously and build up an active mixer and simple stereo headphone driver circuit.</p>
+<p>For this, we’ll need some kind of amplification, and our old friend, the 4069UB, will be doing all of the heavy lifting. Honestly, this week’s circuitry is just an elaboration of the buffer amplifiers and variable overdrive circuits we looked at before. To keep things interesting we’ll explore ping-pong stereo effects, and eventually (of course) put the panning under logic-level control, which is ridiculous and mostly a pretext to introduce another useful switch IC, the 4066 quad switch.</p>
+<p>At the very end of the article is a parts list for essentially everything we’ve done so far. If you’ve been following along and just want to make a one-time order from an electronics supply house, check it out.</p>
+<p><img class="alignleft size-medium wp-image-160765" src="https://hackadaycom.files.wordpress.com/2015/06/klangorium.jpg?w=800&amp;h=600" alt="klangorium" width="400" height="300" originalw="400" originalh="300" src-orig="https://hackadaycom.files.wordpress.com/2015/06/klangorium.jpg?w=400&amp;h=300" scale="2">If you’re wondering why the delay in putting out this issue of Logic Noise, it’s partly because I’ve built up a PCB that incorporates essentially everything we’ve done so far into a powerhouse of a quasi-modular Logic Noise demo — <a href="https://hackaday.io/project/6540-logic-noise-klangorium" target="_blank">The Klangorium</a>. The idea was to take the material from each Logic Noise column so far and build out the board that makes experimenting with each one easy.</p>
+<p>Everything’s open and documented, and it’s essentially modular so you can feel free to take as much or as little out of the project as you’d like. Maybe you’d like to hard-wire the cymbal circuit, or maybe you’d like to swap some of the parts around. Copy ours or build your own. If you do, let us know!</p>
+<p>OK, enough intro babble, let’s dig in.</p>
+<p> <a href="http://hackaday.com/2015/07/02/logic-noise-ping-pong-stereo-mixers-and-more/#more-160389" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: Ping-pong Stereo, Mixers, and More”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a>, <a href="http://hackaday.com/category/hardware/" rel="category tag">hardware</a>, <a href="http://hackaday.com/category/misc-hacks/" rel="category tag">misc hacks</a>, <a href="http://hackaday.com/category/slider/" rel="category tag">slider</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/4066/" rel="tag">4066</a>, <a href="http://hackaday.com/tag/cmos/" rel="tag">cmos</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/mixer/" rel="tag">mixer</a></span><meta itemprop="url" content="http://hackaday.com/2015/07/02/logic-noise-ping-pong-stereo-mixers-and-more/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            
+<article id="post-154374" class="post-154374 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-slider tag-3302466 tag-logic-noise tag-shift-register">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/02/logic-noise-asparagus.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/" rel="bookmark">Logic Noise: Taming the Wild Shift Register</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/05/04/" title="May 4, 2015 - 4:01 am">May 4, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                21 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>One of the best things about DIY synth building is that you can create devices that just don’t exist in the commercial marketplace. In this session, we’ll build a looper / sequencer the likes of which you may have never seen. And it’s groovy. Today we’ll also get back a little closer to the soul of the series. In this session, nothing is analog — this is pure Logic Noise.</p>
+<p>The shift register is the centerpiece chip this session, and a great device in its own right. We’ve got a lot of ground to cover, so watch the teaser video and then let’s get going.</p>
+<p> <a href="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/#more-154374" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: Taming the Wild Shift Register”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a>, <a href="http://hackaday.com/category/slider/" rel="category tag">slider</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/4015/" rel="tag">4015</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/shift-register/" rel="tag">shift register</a></span><meta itemprop="url" content="http://hackaday.com/2015/05/04/logic-noise-taming-the-wild-shift-register/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            
+<article id="post-153551" class="post-153551 post type-post status-publish format-standard has-post-thumbnail hentry category-digital-audio-hacks category-featured category-musical-hacks category-slider tag-cmos tag-logic-noise tag-sequencer tag-synthesizer">
+    <div class="entry-featured-image"><a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/" style="background-image: url(https://hackadaycom.files.wordpress.com/2015/02/logic-noise-tealish.jpg?w=800&amp;h=250)"></a></div>    <header class="entry-header">
+        <h1 class="entry-title"><a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/" rel="bookmark">Logic Noise: Sequencing in Silicon</a></h1>
+                <div class="entry-meta">
+            <span class="entry-date"><a href="http://hackaday.com/2015/04/24/" title="April 24, 2015 - 7:00 am">April 24, 2015</a></span> by <a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a>
+            <a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comments" class="comments-counts comments-counts-top"><span class="icon-hackaday icon-hackaday-comment"></span>
+                11 Comments            </a>
+        </div><!-- .entry-meta -->
+        
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <p>In this session of Logic Noise, we’ll combine a bunch of the modules we’ve made so far into an autonomous machine noise box. OK, at least we’ll start to sequence some of these sounds.</p>
+<p>A sequencer is at the heart of any drum box and the centerpiece of any “serious” modular synthesizer. Why? Because you just can’t tweak all those knobs and play notes and dance around at the same time. Or at least we can’t. So you gotta automate. Previously we did it with <a href="http://hackaday.com/2015/02/23/logic-noise-the-switching-sequencer/">switches</a>. This time we do it with logic pulses.</p>
+<p> <a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#more-153551" class="more-link">Continue reading <span class="screen-reader-text">“Logic Noise: Sequencing in Silicon”</span> <span class="meta-nav">→</span></a></p>
+
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/digital-audio-hacks/" rel="category tag">digital audio hacks</a>, <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a>, <a href="http://hackaday.com/category/musical-hacks/" rel="category tag">musical hacks</a>, <a href="http://hackaday.com/category/slider/" rel="category tag">slider</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/cmos/" rel="tag">cmos</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/sequencer/" rel="tag">sequencer</a>, <a href="http://hackaday.com/tag/synthesizer/" rel="tag">synthesizer</a></span><meta itemprop="url" content="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+                
+                
+            
+            	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text">Posts navigation</h1>
+		<div class="nav-links">
+
+						<div class="nav-previous"><a href="http://hackaday.com/tag/logic-noise/page/2/"><span class="meta-nav">←</span> Older posts</a></div>
+			
+			
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+        
+        </main><!-- #main -->
+    </section><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id428] 300x250 */
+            OA_show(428);
+        </script><script language="JavaScript1.1" src="https://ad.doubleclick.net/ddm/adj/N5744.1822344.HACKADAY.COM/B9275705.125874396;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=428__cb=3242eaf0c7__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D3242eaf0c7%7Ch_value%3D9e504c4207fa54091457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128757244%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3D;ord=3242eaf0c7;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_4114379133"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuSu9uBUiDBgK_NnM3GM0ELr_ES8v1MGVEci8Ne99NgS_QL5TlG0VzMjwV-_nxG1GhO0zH4QJtTRazOe9a37mpQWtxmHcPU&amp;sig=Cg0ArKJSzAeffz6k9KpI&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120895__zoneid%3D428__cb%3D3242eaf0c7__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120895%2526value3%253D652%2526zone%253D428%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253D3242eaf0c7%257Ch_value%253D9e504c4207fa54091457141313%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D1%257Cbpf%253D0.00000000046566128757244%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D428%2526url%253Dhttp://www.ti.com/epd-mcu-msp-fg6x-bs-pf-fg6626-wwe"><img src="https://s1.2mdn.net/viewad/5167093/MCU_MSP_MSP430FG6x_MCUs_300x250_st.jpg" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=428__cb=3242eaf0c7__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D3242eaf0c7%7Ch_value%3D9e504c4207fa54091457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128757244%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9275705.125874396%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9275705.125874396;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120895__zoneid=428__cb=3242eaf0c7__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120895%26value3%3D652%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D3242eaf0c7%7Ch_value%3D9e504c4207fa54091457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128757244%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3D;ord=3242eaf0c7;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_3242eaf0c7" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.supplyframe.com/openads/www/delivery/lg.php?bannerid=120895&amp;campaignid=5711&amp;zoneid=428&amp;loc=1&amp;referer=http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F&amp;cb=3242eaf0c7" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="http://analytics.supplyframe.com/trackingservlet/impression/?action=adImpression&amp;&amp;value2=120895&amp;value3=652&amp;extra=contextualmatch=nolimitation|livetax=0|cookietax=413,190|cb=3242eaf0c7|h_value=9e504c4207fa54091457141313|h_crc=2485905944|geo=us|cnt=na|bp=1|bpf=0.00000000046566128752458|cp=10|h_i=y&amp;zone=428" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <!-- store ad -->
+    <iframe class="sidebar-store-ad" scrolling="no" frameborder="0" align="top" marginwidth="0" marginheight="0" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/-search term-.html"></iframe>
+
+    <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="http://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/wiringboard-showingoff_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino/">Wiring was Arduino before Arduino</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 65 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/rotary-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine/">Broken Promises of the Wankel Engine</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 128 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/16766798111_0dca4198e9_k_d_featured_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing/">Getting it Right by Getting it Wrong: RepRap and the Evolution of 3D Printing</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 60 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/raspberry_pi_logosmall.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true/">Pi 3 Benchmarks: The Marketing Hype Is True</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 112 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/esp8266-color-ntsc-broadcast-thumb.gif" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick/">Color TV Broadcasts are ESP8266’s Newest Trick</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 31 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><label class="screen-reader-text" for="cat">Categories</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="33199679">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="23971598">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="24483654">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="78428">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="3923181">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="6310599">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="79">hardware</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="2708">how-to</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="10969055">laser hacks</option>
+	<option class="level-0" value="18020716">led hacks</option>
+	<option class="level-0" value="10626">lifehacks</option>
+	<option class="level-0" value="729674">linux hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">macs hacks</option>
+	<option class="level-0" value="2377605">major tom</option>
+	<option class="level-0" value="11284667">Medical hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">misc hacks</option>
+	<option class="level-0" value="18020730">multitouch hacks</option>
+	<option class="level-0" value="22652725">musical hacks</option>
+	<option class="level-0" value="18020722">netbook hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">news</option>
+	<option class="level-0" value="1861880">nintendo ds hacks</option>
+	<option class="level-0" value="114555425">nintendo gameboy hacks</option>
+	<option class="level-0" value="18020685">nintendo hacks</option>
+	<option class="level-0" value="4992726">nintendo wii hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="114556430">palm pre hacks</option>
+	<option class="level-0" value="245123">parts</option>
+	<option class="level-0" value="10969081">peripherals hacks</option>
+	<option class="level-0" value="16325149">phone hacks</option>
+	<option class="level-0" value="10969088">playstation hacks</option>
+	<option class="level-0" value="2060">podcasts</option>
+	<option class="level-0" value="10969096">portable audio hacks</option>
+	<option class="level-0" value="10969099">portable video hacks</option>
+	<option class="level-0" value="588444">psp hacks</option>
+	<option class="level-0" value="23971578">radio hacks</option>
+	<option class="level-0" value="47">rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">repair hacks</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="309">reviews</option>
+	<option class="level-0" value="10969101">robots hacks</option>
+	<option class="level-0" value="30302">roundup</option>
+	<option class="level-0" value="10969111">security hacks</option>
+	<option class="level-0" value="268522">slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">software hacks</option>
+	<option class="level-0" value="10969116">solar hacks</option>
+	<option class="level-0" value="10969121">tablet pcs hacks</option>
+	<option class="level-0" value="3075183">teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">tool hacks</option>
+	<option class="level-0" value="25277004">toy hacks</option>
+	<option class="level-0" value="10969134">transportation hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="3184456">video hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">weapons hacks</option>
+	<option class="level-0" value="12552193">wearable hacks</option>
+	<option class="level-0" value="39510952">Weekly roundup</option>
+	<option class="level-0" value="4891215">wireless hacks</option>
+	<option class="level-0" value="7079455">xbox hacks</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://hackaday.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/thumb19.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin/">Materials to Know: Acetal and Delrin</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 44 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/02/transforming-spice/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/02/transforming-spice/">Transforming Spice</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/02/transforming-spice//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 13 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/29/spice-power/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/29/spice-power/">Spice Power</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/29/spice-power//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/links-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016/">Hackaday Links: Leap Eve, 2016</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 3 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/" class="recent-image">
+						<img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/hacklet-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/">Hacklet 97 – Camera Projects</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 9 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1>				<ul id="recentcomments">
+											<li class="recentcomments">
+							<a href="http://ckcnc.wordpress.com/" rel="external nofollow" class="url">The Snob</a> on <a href="http://hackaday.com/2016/03/04/rescuing-the-worlds-first-preserved-railway/#comment-2944014">Rescuing The World’s First Preserved Railway</a>						</li>
+
+												<li class="recentcomments">
+							<a href="https://www.facebook.com/app_scoped_user_id/580919395/" rel="external nofollow" class="url">Todd Hubers</a> on <a href="http://hackaday.com/2016/03/04/start-your-day-the-arduino-way-with-this-iot-shower-controller/#comment-2944012">Start Your Day the Arduino Way with this IoT Shower Controller</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944010">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							<a href="https://hackaday.io/DainBramage" rel="external nofollow" class="url">DainBramage</a> on <a href="http://hackaday.com/2016/03/04/rescuing-the-worlds-first-preserved-railway/#comment-2944009">Rescuing The World’s First Preserved Railway</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944008">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							atomic3 on <a href="http://hackaday.com/2016/03/04/start-your-day-the-arduino-way-with-this-iot-shower-controller/#comment-2944005">Start Your Day the Arduino Way with this IoT Shower Controller</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.ackspace.nl/" rel="external nofollow" class="url">Prodigity</a> on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944004">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944003">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							John Holton on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944002">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+												<li class="recentcomments">
+							John Holton on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944000">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+										</ul>
+				</aside><aside id="hackadayfeed-2" class="widget widget-hackaday-feed"><h1 class="widget-title">Now on Hackaday.io</h1>
+			<ul>
+									<li><a href="http://www.hackaday.io/project/10008-quick-and-dirty-electric-mower">Ampeater has added a new project titled Quick and dirty electric mower.</a></li>
+										<li><a href="http://www.hackaday.io/project/5589-A%20Wireless%20I2C%20Bridge%20for%20Amateur%20Radio%20Use">J. M. Hopkins gave a skull to A Wireless I2C Bridge for Amateur Radio Use.</a></li>
+										<li><a href="http://www.hackaday.io/project/9762-K-9">Andrew Bills has updated components for the project titled K-9.</a></li>
+										<li><a href="http://www.hackaday.io/project/2335-Heater%20with%20PID%20Control#j-discussion-49281">J. M. Hopkins wrote a comment on Heater with PID Control.</a></li>
+										<li><a href="http://www.hackaday.io/project/8069-PiDP-11#j-discussion-49280">S.Edwards wrote a comment on PiDP-11.</a></li>
+										<li><a href="http://www.hackaday.io/project/8343/log/33153#j-discussion-49279">Tim Wilkinson wrote a comment on project log IMU troubles.</a></li>
+										<li><a href="http://www.hackaday.io/project/9941-The%20Razor%20E300%20Overvolt!#j-discussion-49278">Jack Laidlaw wrote a comment on The Razor E300 Overvolt!.</a></li>
+										<li><a href="http://www.hackaday.io/project/10007-Sonar%20Radar%20With%20Bluetooth">charles.fayal has updated details to Sonar Radar With Bluetooth.</a></li>
+										<li><a href="http://www.hackaday.io/project/8687-ESP8266%20web%20based%20%20temperature%20sensor#j-discussion-49277">Gary wrote a comment on ESP8266 web based  temperature sensor.</a></li>
+										<li><a href="http://www.hackaday.io/project/9941-The%20Razor%20E300%20Overvolt!">Jack Laidlaw gave a skull to The Razor E300 Overvolt!.</a></li>
+						</ul>
+	</aside>
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id427] 160x600 */
+            OA_show(427);
+        </script><script language="JavaScript1.1" src="https://ad.doubleclick.net/ddm/adj/N5744.1822344.HACKADAY.COM/B9275705.125872687;sz=160x600;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120896__zoneid=427__cb=d9dc136718__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120896%26value3%3D652%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Dd9dc136718%7Ch_value%3Da2aca741bd86ba4a1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3D;ord=d9dc136718;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2285538384"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuDaMSyuWrErhYOfDxzcCFNJbX_wBmVnkR9tYKUp3qPA4emRcUECOLrHs172wWwjIu-Mlr3UPrxXVrGQ_Z0mM9xAhIeBSaW&amp;sig=Cg0ArKJSzMd1IxOLzf-P&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120896__zoneid%3D427__cb%3Dd9dc136718__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120896%2526value3%253D652%2526zone%253D427%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253Dd9dc136718%257Ch_value%253Da2aca741bd86ba4a1457141313%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.0035546492469244%257Cbpf%253D0.00000000046566128752523%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D427%2526url%253Dhttp://www.ti.com/epd-mcu-msp-432-bs-evm-msp-exp432p401r-wwe"><img src="https://s0.2mdn.net/viewad/5167093/MCU_MSP_MSP432_Buy_LaunchPad_160x600_st.gif" alt="Advertisement" border="0" width="160" height="600" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120896__zoneid=427__cb=d9dc136718__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120896%26value3%3D652%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Dd9dc136718%7Ch_value%3Da2aca741bd86ba4a1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9275705.125872687%3Bsz%3D160x600%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9275705.125872687;sz=160x600;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120896__zoneid=427__cb=d9dc136718__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120896%26value3%3D652%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Dd9dc136718%7Ch_value%3Da2aca741bd86ba4a1457141313%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.0035546492469244%7Cbpf%3D0.00000000046566128752523%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3D;ord=d9dc136718;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=160 HEIGHT=600 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_d9dc136718" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.supplyframe.com/openads/www/delivery/lg.php?bannerid=120896&amp;campaignid=5711&amp;zoneid=427&amp;loc=1&amp;referer=http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F&amp;cb=d9dc136718" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<script type="text/javascript">
+(function() {
+window._pa = window._pa || {};
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5266e87c5dd5ca039c00002d.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})();
+window.onload=function(){
+_pa.track('category_0');
+_pa.track('zone_427');
+if ('us'!='cn') {
+_pa.track('geo_notChina');
+} else {
+_pa.track('geo_isChina');
+}
+}
+</script>
+<script type="text/javascript" src="http://ads.supplyframe.com/openads/www/delivery/fc.php?script=SupplyFrame:front:industry-tag&amp;rand=d9dc136718"></script><img src="http://analytics.supplyframe.com/trackingservlet/impression/?action=adImpression&amp;&amp;value2=120896&amp;value3=652&amp;extra=contextualmatch=nolimitation|livetax=0|cookietax=413,190|cb=d9dc136718|h_value=a2aca741bd86ba4a1457141313|h_crc=2485905944|geo=us|cnt=na|bp=1|bpf=0.00000000046566128757244|cp=10|h_i=y&amp;zone=427" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+</div><!-- #secondary -->
+
+    </div><!-- #content -->
+
+</div><iframe src="http://tpc.googlesyndication.com/sodar/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="http://tpc.googlesyndication.com/sodar/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="http://tpc.googlesyndication.com/sodar/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="http://tpc.googlesyndication.com/sodar/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="http://hackaday.com/" rel="home">
+            <img src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141410"><a href="http://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io/">Hackaday.io</a></li>
+<li id="menu-item-141413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141413"><a href="http://store.hackaday.com/">Store</a></li>
+<li id="menu-item-141414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141414"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="http://hackaday.com/submit-a-tip/">Submit a tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackadaycom.wordpress.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="http://hackaday.com/contact-us/">Contact us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside>
+       <!-- Begin MailChimp Signup Form -->
+
+        <form role="subscribe" action="http://hackaday.us9.list-manage.com/subscribe/post?u=dfadb71b0b15629cef5abf016&amp;id=f37880df9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+                <span>Subscribe to newsletter</span>
+                <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required="">
+            </label>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfadb71b0b15629cef5abf016_f37880df9f" tabindex="-1" value=""></div>
+            <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+            </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+
+        <div class="site-info">
+            Copyright © 2016            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <br>Powered by <a href="https://vip.wordpress.com/" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="http://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&amp;zone=HDay_tag&amp;extra=tag%3Dlogic+noise" id="hdTrack" class="trackImg" scale="0"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42734042-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-cc6zkdHuZwUDM"
+};
+</script>
+<script type="text/javascript" src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/quant.js"></script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-cc6zkdHuZwUDM.gif"
+style="display: none;" border="0" height="1" width="1"
+alt="Quantcast"/&gt;
+</noscript>
+
+<!-- wpcom_wp_footer -->
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"0","is_front_page":"0","is_archive":"1","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s1.wp.com/_static/??-eJyNzcEOgjAQBNAfctlICOFi/JZNKbBt2Va3Rfl7RS8mXprMbeZl8JHARMlWMjrF0W5sbHo2Tk/4U+XFrlZx44QLGU8j7dAeQGjjmTJHqSbqOUFg8TBFUxQmrr/TwMZXr92t2PvejDF/U39j7pz+5muBFMrMotjCgdzHAgmFPbPRN7iul3PXDV3fD0PrXoHGf2g="></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Logic Noise_11_ Playing in Tune with an Exponential VCO _ Hackaday_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'4779443','blog_tz':'-8','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'4779443','v':'wpcom','tz':'-8','user_id':'0','subd':'hackadaycom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=4779443&v=wpcomvt&tz=-8&user_id=0&subd=hackadaycom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtXRThKbHcwXTdETWI1alhvb1oseHImN101ZFpEakVpYjlQYVFLYzBaVHRtPz0wXS9bVlFpZ3c1Qn5UJSxILlJDYX50K09KY2FLfl9LcFhXTytnM112eSV2a3xVPS5DVCxHVDgsby93dSZfUGZLUDA5LFBHL1NheG9YeTFzfHVFZXl2aGx6bm8sZTFucVBiLXJdLFFSJjFXOG53JVIvJk9iLVFrT3RbZjNEQ2w0bkw3bi1CfEd0fkJbSVp4dmhMZGZyUjJvej1HSXJoVk9Ob0RaQ1hLekktK3hSVnk1ZC5bX0JOV0VjYkg4UGYyWltqfElLMy1oSEE9Wg=='}]);
+_stq.push([ 'clickTrackerInit', '4779443', '0' ]);
+	</script>
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<img src="http://pixel.wp.com/g.gif?blog=4779443&amp;v=wpcom&amp;tz=-8&amp;user_id=0&amp;subd=hackadaycom&amp;host=hackaday.com&amp;ref=&amp;rand=0.018235535360872746" id="wpstats"><img src="http://dynamic.cannedbanners.com/pixel/?pixelData=%7B%22window_location_pathname%22%3A%22%2Ftag%2Flogic-noise%2F%22%2C%22domain%22%3A%22hackaday.com%22%2C%22document_url%22%3A%22http%3A%2F%2Fhackaday.com%2Ftag%2Flogic-noise%2F%22%7D&amp;clientId=15&amp;campaignId=1091" width="1" height="1" style="display: none;"></body></html>

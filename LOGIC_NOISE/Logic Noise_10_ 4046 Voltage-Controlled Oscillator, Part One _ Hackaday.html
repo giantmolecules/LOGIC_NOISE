@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/Article" lang="en" class="js wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE">
+<meta name="viewport" content="width=960">
+<title>Logic Noise: 4046 Voltage-Controlled Oscillator, Part One | Hackaday</title>
+<script async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/analytics.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/5266e87c5dd5ca039c00002d.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lidar.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sbhK2lTE.js"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lidar.js"></script><script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://s0.wp.com/wp-content/themes/vip/hackaday-2/favicon.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://hackaday.com/xmlrpc.php">
+<link href="http://google.com/+hackaday" rel="publisher">
+
+<!--[if lt IE 9]>
+    <script src="https://s0.wp.com/wp-content/themes/vip/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+		<script src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Hackaday » Feed" href="http://hackaday.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Comments Feed" href="http://hackaday.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Logic Noise: 4046 Voltage-Controlled Oscillator, Part One Comments Feed" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel="stylesheet" id="all-css-0" href="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/hackaday.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackadaycom.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Fisher Price Bluetooth Speaker Hack" href="http://hackaday.com/2015/08/07/fisher-price-bluetooth-speaker-hack/">
+<link rel="next" title="Nolan Bushnell and Hackaday on the Latest Episode of The Tomorrow Show" href="http://hackaday.com/2015/08/07/nolan-bushnell-and-hackaday-on-the-latest-episode-of-the-tomorrow-show/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">
+<link rel="shortlink" href="http://wp.me/pk3lN-GCL">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F08%2F07%2Flogic-noise-4046-voltage-controlled-oscillator-part-one%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F08%2F07%2Flogic-noise-4046-voltage-controlled-oscillator-part-one%2F&amp;for=wpcom-auto-discovery"><link rel="openid.server" href="http://hackadaycom.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://hackadaycom.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://hackaday.com/osd.xml" title="Hackaday">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta property="og:title" content="Logic Noise: 4046 Voltage-Controlled Oscillator, Part One">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hackadaycom.files.wordpress.com/2015/01/logic-noise1-e1422989825897.jpg?w=600&amp;h=600">
+<meta property="og:url" content="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">
+<meta property="og:description" content="In this session of Logic Noise, we&#39;ll be playing around with the voltage-controlled oscillator from a 4046 phase-locked loop chip, and using it to make &quot;musical&quot; pitches. It&#39;s a lot of bang for the bu...">
+<meta property="og:site_name" content="Hackaday">
+
+<link rel="image_src" href="https://hackadaycom.files.wordpress.com/2015/01/logic-noise1-e1422989825897.jpg?w=600&amp;h=600">
+<meta itemprop="name" content="Logic Noise: 4046 Voltage-Controlled Oscillator, Part One">
+<meta itemprop="description" content="In this session of Logic Noise, we&#39;ll be playing around with the voltage-controlled oscillator from a 4046 phase-locked loop chip, and using it to make &quot;musical&quot; pitches. It&#39;s a lot of bang for the bu...">
+<meta itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/01/logic-noise1-e1422989825897.jpg?w=600&amp;h=600">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hackaday">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Hackaday"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fresh hacks every day"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://hackaday.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4f3e6b6daa090af416a1ba595885efd1?s=16"><style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(2)">
+		
+<script src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/mpm6gph.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/l" media="all"><script>try{Typekit.load();}catch(e){}</script>
+<!-- Supplyframe Ads -->
+<!--<script type='text/javascript' src='http://ads.supplyframe.com/openads/www/delivery/spcjs.php?id=31&amp;block=1'></script>-->
+<script type="text/javascript">
+function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|468")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://ads.supplyframe.com/openads/www/delivery/spc.php":"http://ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+</script><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/spc.php"></script><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/fl.js"></script>
+
+
+<script src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(3)" id="cannedbanners_pixel"></script><script type="text/javascript" async="" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/tagjs"></script><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg(1)" width="1" height="1" border="0" scale="0"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg(2)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(6)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg(3)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(7)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(8)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/seg(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(9)" width="1" height="1" border="0" scale="0"></head>
+
+<body class="single single-post postid-163851 single-format-standard mp6 customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+    <div id="leaderboard">
+        <script type="text/javascript">
+            /* [id426] 728x90 */
+            OA_show(426);
+        </script><script language="JavaScript1.1" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ck.php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_1148329588"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvLGg5zMkoui3z8qMvIiCPuInw_vnF6k7w9Am2ZTSswYTzpb5C_Jk14e-FryopKHSUepOouY-uUgcIzQbzq7I2J2C5cBvmw&amp;sig=Cg0ArKJSzP7Y_QRLrZFQ&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120879__zoneid%3D426__cb%3D9c46191fab__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120879%2526value3%253D771%2526zone%253D426%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253D9c46191fab%257Ch_value%253D38915f5b49674c501457141325%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.027548535842336%257Cbpf%253D0.0000000004656613581586%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D426%2526url%253Dhttp://www.ti.com/sva-sds-ace-dp83867-bs-pf-dp83867-wwe"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/SVASIG_SDS_ACE_DP83867_Cord_728x90_st.gif" alt="Advertisement" border="0" width="728" height="90" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120879__zoneid=426__cb=9c46191fab__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120879%26value3%3D771%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D9c46191fab%7Ch_value%3D38915f5b49674c501457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.027548535842336%7Cbpf%3D0.0000000004656613581586%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261632.125903794%3Bsz%3D728x90%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261632.125903794;sz=728x90;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120879__zoneid=426__cb=9c46191fab__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120879%26value3%3D771%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D9c46191fab%7Ch_value%3D38915f5b49674c501457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.027548535842336%7Cbpf%3D0.0000000004656613581586%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3D;ord=9c46191fab?" BORDER=0 WIDTH=728 HEIGHT=90 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_9c46191fab" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(10)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <a class="skip-link screen-reader-text" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="http://hackaday.com/" rel="home">
+                <img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+            </a>
+            <h1 class="site-title">
+                <a href="http://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu nav-menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="http://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="http://hackaday.io/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-97770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97770"><a href="http://store.hackaday.com/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Store</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="http://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="http://hackaday.com/about/">About</a></li>
+</ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">March 4, 2016</label><div class="calendar_table_wrap"><table id="wp-calendar">
+	<caption>August 2015</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://hackaday.com/2015/07/">« Jul</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://hackaday.com/2015/09/">Sep »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td><a href="http://hackaday.com/2015/08/01/" aria-label="Posts published on August 1, 2015">1</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/08/02/" aria-label="Posts published on August 2, 2015">2</a></td><td><a href="http://hackaday.com/2015/08/03/" aria-label="Posts published on August 3, 2015">3</a></td><td><a href="http://hackaday.com/2015/08/04/" aria-label="Posts published on August 4, 2015">4</a></td><td><a href="http://hackaday.com/2015/08/05/" aria-label="Posts published on August 5, 2015">5</a></td><td><a href="http://hackaday.com/2015/08/06/" aria-label="Posts published on August 6, 2015">6</a></td><td><a href="http://hackaday.com/2015/08/07/" aria-label="Posts published on August 7, 2015">7</a></td><td><a href="http://hackaday.com/2015/08/08/" aria-label="Posts published on August 8, 2015">8</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/08/09/" aria-label="Posts published on August 9, 2015">9</a></td><td><a href="http://hackaday.com/2015/08/10/" aria-label="Posts published on August 10, 2015">10</a></td><td><a href="http://hackaday.com/2015/08/11/" aria-label="Posts published on August 11, 2015">11</a></td><td><a href="http://hackaday.com/2015/08/12/" aria-label="Posts published on August 12, 2015">12</a></td><td><a href="http://hackaday.com/2015/08/13/" aria-label="Posts published on August 13, 2015">13</a></td><td><a href="http://hackaday.com/2015/08/14/" aria-label="Posts published on August 14, 2015">14</a></td><td><a href="http://hackaday.com/2015/08/15/" aria-label="Posts published on August 15, 2015">15</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/08/16/" aria-label="Posts published on August 16, 2015">16</a></td><td><a href="http://hackaday.com/2015/08/17/" aria-label="Posts published on August 17, 2015">17</a></td><td><a href="http://hackaday.com/2015/08/18/" aria-label="Posts published on August 18, 2015">18</a></td><td><a href="http://hackaday.com/2015/08/19/" aria-label="Posts published on August 19, 2015">19</a></td><td><a href="http://hackaday.com/2015/08/20/" aria-label="Posts published on August 20, 2015">20</a></td><td><a href="http://hackaday.com/2015/08/21/" aria-label="Posts published on August 21, 2015">21</a></td><td><a href="http://hackaday.com/2015/08/22/" aria-label="Posts published on August 22, 2015">22</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/08/23/" aria-label="Posts published on August 23, 2015">23</a></td><td><a href="http://hackaday.com/2015/08/24/" aria-label="Posts published on August 24, 2015">24</a></td><td><a href="http://hackaday.com/2015/08/25/" aria-label="Posts published on August 25, 2015">25</a></td><td><a href="http://hackaday.com/2015/08/26/" aria-label="Posts published on August 26, 2015">26</a></td><td><a href="http://hackaday.com/2015/08/27/" aria-label="Posts published on August 27, 2015">27</a></td><td><a href="http://hackaday.com/2015/08/28/" aria-label="Posts published on August 28, 2015">28</a></td><td><a href="http://hackaday.com/2015/08/29/" aria-label="Posts published on August 29, 2015">29</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/08/30/" aria-label="Posts published on August 30, 2015">30</a></td><td><a href="http://hackaday.com/2015/08/31/" aria-label="Posts published on August 31, 2015">31</a></td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            
+<article itemscope="" itemtype="http://schema.org/Article" id="post-163851" class="post-163851 post type-post status-publish format-standard has-post-thumbnail hentry category-hackaday-columns tag-logic-noise tag-phase-locked-loop tag-vco tag-voltage-controlled-oscillator">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">Logic Noise: 4046 Voltage-Controlled Oscillator, Part One</h1>
+        <div class="entry-meta">
+            <a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comments" class="comments-counts"><span class="icon-hackaday icon-hackaday-comment"></span>
+                14 Comments            </a>
+            <ul class="meta-authors vcard author">
+                <li>by:</li>
+                <span class="fn"><a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a></span>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-meta entry-meta-last">
+            <span class="entry-date published updated" itemprop="datePublished" content="August 7, 2015"><a href="http://hackaday.com/2015/08/07/" title="August 7, 2015 - 7:01 am">August 7, 2015</a></span>
+            <ul class="share-post">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackaday.com%2F2015%2F08%2F07%2Flogic-noise-4046-voltage-controlled-oscillator-part-one%2F" target="_blank"><span class="icon-hackaday icon-hackaday-facebook"></span></a></li>
+               <li><a href="https://twitter.com/intent/tweet?text=Logic+Noise%3A+4046+Voltage-Controlled+Oscillator%2C+Part+One%20via%20@hackaday&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F08%2F07%2Flogic-noise-4046-voltage-controlled-oscillator-part-one%2F" target="_blank"><span class="icon-hackaday icon-hackaday-twitter"></span></a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fhackaday.com%2F2015%2F08%2F07%2Flogic-noise-4046-voltage-controlled-oscillator-part-one%2F&amp;h1=en-US" target="_blank"><span class="icon-hackaday icon-hackaday-google"></span></a></li>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-featured-image"><img itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/01/logic-noise1-e1422989825897.jpg?w=600&amp;h=600" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/logic-noise.jpg" alt="" originalw="800" width="800" height="412" src-orig="https://hackadaycom.files.wordpress.com/2015/01/logic-noise.jpg?w=800" scale="2"></div>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content" itemprop="articleBody">
+        <p>In this session of Logic Noise, we’ll be playing around with the <a href="https://en.wikipedia.org/wiki/Voltage-controlled_oscillator" target="_blank">voltage-controlled oscillator</a> from a 4046 phase-locked loop chip, and using it to make “musical” pitches. It’s a lot of bang for the buck, and sets us on the path toward much more interesting circuits in the future. So watch the intro video right after the break, and we’ll dig straight in.</p>
+<p><span id="more-163851"></span></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ndFktKDXIDI.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>4046 Phase-Locked Loop</h2>
+<p>The 4046 Phase-locked Loop (PLL) chip is a fantastic chip to experiment around with. In fact, it’s so versatile that we’ll spend the next three sessions exploring it. And still, we’ll only scratch the surface. Hackaday’s own <a href="http://hackaday.com/2011/06/21/pll-101/">Bil Herd is also in love with the 4046</a>, and we’ve posted up <a href="http://hackaday.com/2012/02/15/intro-to-phase-locked-loops/">tutorials on using it before</a>. We won’t be using any of the intended functionality of the chips here, so check those links out when you’re done making bleepy-bloopy sounds.</p>
+<p>PLL’s are sweet circuits. In normal use, you put in a waveform with a given frequency, and the PLL outputs a square wave that’s synced to the input, but at a higher frequency. It works by having a voltage-controlled oscillator (VCO) inside, and driving the VCO with a voltage signal that depends on the frequency difference between the internal VCO and the external signal. So far so good, by changing the voltage of the internal VCO depending on how out of sync it is, you can sync up the internal and external waveforms.</p>
+<p>The trick to getting frequency multiplication is to divide-down the internal VCO’s output frequency, say by four, and then sync that divided-down result to the input. When the one-fourth speed VCO signal is synced up to the input, the straight VCO signal is running four times as fast as the input. Voilá, a frequency multiplier.</p>
+<h2>Simplest VCO</h2>
+<p>That’s all very clever, but for this session, we’ll just be using the built-in VCO. It’s a quick-and-dirty introduction into the world of voltage control, which has been what’s made the modern synthesizer work since at least the 1960’s.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/4AYjbMjtYBA.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>To use the 4046’s VCO, we’ll only be using a few of its 16 pins. The VCO has an inhibit pin, pin 5, that we need to connect to ground, along with the usual VCC and GND pins. The voltage input for the VCO is on pin 9, and the output is on pin 4. And finally, the frequency range is controlled by selecting the capacitor on pins 6 and 7, as well as the frequency (and optionally offset) resistors on pins 11 and 12, respectively.</p>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/simple_vco-sch.png" target="_blank"><img class="alignleft size-medium wp-image-163862" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/simple_vco-sch.png" alt="simple_vco.sch" width="400" height="257" originalw="400" originalh="257" src-orig="https://hackadaycom.files.wordpress.com/2015/07/simple_vco-sch.png?w=400&amp;h=257" scale="2"></a>As you can see from the schematic here, it’s a no-brainer. A capacitor of 10nF and a frequency-selection resistor of 100K works just great. Since the product of these two controls the center frequency, you could also use a 100nF (0.1uF) cap and a 10K resistor. According to the datasheet, any value resistor between 10K and 1MOhm works just fine. You can also use a 100K pot here if you’d like to adjust the center frequency later.</p>
+<p>There’s an extra (optional) complication with the offset resistor (R2). Adding a resistor to ground here shifts the whole frequency range upwards, which is nice if you’d like the minimum frequency to be something other than zero. The offset resistor has to be larger than the frequency-selection resistor above, but otherwise can be infinite. This would be a great place for a 1M or 10M potentiometer. We’re just skipping over it for now.</p>
+<p>And that’s it. Two external parts, a resistor and a capacitor, and you’ve got a voltage-controlled square wave oscillator. Now all we need is a voltage source to control it. First up, a potentiometer hooked up as a voltage divider. One end to VCC and the other to GND, with the middle (wiper) terminal to the VCO’s voltage input. It’s just about the same functionality as the resistor-tuned oscillator from before, though.</p>
+<h2>Voltage Control</h2>
+<p>The fun in putting synth parts under voltage control is making up wacky sources of control voltage. Turning a knob with your fingers is great, but handing that duty over to some circuitry is better. And that, in a nutshell, is what <a href="https://en.wikipedia.org/wiki/Moog_synthesizer" target="_blank">brought the synthesizer out of the laboratory</a> and gave birth to the modern synthesizer as musical instrument. In this video, we use an intermittent voltage source — a piece of VHS tape and a crocodile clip used as a voltage divider — to illustrate some of the things that you can do with a VCO that you can’t do with our resistor-controlled version.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/5wiU7z15HWI.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>You’ll notice that the voltage input is very sensitive. In fact, when it’s not connected to anything, it’s changing frequency wildly because it’s picking up power-line interference. We think the noise is great, but if you’re doing something musical, you’d have to tune up all your other instruments to the power-line frequency. In the video, we solve this problem two ways.</p>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/vc_one-sch.png" target="_blank"><img class="alignleft size-medium wp-image-163863" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/vc_one-sch.png" alt="vc_one.sch" width="400" height="223" originalw="400" originalh="223" src-orig="https://hackadaycom.files.wordpress.com/2015/07/vc_one-sch.png?w=400&amp;h=223" scale="2"></a>First, adding a capacitor to the voltage input of the VCO holds on to the last voltage for a while. This lets the last note continue to play even after removing our finger from the keys, or the croco clip from the VHS tape, as it were. Second, adding a resistor to ground, ideally one with fairly large value so that it doesn’t drag the control voltage level down, silences the VCO in-between actions. And mixing the two results in a pitch that slowly decays. (Whether that’s useful or not depends on you.)</p>
+<p>Portamento, the sliding of pitch between notes, is also achievable with just a capacitor, although the speed will depend on the output impedance of whatever you’re using as your voltage source, so it’s not entirely reliable. There are better portamento circuits out there, but they’ll probably involve op-amps.</p>
+<p>As a quick aside, you can make a rudimentary keyboard with just a bunch of push buttons and voltage sources. Indeed, a great device to have around is a set of buttons connected to an equal number of potentiometers that are configured as voltage dividers as we did in the first demo. Being able to tune each key independently makes up for not having very many available, and means you can play in whatever scale you’d like.</p>
+<h2>Voltage Controlled Sirens</h2>
+<p>Now let’s do something that we absolutely couldn’t do with a resistor as the control element: control the frequency of the 4046’s oscillator from another oscillator.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/FTLAaVgY2m8.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/vco_vco-sch.png" target="_blank"><img class="alignleft size-medium wp-image-163865" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/vco_vco-sch.png" alt="vco_vco.sch" width="400" height="182" originalw="400" originalh="182" src-orig="https://hackadaycom.files.wordpress.com/2015/07/vco_vco-sch.png?w=400&amp;h=182" scale="2"></a>To do that, we’ll build up an oscillator using our old friend the 40106. Use a nice large value capacitor (10uF is good) so that it’s got a nice slow swing to it. And instead of tapping the output, where there’s a full-range square wave, we’ll tap the input which has an analog triangle wave that bounces handily between the 40106’s hysteresis voltage thresholds.</p>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/scope_2.png" target="_blank"><img class="size-medium wp-image-163864 alignright" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/scope_2.png" alt="scope_2" width="400" height="276" originalw="400" originalh="276" src-orig="https://hackadaycom.files.wordpress.com/2015/07/scope_2.png?w=400&amp;h=276" scale="2"></a>This is a simple and perfect combo. The 4046’s voltage input doesn’t draw much current at all, so we can connect it up unbuffered to the 40106’s triangle wave / input without changing the frequency. The triangle wave also doesn’t swing full-range, which is great since the 4046 will stop oscillating entirely below around 1.4V. And with one knob, you can create a slow siren-like effect or ramp the modulating triangle wave up to audio levels, and play around with crazy frequency-modulation (FM) type sounds.</p>
+<p>Because continuous voltage sources get monotonous pretty quickly, we add a pushbutton at the end of the video. This also lets us show off the voltage-hold and voltage-decay tricks that we used before. Plus, adding a switch and a capacitor leads directly into sample and hold circuits, and that’s the topic of the next section.</p>
+<h2>Sample and Hold</h2>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/3y97KR0U9SA.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>&nbsp;</p>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/sample_and_hold-sch.png" target="_blank"><img class="alignleft wp-image-163869 size-medium" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sample_and_hold-sch.png" alt="sample_and_hold.sch" width="400" height="292" originalw="400" originalh="292" src-orig="https://hackadaycom.files.wordpress.com/2015/07/sample_and_hold-sch.png?w=400&amp;h=292" scale="2"></a>Sample and hold (S&amp;H) is a fancy electronic engineer’s term for putting a capacitor and a switch into a circuit, but its a cool and useful effect to have in your synthesizer arsenal. Indeed, synthesizers going back at least to the original Moog modular had a S&amp;H circuit on board. Why? It’s a cheap and cheerful source of almost-randomness.</p>
+<p>So we’ll hook up a second clock-rate oscillator on the 40106 chip, this time using the square wave output. Replacing our pushbutton with a 4066 digital switch puts the S&amp;H under oscillator control. Capacitor C2 charges up to the oscillator when the 4066 switch closes, and holds when it’s open. For now, the time that the circuit samples (the button switch is closed) is the same as the amount of time that the circuit holds (switch is open). For now, we’ll stick to the basics.</p>
+<p>There are actually three variants of the circuit here that are interesting. The first is the direct sample and hold circuit. When the sample and hold oscillator is high, and the switch is closed, the VCO tracks the pitch oscillator, and when the S&amp;H oscillator goes low, the pitch holds at its previous level, just as when we were doing it by hand.</p>
+<p>Another neat effect is to substitute a pulldown resistor (say, 100K again) for the S&amp;H capacitor (C2). Now when the button isn’t pressed, the voltage gets pulled down and the VCO goes silent. This makes for a nice staccato sound that only plays 50% of the time, wherein the pitch tracks the pitch oscillator.</p>
+<h3>S&amp;H Behavior</h3>
+<p><a href="https://hackadaycom.files.wordpress.com/2015/07/sample_and_hold1.png" target="_blank"><img class="aligncenter wp-image-163868 size-large" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/sample_and_hold1.png" alt="sample_and_hold" width="800" height="184" originalw="800" originalh="184" src-orig="https://hackadaycom.files.wordpress.com/2015/07/sample_and_hold1.png?w=800&amp;h=184" scale="2"></a></p>
+<p>If you run the control voltage oscillator pretty fast (as in the first pane)&nbsp;and then sample it relatively slowly, it’s hard to predict what the sampled voltage is going to end up at. This is because the control voltage oscillator changes a lot over the sampling period. Sampling slowly from a quickly-varying clock source like this is a great trick to have.</p>
+<p>If you do the opposite, sample frequently from a slowly-moving source voltage, you get this stair-step effect that traces out the general contour of the triangle wave, but holding discrete pitches along the way, as seen in the center pane above.</p>
+<p>In the in-between zone, where both oscillators are running at comparable speeds, the sampling takes place at more or less similar places in the control wave. In the third pane above, you can just make out the capacitor moving with the control voltage when the switch is closed, but it all blends together. We’re really big fans of the region between total order and total chaos, so this is where we like to play.</p>
+<p>In the real world, the S&amp;H circuitry on things like analog-to-digital converters use very short sample pulses and tiny, low-leakage capacitors that charge up quickly so that it’s more like taking a snapshot of the voltage at a given instant. They also use special digital switches that turn on and off very rapidly and have extremely high impedance when they’re switched off. If you’d like to make something similar with our setup, you can convert the square wave into a pulse wave as we have done with the cymbal and drum circuits before. Play around with different capacitor values to lengthen or shorten the pulse length.</p>
+<h2>Next Session</h2>
+<p>We’re having a great time making pitched noises with our VCO. But we’re still not playing scales. To take the next step toward musicality, we’ll need to work on voltage scaling. It’s a lot easier to make music when a fixed voltage increment gives you a fixed scale step. Right now, that’s not the case, and we’ll get into the whole mess next time. It’s worth it.</p>
+<p>But for now, enjoy the crazy voltage-controlled tunes / noises.</p>
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/hackaday-columns/" rel="category tag">Hackaday Columns</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/phase-locked-loop/" rel="tag">phase-locked loop</a>, <a href="http://hackaday.com/tag/vco/" rel="tag">vco</a>, <a href="http://hackaday.com/tag/voltage-controlled-oscillator/" rel="tag">voltage controlled oscillator</a></span><meta itemprop="url" content="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+            	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://hackaday.com/2015/08/07/fisher-price-bluetooth-speaker-hack/" rel="prev"><span class="meta-nav">←</span>&nbsp;Fisher Price Bluetooth Speaker Hack</a></div><div class="nav-next"><a href="http://hackaday.com/2015/08/07/nolan-bushnell-and-hackaday-on-the-latest-episode-of-the-tomorrow-show/" rel="next">Nolan Bushnell and Hackaday on the Latest Episode of The Tomorrow Show&nbsp;<span class="meta-nav">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+            <div class="content-ads-holder">
+                <script type="text/javascript">
+                    /* [id429] 300x250 */
+                    OA_show(429);
+                </script><script language="JavaScript1.1" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ck(1).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_751102792"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvlZFbviUPOfEARGAneUN95DVzxxvAH6PHa8HdSw3nqy4hoDXZDSDJohn6LeEMeNLohaYNlHJ9gHCOmAz4A4-2P1GCHWbrJ&amp;sig=Cg0ArKJSzFIpCBdeEru9&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120880__zoneid%3D429__cb%3D40b26f273e__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120880%2526value3%253D771%2526zone%253D429%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253D40b26f273e%257Ch_value%253D9f88ae88fa6d2cd21457141325%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D1%257Cbpf%253D0.00000000046566128763764%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D429%2526url%253Dhttp://www.ti.com/sva-sds-fcp-lmx25x2-bs-pf-lmx2582-wwe"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/SVASIG_SDS_FCP_LMX2582_300x250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120880__zoneid=429__cb=40b26f273e__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120880%26value3%3D771%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D40b26f273e%7Ch_value%3D9f88ae88fa6d2cd21457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128763764%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261632.125903795%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261632.125903795;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120880__zoneid=429__cb=40b26f273e__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120880%26value3%3D771%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D40b26f273e%7Ch_value%3D9f88ae88fa6d2cd21457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.00000000046566128763764%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3D;ord=40b26f273e?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_40b26f273e" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lg(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(11)" width="0" height="0" alt="" style="display:none">
+
+            </div>
+
+            
+<div id="comments" class="comments-area">
+
+    
+            <h2 class="comments-title">
+            14 thoughts on “<span>Logic Noise: 4046 Voltage-Controlled Oscillator, Part One</span>”        </h2>
+
+        
+        <ol class="comment-list">
+            	<li id="comment-2671516" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2671516" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Roel</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671516">
+						<time datetime="2015-08-07T07:37:36+00:00">
+							August 7, 2015 at 7:37 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Wicked! I love this series a lot!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671516"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671516&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671516&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671516#respond" onclick="return addComment.moveForm( &quot;div-comment-2671516&quot;, &quot;2671516&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Roel">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2671521" class="comment byuser comment-author-arachnidster odd alt thread-odd thread-alt depth-1 parent  highlander-comment">
+		<article id="div-comment-2671521" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">arachnidster</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671521">
+						<time datetime="2015-08-07T07:47:24+00:00">
+							August 7, 2015 at 7:47 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I’m really enjoying the series too. I’m wondering, in fact, if anyone’s going to put together a kit with PCBs and parts for all the circuits in the series so far – so you can have a really cheap, ‘hack modular synth’.</p>
+<p>I’m curious, though, why use the 4046’s LDO instead of just making one with a comparator and a ramp generator?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671521"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671521&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671521&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671521#respond" onclick="return addComment.moveForm( &quot;div-comment-2671521&quot;, &quot;2671521&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to arachnidster">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2671571" class="comment byuser comment-author-mikehackaday comment-author-is-site-member even depth-2 parent  highlander-comment">
+		<article id="div-comment-2671571" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://jumptuck.com/" rel="external nofollow" class="url">Mike Szczys</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671571">
+						<time datetime="2015-08-07T09:10:38+00:00">
+							August 7, 2015 at 9:10 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p><a href="https://hackaday.io/project/6540-logic-noise-klangorium" rel="nofollow" target="_blank">https://hackaday.io/project/6540-logic-noise-klangorium</a></p>
+<p><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/4407741435675790858.jpg" scale="0"></p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671571"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671571&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671571&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671571#respond" onclick="return addComment.moveForm( &quot;div-comment-2671571&quot;, &quot;2671571&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Mike Szczys">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2671583" class="comment byuser comment-author-arachnidster odd alt depth-3   highlander-comment">
+		<article id="div-comment-2671583" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">arachnidster</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671583">
+						<time datetime="2015-08-07T09:22:56+00:00">
+							August 7, 2015 at 9:22 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Awesome!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671583"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671583&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671583&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671583#respond" onclick="return addComment.moveForm( &quot;div-comment-2671583&quot;, &quot;2671583&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to arachnidster">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2671665" class="comment even depth-3 parent  highlander-comment">
+		<article id="div-comment-2671665" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://twitter.com/david_haitch" rel="external nofollow" class="url">Dahud Lefthanded (@david_haitch)</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671665">
+						<time datetime="2015-08-07T11:31:39+00:00">
+							August 7, 2015 at 11:31 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I would 100% buy one of those, but I just popped the gerber files into OSHPark and a minimum order of 3 was $150! I hope you manage to find a more cost-effective mass production way, otherwise I wouldn’t be able to afford it.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671665"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671665&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671665&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671665#respond" onclick="return addComment.moveForm( &quot;div-comment-2671665&quot;, &quot;2671665&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Dahud Lefthanded (@david_haitch)">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2671714" class="comment byuser comment-author-hexagon5un comment-author-is-site-member bypostauthor odd alt depth-4 parent  highlander-comment">
+		<article id="div-comment-2671714" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Elliot Williams</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671714">
+						<time datetime="2015-08-07T12:49:06+00:00">
+							August 7, 2015 at 12:49 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I did.  I’ve got the board cost down around $5.  Sourcing the rest of the parts (in particular the pots) cheap enough to make it a viable product / project is going to be tricky, but I’m going to (hopefully) get that done in early Sept.</p>
+<p>It’s a damn big board, and if you’re paying by the square inch, that’s a problem.  That said, I made it just about as small as possible while still retaining “playability”.  If you squeeze stuff too tight together, it’s hard to plug/unplug wires unless you have tiny fingers or tweezers, and that’s not gonna fly either.</p>
+<p>I wish I could say something smarter or more definite than “stay tuned”, but that’s what I’ve got at the moment.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671714"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671714&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671714&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671714#respond" onclick="return addComment.moveForm( &quot;div-comment-2671714&quot;, &quot;2671714&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Elliot Williams">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2671966" class="comment even depth-5  max-depth highlander-comment">
+		<article id="div-comment-2671966" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">jorpy</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671966">
+						<time datetime="2015-08-07T19:44:41+00:00">
+							August 7, 2015 at 7:44 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I’d love to buy the bare PCB. I’ve been buying ICs to follow the series and most of the other parts I have (maybe not with the right footprint, but something can be hacked together)</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671966"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671966&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671966&#39;);">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2671575" class="comment odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2671575" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">condor</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2671575">
+						<time datetime="2015-08-07T09:12:58+00:00">
+							August 7, 2015 at 9:12 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Loved this HaD article.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2671575"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2671575&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2671575&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2671575#respond" onclick="return addComment.moveForm( &quot;div-comment-2671575&quot;, &quot;2671575&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to condor">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2672125" class="comment even thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2672125" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">rj</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2672125">
+						<time datetime="2015-08-08T00:48:41+00:00">
+							August 8, 2015 at 12:48 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Ooh, you’re going to add an exponent converter next. Nice, we all need our 1V/octave input :)</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2672125"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2672125&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2672125&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2672125#respond" onclick="return addComment.moveForm( &quot;div-comment-2672125&quot;, &quot;2672125&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to rj">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2672271" class="comment odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2672271" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Heinz</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2672271">
+						<time datetime="2015-08-08T05:14:52+00:00">
+							August 8, 2015 at 5:14 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Hello, really great.<br>
+ remembers me of the 1980s when i have made such things like a vocoder or  a phaser out of cmos gates. The inspiration came from the german magazine ELRAD 12/1984.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2672271"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2672271&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2672271&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2672271#respond" onclick="return addComment.moveForm( &quot;div-comment-2672271&quot;, &quot;2672271&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Heinz">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2672478" class="comment even thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2672478" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">John Massis</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2672478">
+						<time datetime="2015-08-08T11:26:53+00:00">
+							August 8, 2015 at 11:26 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>SAme here, love it, keep up the good work!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2672478"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2672478&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2672478&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2672478#respond" onclick="return addComment.moveForm( &quot;div-comment-2672478&quot;, &quot;2672478&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to John Massis">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2677621" class="comment byuser comment-author-chrisbeckstrom odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2677621" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">chrisbeckstrom</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2677621">
+						<time datetime="2015-08-13T12:28:00+00:00">
+							August 13, 2015 at 12:28 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Dude… this wins the internet! I can’t believe how useful this stuff is. Thanks SO MUCH for sharing and making everything so easy to understand. So great!! Just when I thought I was done adding stuff to my DIY modular…</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2677621"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2677621&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2677621&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2677621#respond" onclick="return addComment.moveForm( &quot;div-comment-2677621&quot;, &quot;2677621&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to chrisbeckstrom">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2678085" class="comment even thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2678085" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">alejandro</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2678085">
+						<time datetime="2015-08-13T22:14:05+00:00">
+							August 13, 2015 at 10:14 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you very very much for this series!! It´s awesome!! How</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2678085"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2678085&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2678085&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2678085#respond" onclick="return addComment.moveForm( &quot;div-comment-2678085&quot;, &quot;2678085&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to alejandro">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2711700" class="comment odd alt thread-even depth-1   highlander-comment">
+		<article id="div-comment-2711700" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://elecurls.tripod.com/" rel="external nofollow" class="url">Ted</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-2711700">
+						<time datetime="2015-09-12T09:00:02+00:00">
+							September 12, 2015 at 9:00 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>How can I get the whole series?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2711700"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2711700&#39;, &#39;afeea7f03a&#39;, &#39;safe-comments-result-2711700&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/?replytocom=2711700#respond" onclick="return addComment.moveForm( &quot;div-comment-2711700&quot;, &quot;2711700&quot;, &quot;respond&quot;, &quot;163851&quot; )" aria-label="Reply to Ted">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+
+        
+    
+    
+    				<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://hackaday.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="ffd2fc5953"><input type="hidden" name="_wp_http_referer" value="/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 19.6px; width: 778px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 39px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+		</li></ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" scale="0">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/08/07/logic-noise-4046-voltage-controlled-oscillator-part-one/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="163851" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3c00389c66"></p>
+<input type="hidden" name="genseq" value="1457141325">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1457141327471"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+</div><!-- #comments -->
+
+        
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id428] 300x250 */
+            OA_show(428);
+        </script><script language="JavaScript1.1" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ck(2).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_2243278350"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvlBtNAJ3y0YB9L8oYQp39K2-LM6CE4R6wO8BpgU5IFAUSHDHkGf4C18bCgzpgOucShUZBZp5NyA98s948ZjV_7VQDbsEBP&amp;sig=Cg0ArKJSzGZMlXX5_MDK&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120880__zoneid%3D428__cb%3D7617e3675c__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120880%2526value3%253D771%2526zone%253D428%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253D7617e3675c%257Ch_value%253D19a56576156f7c431457141325%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D1%257Cbpf%253D0.0000011243963021766%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D428%2526url%253Dhttp://www.ti.com/sva-sds-fcp-lmx9838-bs-evm-lmx9838dongle-wwe"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/SVASIG_SDS_FCP_LMX9838_300x250_st.gif" alt="Advertisement" border="0" width="300" height="250" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120880__zoneid=428__cb=7617e3675c__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120880%26value3%3D771%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D7617e3675c%7Ch_value%3D19a56576156f7c431457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.0000011243963021766%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261632.125903795%3Bsz%3D300x250%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261632.125903795;sz=300x250;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120880__zoneid=428__cb=7617e3675c__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120880%26value3%3D771%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3D7617e3675c%7Ch_value%3D19a56576156f7c431457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.0000011243963021766%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3D;ord=7617e3675c?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_7617e3675c" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lg(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(12)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <!-- store ad -->
+    <iframe class="sidebar-store-ad" scrolling="no" frameborder="0" align="top" marginwidth="0" marginheight="0" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/-search term-.html"></iframe>
+
+    <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="http://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/wiringboard-showingoff_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino/">Wiring was Arduino before Arduino</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/04/wiring-was-arduino-before-arduino//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 65 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/rotary-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine/">Broken Promises of the Wankel Engine</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/03/broken-promises-of-the-wankel-engine//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 128 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/16766798111_0dca4198e9_k_d_featured_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing/">Getting it Right by Getting it Wrong: RepRap and the Evolution of 3D Printing</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/02/getting-it-right-by-getting-it-wrong-reprap-and-the-evolution-of-3d-printing//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 60 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/raspberry_pi_logosmall.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true/">Pi 3 Benchmarks: The Marketing Hype Is True</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/01/pi-3-benchmarks-the-marketing-hype-is-true//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 112 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/esp8266-color-ntsc-broadcast-thumb.gif" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick/">Color TV Broadcasts are ESP8266’s Newest Trick</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/01/color-tv-broadcasts-are-esp8266s-newest-trick//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 31 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><label class="screen-reader-text" for="cat">Categories</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="33199679">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="23971598">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="24483654">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="78428">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="3923181">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="6310599">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="79">hardware</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="2708">how-to</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="10969055">laser hacks</option>
+	<option class="level-0" value="18020716">led hacks</option>
+	<option class="level-0" value="10626">lifehacks</option>
+	<option class="level-0" value="729674">linux hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">macs hacks</option>
+	<option class="level-0" value="2377605">major tom</option>
+	<option class="level-0" value="11284667">Medical hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">misc hacks</option>
+	<option class="level-0" value="18020730">multitouch hacks</option>
+	<option class="level-0" value="22652725">musical hacks</option>
+	<option class="level-0" value="18020722">netbook hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">news</option>
+	<option class="level-0" value="1861880">nintendo ds hacks</option>
+	<option class="level-0" value="114555425">nintendo gameboy hacks</option>
+	<option class="level-0" value="18020685">nintendo hacks</option>
+	<option class="level-0" value="4992726">nintendo wii hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="114556430">palm pre hacks</option>
+	<option class="level-0" value="245123">parts</option>
+	<option class="level-0" value="10969081">peripherals hacks</option>
+	<option class="level-0" value="16325149">phone hacks</option>
+	<option class="level-0" value="10969088">playstation hacks</option>
+	<option class="level-0" value="2060">podcasts</option>
+	<option class="level-0" value="10969096">portable audio hacks</option>
+	<option class="level-0" value="10969099">portable video hacks</option>
+	<option class="level-0" value="588444">psp hacks</option>
+	<option class="level-0" value="23971578">radio hacks</option>
+	<option class="level-0" value="47">rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">repair hacks</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="309">reviews</option>
+	<option class="level-0" value="10969101">robots hacks</option>
+	<option class="level-0" value="30302">roundup</option>
+	<option class="level-0" value="10969111">security hacks</option>
+	<option class="level-0" value="268522">slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">software hacks</option>
+	<option class="level-0" value="10969116">solar hacks</option>
+	<option class="level-0" value="10969121">tablet pcs hacks</option>
+	<option class="level-0" value="3075183">teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">tool hacks</option>
+	<option class="level-0" value="25277004">toy hacks</option>
+	<option class="level-0" value="10969134">transportation hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="3184456">video hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">weapons hacks</option>
+	<option class="level-0" value="12552193">wearable hacks</option>
+	<option class="level-0" value="39510952">Weekly roundup</option>
+	<option class="level-0" value="4891215">wireless hacks</option>
+	<option class="level-0" value="7079455">xbox hacks</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://hackaday.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/thumb19.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin/">Materials to Know: Acetal and Delrin</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/03/materials-to-know-acetal-and-delrin//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 44 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/03/02/transforming-spice/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/03/02/transforming-spice/">Transforming Spice</a>
+				</h2>
+				<a href="http://hackaday.com/2016/03/02/transforming-spice//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 13 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/29/spice-power/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/29/spice-power/">Spice Power</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/29/spice-power//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/links-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016/">Hackaday Links: Leap Eve, 2016</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/28/hackaday-links-leap-eve-2016//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 3 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/" class="recent-image">
+						<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/hacklet-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/">Hacklet 97 – Camera Projects</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 9 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1>				<ul id="recentcomments">
+											<li class="recentcomments">
+							<a href="http://ckcnc.wordpress.com/" rel="external nofollow" class="url">The Snob</a> on <a href="http://hackaday.com/2016/03/04/rescuing-the-worlds-first-preserved-railway/#comment-2944014">Rescuing The World’s First Preserved Railway</a>						</li>
+
+												<li class="recentcomments">
+							<a href="https://www.facebook.com/app_scoped_user_id/580919395/" rel="external nofollow" class="url">Todd Hubers</a> on <a href="http://hackaday.com/2016/03/04/start-your-day-the-arduino-way-with-this-iot-shower-controller/#comment-2944012">Start Your Day the Arduino Way with this IoT Shower Controller</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944010">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							<a href="https://hackaday.io/DainBramage" rel="external nofollow" class="url">DainBramage</a> on <a href="http://hackaday.com/2016/03/04/rescuing-the-worlds-first-preserved-railway/#comment-2944009">Rescuing The World’s First Preserved Railway</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944008">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							atomic3 on <a href="http://hackaday.com/2016/03/04/start-your-day-the-arduino-way-with-this-iot-shower-controller/#comment-2944005">Start Your Day the Arduino Way with this IoT Shower Controller</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.ackspace.nl/" rel="external nofollow" class="url">Prodigity</a> on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944004">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://siluxmedia.wordpress.com/" rel="external nofollow" class="url">siluxmedia</a> on <a href="http://hackaday.com/2015/08/20/drivers-for-3d-printers-and-why-we-need-them/#comment-2944003">Drivers for 3D Printers and Why We Need Them</a>						</li>
+
+												<li class="recentcomments">
+							John Holton on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944002">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+												<li class="recentcomments">
+							John Holton on <a href="http://hackaday.com/2016/03/04/dual-uarti2c-breakout-goes-both-ways/#comment-2944000">Dual UART/I2C Breakout Goes Both Ways</a>						</li>
+
+										</ul>
+				</aside><aside id="hackadayfeed-2" class="widget widget-hackaday-feed"><h1 class="widget-title">Now on Hackaday.io</h1>
+			<ul>
+									<li><a href="http://www.hackaday.io/project/10008-quick-and-dirty-electric-mower">Ampeater has added a new project titled Quick and dirty electric mower.</a></li>
+										<li><a href="http://www.hackaday.io/project/5589-A%20Wireless%20I2C%20Bridge%20for%20Amateur%20Radio%20Use">J. M. Hopkins gave a skull to A Wireless I2C Bridge for Amateur Radio Use.</a></li>
+										<li><a href="http://www.hackaday.io/project/9762-K-9">Andrew Bills has updated components for the project titled K-9.</a></li>
+										<li><a href="http://www.hackaday.io/project/2335-Heater%20with%20PID%20Control#j-discussion-49281">J. M. Hopkins wrote a comment on Heater with PID Control.</a></li>
+										<li><a href="http://www.hackaday.io/project/8069-PiDP-11#j-discussion-49280">S.Edwards wrote a comment on PiDP-11.</a></li>
+										<li><a href="http://www.hackaday.io/project/8343/log/33153#j-discussion-49279">Tim Wilkinson wrote a comment on project log IMU troubles.</a></li>
+										<li><a href="http://www.hackaday.io/project/9941-The%20Razor%20E300%20Overvolt!#j-discussion-49278">Jack Laidlaw wrote a comment on The Razor E300 Overvolt!.</a></li>
+										<li><a href="http://www.hackaday.io/project/10007-Sonar%20Radar%20With%20Bluetooth">charles.fayal has updated details to Sonar Radar With Bluetooth.</a></li>
+										<li><a href="http://www.hackaday.io/project/8687-ESP8266%20web%20based%20%20temperature%20sensor#j-discussion-49277">Gary wrote a comment on ESP8266 web based  temperature sensor.</a></li>
+										<li><a href="http://www.hackaday.io/project/9941-The%20Razor%20E300%20Overvolt!">Jack Laidlaw gave a skull to The Razor E300 Overvolt!.</a></li>
+						</ul>
+	</aside>
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id427] 160x600 */
+            OA_show(427);
+        </script><script language="JavaScript1.1" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ck(3).php">
+</script><div class="GoogleActiveViewClass" id="DfaVisibilityIdentifier_1780768744"><a target="_blank" href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsu0jwH8rqH_S9mjeY8P4pL3XuhMBCzYiLqbk2BblqCkKdWzHDv35eIJEHa3ezbvnVveX9t0W8eSxpICZ1G29B6db1D50r8d&amp;sig=Cg0ArKJSzFG55m4L3TXX&amp;urlfix=1&amp;adurl=http://ads.supplyframe.com/openads/www/delivery/ck.php%3Foaparams%3D2__bannerid%3D120881__zoneid%3D427__cb%3Dbf2e46c329__oadest%3Dhttp%253A%252F%252Fanalytics.supplyframe.com%252Ftrackingservlet%252Ftrack%252F%253Faction%253DadClick%2526value1%253D%7Btaxonomy_enc%7D%2526value2%253D120881%2526value3%253D771%2526zone%253D427%2526extra%253Dcontextualmatch%253Dnolimitation%257Clivetax%253D0%257Ccookietax%253D413%252C190%257Ccb%253Dbf2e46c329%257Ch_value%253D19681affe54388f41457141325%257Ch_crc%253D2485905944%257Cgeo%253Dus%257Ccnt%253Dna%257Cbp%253D0.027548535842336%257Cbpf%253D0.0000000004656613581586%257Ccp%253D10%257Ch_i%253Dy%2526zone%253D427%2526url%253Dhttp://www.ti.com/sva-sds-dps-100ge-bs-lp-sigcon-wwe"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/SVASIG_SDS_DPS_DS280BR810_DS250DF810_160x600st.gif" alt="Advertisement" border="0" width="160" height="600" scale="0"></a></div>
+<noscript>
+&lt;a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120881__zoneid=427__cb=bf2e46c329__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120881%26value3%3D771%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Dbf2e46c329%7Ch_value%3D19681affe54388f41457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.027548535842336%7Cbpf%3D0.0000000004656613581586%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN5744.1822344.HACKADAY.COM%2FB9261632.125903793%3Bsz%3D160x600%3Bclick%3D%7Bclickurl%7D%3Bord%3D%7Brandom%7D%3F" target="_blank"&gt;
+&lt;IMG SRC="https://ad.doubleclick.net/ddm/ad/N5744.1822344.HACKADAY.COM/B9261632.125903793;sz=160x600;click=http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=120881__zoneid=427__cb=bf2e46c329__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D120881%26value3%3D771%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%2C190%7Ccb%3Dbf2e46c329%7Ch_value%3D19681affe54388f41457141325%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.027548535842336%7Cbpf%3D0.0000000004656613581586%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3D;ord=bf2e46c329?" BORDER=0 WIDTH=160 HEIGHT=600 ALT="Advertisement"&gt;&lt;/A&gt;
+</noscript><div id="beacon_bf2e46c329" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/lg(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<script type="text/javascript">
+(function() {
+window._pa = window._pa || {};
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5266e87c5dd5ca039c00002d.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})();
+window.onload=function(){
+_pa.track('category_0');
+_pa.track('zone_427');
+if ('us'!='cn') {
+_pa.track('geo_notChina');
+} else {
+_pa.track('geo_isChina');
+}
+}
+</script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/fc.php"></script><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(13)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+</div><!-- #secondary -->
+
+    </div><!-- #content -->
+
+</div><iframe src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><iframe src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="http://hackaday.com/" rel="home">
+            <img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141410"><a href="http://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io/">Hackaday.io</a></li>
+<li id="menu-item-141413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141413"><a href="http://store.hackaday.com/">Store</a></li>
+<li id="menu-item-141414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141414"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="http://hackaday.com/submit-a-tip/">Submit a tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackadaycom.wordpress.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="http://hackaday.com/contact-us/">Contact us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside>
+       <!-- Begin MailChimp Signup Form -->
+
+        <form role="subscribe" action="http://hackaday.us9.list-manage.com/subscribe/post?u=dfadb71b0b15629cef5abf016&amp;id=f37880df9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+                <span>Subscribe to newsletter</span>
+                <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required="">
+            </label>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfadb71b0b15629cef5abf016_f37880df9f" tabindex="-1" value=""></div>
+            <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+            </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+
+        <div class="site-info">
+            Copyright © 2016            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <br>Powered by <a href="https://vip.wordpress.com/" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/impression" id="hdTrack" class="trackImg" scale="0"><iframe src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/cTrvNaRi.html" width="0" height="0" style="display: none;"></iframe><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42734042-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-cc6zkdHuZwUDM"
+};
+</script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/quant.js"></script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-cc6zkdHuZwUDM.gif"
+style="display: none;" border="0" height="1" width="1"
+alt="Quantcast"/&gt;
+</noscript>
+
+<!-- wpcom_wp_footer -->
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/hackadaycom.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/hackadaycom.wordpress.com\/wp-login.php?action=logout&_wpnonce=2545a52629","homeURL":"http:\/\/hackaday.com\/","postID":"163851","gravDefault":"mystery","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(14)"></script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(15)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'4779443','blog_tz':'-8','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'4779443','v':'wpcom','tz':'-8','user_id':'0','post':'163851','subd':'hackadaycom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=4779443&v=wpcomvt&tz=-8&user_id=0&post=163851&subd=hackadaycom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdkRXFNdWdRL28yNk8rbmNjbWVqU35PYUcuJnlOQ3EmcVpVVis9T2dqY0ZHbTlNQVt3eEFCL2QyMzMmS0xiSTMmR1YrW1B+bjYuPXRHPXdNRHBbW3lDQ1QtZUlzJi56eUtjYmp0R0E4X1plemU2T3puUHFUZUd2cCZ2SWNkL2ZKQWZ8W0EzMUxEJk9BZmxFVyZYV2RNQVpbN05DUCVFU0RZbm5LMEFiLTNNfEJjXXd+OWRZWV9SP0JFYkM4WUZzLjhrY1MyRVpLPTNCUjMrdTNwLFNwTjFxbGFdNEZtLEg='}]);
+_stq.push([ 'clickTrackerInit', '4779443', '163851' ]);
+	</script>
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<!--
+	generated in 0.258 seconds
+	101043 bytes batcached for 300 seconds
+-->
+<img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/g.gif" id="wpstats" scale="0"><img src="./Logic Noise_10_ 4046 Voltage-Controlled Oscillator, Part One _ Hackaday_files/saved_resource(16)" width="1" height="1" style="display: none;" scale="0"></body></html>
