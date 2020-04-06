@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/Article" lang="en" class="js wf-proximanova-i1-active wf-proximanova-i3-active wf-proximanova-i4-active wf-proximanova-i6-active wf-proximanova-i7-active wf-proximanova-i8-active wf-proximanova-i9-active wf-proximanova-n1-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE">
+<meta name="viewport" content="width=960">
+<title>Logic Noise: Sequencing in Silicon | Hackaday</title>
+<script async="" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/analytics.js"></script><script type="text/javascript" async="" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/5266e87c5dd5ca039c00002d.js"></script><script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://s0.wp.com/wp-content/themes/vip/hackaday-2/favicon.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://hackaday.com/xmlrpc.php">
+<link href="http://google.com/+hackaday" rel="publisher">
+
+<!--[if lt IE 9]>
+    <script src="https://s0.wp.com/wp-content/themes/vip/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+		<script src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Hackaday » Feed" href="http://hackaday.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Comments Feed" href="http://hackaday.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Hackaday » Logic Noise: Sequencing in Silicon Comments Feed" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel="stylesheet" id="all-css-0" href="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/hackaday.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackadaycom.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Hackaday visits Toronto, Canada" href="http://hackaday.com/2015/04/24/hackaday-visits-toronto-canada/">
+<link rel="next" title="$50k in Play: Thirty Projects Will Win Custom PCBs this Week" href="http://hackaday.com/2015/04/24/50k-in-play-thirty-projects-will-win-custom-pcbs-this-week/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/">
+<link rel="shortlink" href="http://wp.me/pk3lN-DWD">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F04%2F24%2Flogic-noise-sequencing-in-silicon%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F04%2F24%2Flogic-noise-sequencing-in-silicon%2F&amp;for=wpcom-auto-discovery"><link rel="openid.server" href="http://hackadaycom.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://hackadaycom.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://hackaday.com/osd.xml" title="Hackaday">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta property="og:title" content="Logic Noise: Sequencing in Silicon">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-tealish.jpg?w=600&amp;h=600">
+<meta property="og:url" content="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/">
+<meta property="og:description" content="In this session of Logic Noise, we&#39;ll combine a bunch of the modules we&#39;ve made so far into an autonomous machine noise box. OK, at least we&#39;ll start to sequence some of these sounds.
+
+A sequencer i...">
+<meta property="og:site_name" content="Hackaday">
+
+<link rel="image_src" href="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-tealish.jpg?w=600&amp;h=600">
+<meta itemprop="name" content="Logic Noise: Sequencing in Silicon">
+<meta itemprop="description" content="In this session of Logic Noise, we&#39;ll combine a bunch of the modules we&#39;ve made so far into an autonomous machine noise box. OK, at least we&#39;ll start to sequence some of these sounds.
+
+A sequencer i...">
+<meta itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-tealish.jpg?w=600&amp;h=600">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hackaday">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Hackaday"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fresh hacks every day"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://hackaday.com/feed/;icon-uri=http://0.gravatar.com/blavatar/4f3e6b6daa090af416a1ba595885efd1?s=16"><style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(2)">
+		
+<script src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/mpm6gph.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/l" media="all"><script>try{Typekit.load();}catch(e){}</script>
+<!-- Supplyframe Ads -->
+<!--<script type='text/javascript' src='http://ads.supplyframe.com/openads/www/delivery/spcjs.php?id=31&amp;block=1'></script>-->
+<script type="text/javascript">
+function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|468")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://ads.supplyframe.com/openads/www/delivery/spc.php":"http://ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+</script><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/spc.php"></script><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/fl.js"></script>
+
+
+<script src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(3)" id="cannedbanners_pixel"></script><script type="text/javascript" async="" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/tagjs"></script><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg(1)" width="1" height="1" border="0" scale="0"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg(2)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(6)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg(3)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(7)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg(4)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(8)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/seg(5)" width="1" height="1" border="0" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(9)" width="1" height="1" border="0" scale="0"></head>
+
+<body class="single single-post postid-153551 single-format-standard mp6 customizer-styles-applied group-blog highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+    <div id="leaderboard">
+        <script type="text/javascript">
+            /* [id426] 728x90 */
+            OA_show(426);
+        </script><a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=128758__zoneid=426__cb=eedb7093e5__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D128758%26value3%3D522%26zone%3D426%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Deedb7093e5%7Ch_value%3Df07b3cd2eef36fa41456625286%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.22612677712833%7Cbpf%3D0.064901832976528%7Ccp%3D10%7Ch_i%3Dy%26zone%3D426%26url%3Dhttp%253A%252F%252Fwww.microchip.com%252Fwwwproducts%252FDevices.aspx%253Fproduct%253DMCP6N16%2523utm_source%253DSupply-Frame_Hack-A-Day%2526utm_medium%253D728x90%2526utm_term%253DFY16Q4%2526utm_content%253DMSLD%2526utm_campaign%253DPublisher-Display-Ad" target="_blank"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/e4334df01ce1078bf4e1127478102547.jpg" width="728" height="90" alt="" title="" border="0" scale="0"></a><div id="beacon_eedb7093e5" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(10)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <a class="skip-link screen-reader-text" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="http://hackaday.com/" rel="home">
+                <img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+            </a>
+            <h1 class="site-title">
+                <a href="http://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu nav-menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="http://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="http://hackaday.io/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-97770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97770"><a href="http://store.hackaday.com/?from=had&amp;utm_source=hackaday&amp;utm_medium=menu&amp;utm_campaign=blog">Store</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="http://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="http://hackaday.com/about/">About</a></li>
+</ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">February 27, 2016</label><div class="calendar_table_wrap"><table id="wp-calendar">
+	<caption>April 2015</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://hackaday.com/2015/03/">« Mar</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://hackaday.com/2015/05/">May »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="3" class="pad">&nbsp;</td><td><a href="http://hackaday.com/2015/04/01/" aria-label="Posts published on April 1, 2015">1</a></td><td><a href="http://hackaday.com/2015/04/02/" aria-label="Posts published on April 2, 2015">2</a></td><td><a href="http://hackaday.com/2015/04/03/" aria-label="Posts published on April 3, 2015">3</a></td><td><a href="http://hackaday.com/2015/04/04/" aria-label="Posts published on April 4, 2015">4</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/04/05/" aria-label="Posts published on April 5, 2015">5</a></td><td><a href="http://hackaday.com/2015/04/06/" aria-label="Posts published on April 6, 2015">6</a></td><td><a href="http://hackaday.com/2015/04/07/" aria-label="Posts published on April 7, 2015">7</a></td><td><a href="http://hackaday.com/2015/04/08/" aria-label="Posts published on April 8, 2015">8</a></td><td><a href="http://hackaday.com/2015/04/09/" aria-label="Posts published on April 9, 2015">9</a></td><td><a href="http://hackaday.com/2015/04/10/" aria-label="Posts published on April 10, 2015">10</a></td><td><a href="http://hackaday.com/2015/04/11/" aria-label="Posts published on April 11, 2015">11</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/04/12/" aria-label="Posts published on April 12, 2015">12</a></td><td><a href="http://hackaday.com/2015/04/13/" aria-label="Posts published on April 13, 2015">13</a></td><td><a href="http://hackaday.com/2015/04/14/" aria-label="Posts published on April 14, 2015">14</a></td><td><a href="http://hackaday.com/2015/04/15/" aria-label="Posts published on April 15, 2015">15</a></td><td><a href="http://hackaday.com/2015/04/16/" aria-label="Posts published on April 16, 2015">16</a></td><td><a href="http://hackaday.com/2015/04/17/" aria-label="Posts published on April 17, 2015">17</a></td><td><a href="http://hackaday.com/2015/04/18/" aria-label="Posts published on April 18, 2015">18</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/04/19/" aria-label="Posts published on April 19, 2015">19</a></td><td><a href="http://hackaday.com/2015/04/20/" aria-label="Posts published on April 20, 2015">20</a></td><td><a href="http://hackaday.com/2015/04/21/" aria-label="Posts published on April 21, 2015">21</a></td><td><a href="http://hackaday.com/2015/04/22/" aria-label="Posts published on April 22, 2015">22</a></td><td><a href="http://hackaday.com/2015/04/23/" aria-label="Posts published on April 23, 2015">23</a></td><td><a href="http://hackaday.com/2015/04/24/" aria-label="Posts published on April 24, 2015">24</a></td><td><a href="http://hackaday.com/2015/04/25/" aria-label="Posts published on April 25, 2015">25</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://hackaday.com/2015/04/26/" aria-label="Posts published on April 26, 2015">26</a></td><td><a href="http://hackaday.com/2015/04/27/" aria-label="Posts published on April 27, 2015">27</a></td><td><a href="http://hackaday.com/2015/04/28/" aria-label="Posts published on April 28, 2015">28</a></td><td><a href="http://hackaday.com/2015/04/29/" aria-label="Posts published on April 29, 2015">29</a></td><td><a href="http://hackaday.com/2015/04/30/" aria-label="Posts published on April 30, 2015">30</a></td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            
+<article itemscope="" itemtype="http://schema.org/Article" id="post-153551" class="post-153551 post type-post status-publish format-standard has-post-thumbnail hentry category-digital-audio-hacks category-featured category-musical-hacks category-slider tag-cmos tag-logic-noise tag-sequencer tag-synthesizer">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">Logic Noise: Sequencing in Silicon</h1>
+        <div class="entry-meta">
+            <a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comments" class="comments-counts"><span class="icon-hackaday icon-hackaday-comment"></span>
+                11 Comments            </a>
+            <ul class="meta-authors vcard author">
+                <li>by:</li>
+                <span class="fn"><a href="http://hackaday.com/author/hexagon5un/" title="Posts by Elliot Williams" class="author url fn" rel="author">Elliot Williams</a></span>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-meta entry-meta-last">
+            <span class="entry-date published updated" itemprop="datePublished" content="April 24, 2015"><a href="http://hackaday.com/2015/04/24/" title="April 24, 2015 - 7:00 am">April 24, 2015</a></span>
+            <ul class="share-post">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackaday.com%2F2015%2F04%2F24%2Flogic-noise-sequencing-in-silicon%2F" target="_blank"><span class="icon-hackaday icon-hackaday-facebook"></span></a></li>
+               <li><a href="https://twitter.com/intent/tweet?text=Logic+Noise%3A+Sequencing+in+Silicon%20via%20@hackaday&amp;url=http%3A%2F%2Fhackaday.com%2F2015%2F04%2F24%2Flogic-noise-sequencing-in-silicon%2F" target="_blank"><span class="icon-hackaday icon-hackaday-twitter"></span></a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fhackaday.com%2F2015%2F04%2F24%2Flogic-noise-sequencing-in-silicon%2F&amp;h1=en-US" target="_blank"><span class="icon-hackaday icon-hackaday-google"></span></a></li>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-featured-image"><img itemprop="image" content="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-thumb-tealish.jpg?w=600&amp;h=600" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/logic-noise-tealish.jpg" alt="" originalw="800" width="800" height="412" src-orig="https://hackadaycom.files.wordpress.com/2015/02/logic-noise-tealish.jpg?w=800" scale="2"></div>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content" itemprop="articleBody">
+        <p>In this session of Logic Noise, we’ll combine a bunch of the modules we’ve made so far into an autonomous machine noise box. OK, at least we’ll start to sequence some of these sounds.</p>
+<p>A sequencer is at the heart of any drum box and the centerpiece of any “serious” modular synthesizer. Why? Because you just can’t tweak all those knobs and play notes and dance around at the same time. Or at least we can’t. So you gotta automate. Previously we did it with <a href="http://hackaday.com/2015/02/23/logic-noise-the-switching-sequencer/">switches</a>. This time we do it with logic pulses.</p>
+<p><span id="more-153551"></span></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/rEBHZxlYFDs.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>The 4017 Decade Counter</h2>
+<p>The featured chip this session, the one that gets it all done, is the 4017 Decade Counter. It’s a strange chip, left over from the days when people wanted to count things using IC logic chips instead of just running the input into a microcontroller. But therein lies its charm and usability.</p>
+<p><img class="alignleft wp-image-153554 size-medium" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/4017_pinout.png" alt="4017_pinout" width="400" height="398" originalw="400" originalh="398" src-orig="https://hackadaycom.files.wordpress.com/2015/04/4017_pinout.png?w=400&amp;h=398" scale="2"></p>
+<p>At its simplest, you input a clock signal and one of ten different outputs (Q0-Q9) is set high while the others are all low. On the next rising edge of the clock, the next output is set high and the previous is set low. This goes on until the count loops around the end.</p>
+<p>One feature that makes the 4017 super useful is the reset pin. When a high voltage is set on reset, the first output (Q0) is set high and all the others zeroed out — the chip starts counting at zero again. The cool trick here is that you can connect the reset pin up to one of the Q outputs and the counter will automatically reset once it reaches that output. If reset is connected to Q2, for example, the count will go Q0 then Q1, and then immediately reset back to Q0 again: Q0, Q1, Q0, Q1… If you wanted an octal (divide by eight) counter, you just hook the reset pin up to Q8.</p>
+<p><img class=" wp-image-153566 size-medium alignright" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/4017_timing1.png" alt="4017_timing" width="400" height="333" originalw="400" originalh="333" src-orig="https://hackadaycom.files.wordpress.com/2015/04/4017_timing1.png?w=400&amp;h=333" scale="2"></p>
+<p>Eight steps is pretty standard (boring?) and you can get nice groove patterns by selecting odd sequence lengths. But if you want your standard drum machine, hooking the reset up to Q8 is the way to go.</p>
+<p>Looking at the timing diagram, notice that the reset pin can also be used asynchronously. That is, the chip will reset as soon as the reset line goes high — it doesn’t wait to finish the current clock cycle. Here, for instance, we hit reset while clock step five (on Q4) was still active.</p>
+<p>Async reset means that your reset source can come from outside the 4017 chip and its counter. For instance, you could connect the reset line through a pushbutton to VCC and reset the sequence at will. (If you do this, consider a pulldown resistor on the reset line to keep the voltage level well-defined when the button isn’t pressed.)</p>
+<p>There are two more pins left over. The “Carry Out” pin is low when Q0-Q4 is high and high when Q5-Q9 are high. When the chip is counting up to ten, this produces a nice square wave with a cycle once for every ten counts. As the name suggests, this can be fed into another 4017’s clock input and you’ll have a count-to-100 device. Chain up the next carry out to a third 4017, and you can count up to 1,000 clock pulses. (Tie all the reset lines together to zero them at once, if you’re actually counting.) Carry out is less useful for us, but we’ll play around with it a tiny bit next session anyway.</p>
+<p>Finally, there’s the “Inhibit” pin. In most implementations of the 4017 chips, setting inhibit high makes the chip ignore the incoming clock pulses. Some manufacturers’ chips have some slightly more clever logic where the inhibit line can be dual-purposed to count up for high-to-low transitions if the “clock” line is held low and the “inhibit” line toggled. We’ll not be using this feature, so just remember to tie the inhibit line (pin 13) to ground so that it’s not glitching around.</p>
+<p>Back to what matters here. We’ve got a chip that’ll put out logic voltage signals on one pin after the other, clockable and resettable. That’s the heart of a simple sequencer. Most of what we’ll be doing this session is making these voltage steps play well with our quick-and-dirty CMOS logic synth modules.</p>
+<h2>The Basic Sequencer</h2>
+<p>The sequencer that we’ll be building up this session is nothing more than a 4017 clocked by a 40106-based oscillator that’s running at a “tempo” frequency rather than at audio rates. Indeed, you could stop there. But for the low, low price of another 4017 logic chip, some LEDs and resistors, you can have something deluxe.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/5linx91sLbk.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<p>Our version of this simple sequencer is going to be built from two 4017s with the clock and reset lines in common between them. This means that the two 4017’s will run in lockstep with one another at all times. We can use one 4017 for driving our synth devices and the other for driving ten status LEDs, without having to worry about the LEDs pulling the output voltages low if they draw too much current.</p>
+<p><img class=" wp-image-153626 size-large aligncenter" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/dual_4017s-sch1.png" alt="dual_4017s.sch" width="800" height="602" originalw="800" originalh="602" src-orig="https://hackadaycom.files.wordpress.com/2015/04/dual_4017s-sch1.png?w=800&amp;h=602" scale="2"></p>
+<p>&nbsp;</p>
+<p>Of course, if you don’t want the LEDs, you can entirely omit the second 4017 from the circuit. Or if you’re feeling lucky, you could hang the LEDs off of the signal outputs directly. But since we’ll be already demanding a little bit more current from the 4017s than they’re designed for, we think it’s easily worth the extra chip for insurance and convenience. Plus, it makes for a lot cleaner layout on the breadboard.</p>
+<h2>Gating Oscillators with the 4017 Sequencer</h2>
+<p>The first thing you’d probably like to do with the sequencer is to play a bunch of notes. The quick-and-dirtiest way to do that with our current setup is to construct one oscillator per note you’d like to play and then have that oscillator sound only when the corresponding “Q” output of the 4017 is set high. That should be easy enough, and it is.</p>
+<p>If you remember back from our <a href="http://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/">first session</a>, we used a diode to create a hard-sync oscillator sound by gating one oscillator with another. The oscillators all work by charging up a capacitor through the feedback resistor, recall, so if you can drain enough current out to prevent the capacitor from charging up, you can silence the oscillator.</p>
+<p><img class="aligncenter size-large wp-image-153612" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/4017_and_oscillators-sch.png" alt="4017_and_oscillators.sch" width="800" height="277" originalw="800" originalh="277" src-orig="https://hackadaycom.files.wordpress.com/2015/04/4017_and_oscillators-sch.png?w=800&amp;h=277" scale="2"></p>
+<p>&nbsp;</p>
+<p>First look at the single audio oscillator on the top right, connected to the 4017 through input “A”. When the corresponding 4017 output is low, whatever current passes through the feedback resistor (RV2) to charge up the capacitor (C2) will get sucked out the diode (D1) into the 4017, and the oscillator won’t oscillate. When the 4017’s output is high, the diode blocks and the oscillator is free to do its thing. Easy and done.</p>
+<h2>The Diode OR Gate</h2>
+<p>But what if we want one note to fire multiple times? Here’s an interfacing trick that can be handy, called “Mickey-mouse” logic or less imaginatively, <a href="https://en.wikipedia.org/wiki/Mickey_Mouse_logic" target="_blank">diode logic</a>. The idea is that you can set up the desired default logic state with a pull-up or pull-down resistor, and then override it with signals coming in through a bunch of diodes. To add more inputs to the OR all you have to do is add more diodes to the circuit, which makes it useful when you need something odd like a seven-way OR function.</p>
+<p><img class="alignleft size-medium wp-image-153613" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/diode_or-sch.png" alt="diode_or.sch" width="400" height="215" originalw="400" originalh="215" src-orig="https://hackadaycom.files.wordpress.com/2015/04/diode_or-sch.png?w=400&amp;h=215" scale="2">Consider inputs B, C, and D in this snippet from our full schematic. When none of B, C, or D are high voltage, none of the diodes (D2-D4) will be conducting, and the pulldown resistor (R3) will set the voltage going into diode D5 low, pulling current out of the oscillator and stopping it from working. When any of B, C, or D are logic high the 4017 will pass current through the corresponding diode and out to the junction with the resistor. When this point is high, the diode D5 won’t conduct and the oscillator runs, just as in the single-step version above it.</p>
+<p>Why the diodes D2-D4? If one stage of the 4017 is high, say B, the other two must be low. Without the diodes in the circuit, we’d be shorting the two pins of the 4017 together, and all bets are off about the voltage at the junction labelled “Diode OR”. These diodes keep one pin of the 4017 from fighting with another.</p>
+<p>Picking the value for the resistor in the diode OR circuit is a little critical. It needs have a low enough resistance that it can pull down the oscillator circuit. So R3 needs to be less than the value we’ve got dialed in on the variable resistor that tunes the oscillator (RV3). But R3 needs to be large enough that when the 4017 pushes its high voltage through the output diodes, the voltage at the junction rises enough to block diode D5.</p>
+<p>The 4017 is only specified for an input or output drive current of three milliamps with a 10V supply, and only one milliamp at 5V, which means that we should use a pulldown resistor no smaller than 2.2K as a pulldown if we want a voltage higher than VCC/2 at the diode OR’s junction. Use something even larger helps reduce the demand for current on the 4017.</p>
+<p>Indeed, it’s this requirement for the 4017 to source a bunch of current that motivates using a second 4017 to handle the LEDs. Our 4017 datasheets only specifies three milliamps of output drive or sink current connected to a 10V supply. (And this drops to one milliamp at 5V VCC.) With 1K resistors on the LEDs, we’re probably already drawing five to ten milliamps — way more than the chip is specified for. Adding more load to a single 4017 chip to drive the diode OR, or even more outputs, is asking for trouble. You could imagine buffering each output of the 4017, but at some point it’s just easier to toss another 4017 into the design.</p>
+<p>Anyway, technical details aside, that handles controlling individual oscillators from the sequencer. And we’ve seen how to run one oscillator from multiple sequencer stages. With six oscillator per 40106 chip, you should be able to make reasonable melodies with a minimum of parts.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/02P2mTz7rug.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>Gate-to-Trigger Pulse Circuit</h2>
+<p>Now it’s time to drive our percussion. If you remember the two-diode VCA from our <a href="http://hackaday.com/tag/logic-noise/">Cowbell session</a>, we actually built out a “gate to trigger” converter. In modular synth lingo, a “gate” signal is a logic signal that stays high as long as (for instance) a key is pressed, and then drops back down low instantly when it’s released. The 4017’s individual outputs look a lot like a gate signal — each output is high during its complete step and only during its step. Or cymbal’s decaying amplitude circuit, on the other hand, needed a quick pulse at the start of the step, called a “trigger” signal.</p>
+<p><img class="aligncenter wp-image-153614 size-large" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/diode_vca_interface-sch.png" alt="diode_vca_interface.sch" width="800" height="278" originalw="800" originalh="278" src-orig="https://hackadaycom.files.wordpress.com/2015/04/diode_vca_interface-sch.png?w=800&amp;h=278" scale="2"></p>
+<p>At the heart of the gate-to-trigger circuit is a capacitor (C1). Changes in voltage on one side of the capacitor let a bit of current through until the capacitor has charged up enough to resist further current. This turns the leading and trailing edges of our gate signal into positive and negative spike pulses.</p>
+<p>We choose to only pass the positive voltage spike by using a diode (D5). The remaining problem, that we glossed over in the Cowbell session, is that the negative spike doesn’t pass through D5. In fact, without the diode pointing up from ground (D7) in the circuit, the right-hand plate of the capacitor C1 would get stuck at a negative voltage with respect to ground. Additional positive pulses sent through from the 4017 on the left-hand side would maybe raise the voltage up as high as zero volts, but certainly wouldn’t be enough to pass through diode D5 and make a sound. In short, you’d have one hit and then you’d never hear it again.</p>
+<p>The diode up from ground (D7) prevents this situation by charging the right-hand side of C1 up to at least a diode-drop less than 0V after each negative spike. This makes the gate to pulse circuit work a little bit like a pump; when charge is pushed through the capacitor from the 4017 side, it passes through D5, and when charge is pulled back the other way it is sourced through the D7 “check valve” from ground.</p>
+<p>If you buy that analogy, the rest of the cymbals interface circuit should be clear. A diode OR on the left-hand side allows multiple cymbal hits. Again, the choice of the pulldown resistor is important, but here there is a lot less demand for it to be tiny. The resistor R2 is only responsible for discharging the left-hand side of capacitor C1 between hits. If you’re running fast sequences, experiment with lower values.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/6OuF128u1VY.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>Variable Trigger Pulse for the Twin-T Drum</h2>
+<p>Again, for the bass drum sound, we’re going to need a gate-to-trigger circuit, and aside from using a smaller capacitor than the one above, it’s just the same. But one thing we really like about twin-t drum circuits is the volume dynamics across different input voltage spikes. That is, if you hit the twin-t with a small voltage spike it’s quiet, and if you hit it with a large voltage spike it gets loud. Adding in this kind of variation into your drum patterns make them sound less robotic, so it’s worth thinking about and spending a couple of resistors on. And indeed, that’s all that we’ll need.</p>
+<p><img class="aligncenter wp-image-153615 size-large" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/4069_drums_interface-sch.png" alt="4069_drums_interface.sch" width="800" height="318" originalw="800" originalh="318" src-orig="https://hackadaycom.files.wordpress.com/2015/04/4069_drums_interface-sch.png?w=800&amp;h=318" scale="2"></p>
+<p>This circuit combines the outputs from the 4017 in an effective voltage divider. Since only one of the 4017’s outputs will be high at any given time, we can figure this out pretty quickly. When A goes high, there’s a voltage divider to ground formed by the 22K resistor R1 and the two 100K resistors in parallel, R2 and R3, for 50K. The voltage output at the junction of the resistors is 22 / 72 * VCC, or about 2.75V with a 9V supply.</p>
+<p>When either of B or C is high, the effective resistor to ground has the parallel resistance of 22K and 100K resistors, or 18K. The resulting voltage spike has a peak around 1.4V, so it sounds a bit quieter. All of these pulses have to pass through the diode D1 as well, so they’re probably attenuated even further. You can just play around with the values until they sound right.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="800" height="480" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/cc3Rh-KZxm8.html" frameborder="0" webkitallowfullscreen="" allowfullscreen="" seamless=""></iframe></span></p>
+<h2>Output Mixer and Final Details</h2>
+<p>Finally, all of the various sound sources are combined simply by passing them through 100K resistors and connecting them together at the amplifier’s input. This simple summing “mixer” is quick and dirty and works just fine. If you want one sound source quieter or louder, you can change these resistor values within reason: how much you can get away with depends on the input impedance of the amplifier you’ve got it hooked into. Factors of two are probably OK. Experiment.</p>
+<p>A more engineered solution involves removing the DC offset from each sound source and summing them (probably with variable gain) using operational amplifiers or similar. That’s a great idea, but that’s also another project in itself.</p>
+<h2>Inspiration</h2>
+<p>The classic 4017-based sequencer is the “<a href="http://midiwall.com/gear/babyseq/" target="_blank">Baby 10</a>“.&nbsp; The original was intended to drive voltage-controlled analog gear, so it put out an adjustable voltage with each step in addition to the on-off gate signals that we’re using. If you’ve got anything that’ll take control voltages, it’s easily worth the ten potentiometers to build out a full Baby 10. You’ll find tons of links on the web.</p>
+<h2>Next Session</h2>
+<p>This session was all about sequencing for control. Next session we’ll go back to crazy. We’ll continue to use the 4017, although next time in “unexpected” ways. But the main attraction is going to be a shift register, specifically the 4015. Mayhem ensues!</p>
+            </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="http://hackaday.com/category/digital-audio-hacks/" rel="category tag">digital audio hacks</a>, <a href="http://hackaday.com/category/featured/" rel="category tag">Featured</a>, <a href="http://hackaday.com/category/musical-hacks/" rel="category tag">musical hacks</a>, <a href="http://hackaday.com/category/slider/" rel="category tag">slider</a></span><span class="tags-links">Tagged <a href="http://hackaday.com/tag/cmos/" rel="tag">cmos</a>, <a href="http://hackaday.com/tag/logic-noise/" rel="tag">logic noise</a>, <a href="http://hackaday.com/tag/sequencer/" rel="tag">sequencer</a>, <a href="http://hackaday.com/tag/synthesizer/" rel="tag">synthesizer</a></span><meta itemprop="url" content="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/">    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+            	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://hackaday.com/2015/04/24/hackaday-visits-toronto-canada/" rel="prev"><span class="meta-nav">←</span>&nbsp;Hackaday visits Toronto, Canada</a></div><div class="nav-next"><a href="http://hackaday.com/2015/04/24/50k-in-play-thirty-projects-will-win-custom-pcbs-this-week/" rel="next">$50k in Play: Thirty Projects Will Win Custom PCBs this Week&nbsp;<span class="meta-nav">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+            <div class="content-ads-holder">
+                <script type="text/javascript">
+                    /* [id429] 300x250 */
+                    OA_show(429);
+                </script><a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=128759__zoneid=429__cb=513c68b4ff__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D128759%26value3%3D522%26zone%3D429%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3D513c68b4ff%7Ch_value%3Dd3617368d71486e01456625286%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.0065320689576676%7Ccp%3D10%7Ch_i%3Dy%26zone%3D429%26url%3Dhttp%253A%252F%252Fwww.microchip.com%252Fwwwproducts%252FDevices.aspx%253Fproduct%253DMCP6N16%2523utm_source%253DSupply-Frame_Hack-A-Day%2526utm_medium%253D300x250%2526utm_term%253DFY16Q4%2526utm_content%253DMSLD%2526utm_campaign%253DPublisher-Display-Ad" target="_blank"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/a0701177d270dcd0c049abd2cff11f6b.jpg" width="300" height="250" alt="" title="" border="0" scale="0"></a><div id="beacon_513c68b4ff" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/lg(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(11)" width="0" height="0" alt="" style="display:none">
+
+            </div>
+
+            
+<div id="comments" class="comments-area">
+
+    
+            <h2 class="comments-title">
+            11 thoughts on “<span>Logic Noise: Sequencing in Silicon</span>”        </h2>
+
+        
+        <ol class="comment-list">
+            	<li id="comment-2540741" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2540741" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">chaosbc</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2540741">
+						<time datetime="2015-04-24T08:14:22+00:00">
+							April 24, 2015 at 8:14 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great article once again. Crystal clear and always inspiring. bravo</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2540741"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2540741&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2540741&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2540741#respond" onclick="return addComment.moveForm( &quot;div-comment-2540741&quot;, &quot;2540741&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to chaosbc">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2540899" class="comment byuser comment-author-jaromirs odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2540899" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="https://hackaday.io/hacker/2648-jaromirsukuba" rel="external nofollow" class="url">jaromirs</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2540899">
+						<time datetime="2015-04-24T11:22:04+00:00">
+							April 24, 2015 at 11:22 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great series. Going from bottom up, from simple circuits to more complex devices, I like it.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2540899"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2540899&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2540899&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2540899#respond" onclick="return addComment.moveForm( &quot;div-comment-2540899&quot;, &quot;2540899&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to jaromirs">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2540904" class="comment even thread-even depth-1 parent  highlander-comment">
+		<article id="div-comment-2540904" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Zeigren</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2540904">
+						<time datetime="2015-04-24T11:26:17+00:00">
+							April 24, 2015 at 11:26 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Maybe I’m just being lazy but would it be possible to include a parts list with these posts? I’m going to use this as my first foray into really building electronics and going through each post and digging out what exactly I need is a bit difficult. It’s not impossible but typing in potentiometer into Digi-Key and trying to figure out what would work is a little overwhelming. The obvious power supply, breadboard, jumper wires etc… are easy enough but figuring out what potentiometers, diodes, resistors, and capacitors to have on hand is where it gets tricky.</p>
+<p>Anyway thanks for the great posts and I’m looking forward to trying to build all of this stuff!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2540904"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2540904&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2540904&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2540904#respond" onclick="return addComment.moveForm( &quot;div-comment-2540904&quot;, &quot;2540904&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Zeigren">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2541032" class="comment odd alt depth-2 parent  highlander-comment">
+		<article id="div-comment-2541032" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Noirwhal</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541032">
+						<time datetime="2015-04-24T14:19:13+00:00">
+							April 24, 2015 at 2:19 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Build your own partslists.. It will take about 5 minutes per post…The nature of this series dictates this approach, IMO. </p>
+<p>When preparing for such project, it is good to get extra different values of things like potentiometers and resistors or capacitors. They cost pennies.</p>
+<p>Just making the parts list will help you tackle the rest of the project.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541032"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541032&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541032&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541032#respond" onclick="return addComment.moveForm( &quot;div-comment-2541032&quot;, &quot;2541032&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Noirwhal">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2541155" class="comment even depth-3   highlander-comment">
+		<article id="div-comment-2541155" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Zeigren</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541155">
+						<time datetime="2015-04-24T16:37:04+00:00">
+							April 24, 2015 at 4:37 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I totally agree with you. Taking the time to figure out the materials needed and the procedure is a great way to prepare for something like this. As well as having extras and variants for parts either as a precaution or for experimentation.</p>
+<p>For me at least a parts list would help me make sure I’m in the same ballpark especially for things I’m uncertain about. Even an informal list of something like ‘You’ll need a couple of these and a few of these’ would be helpful.</p>
+<p>That being said after rereading and studying diagrams I have a much better idea of what I need to get.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541155"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541155&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541155&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541155#respond" onclick="return addComment.moveForm( &quot;div-comment-2541155&quot;, &quot;2541155&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Zeigren">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2541060" class="comment byuser comment-author-davedarko odd alt depth-2 parent  highlander-comment">
+		<article id="div-comment-2541060" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">davedarko</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541060">
+						<time datetime="2015-04-24T14:41:58+00:00">
+							April 24, 2015 at 2:41 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Hey there,<br>
+If you start with the CD40106 – I’ve made a table which shows the frequency range depending on the potentiometer and capacitor values (only a few do really make sense). With linear 100k potentiometers and 100nF capacitors you get a nice tone range. I’ve read that when it comes to diodes you mostly need 1N4148 and 1N4007.   <a href="https://hackaday.io/project/5237-zynthia-sequencer-synthesizer/log/16838-hardware-vs-frequency" rel="nofollow" target="_blank">https://hackaday.io/project/5237-zynthia-sequencer-synthesizer/log/16838-hardware-vs-frequency</a></p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541060"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541060&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541060&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541060#respond" onclick="return addComment.moveForm( &quot;div-comment-2541060&quot;, &quot;2541060&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to davedarko">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-2541162" class="comment even depth-3   highlander-comment">
+		<article id="div-comment-2541162" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Zeigren</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541162">
+						<time datetime="2015-04-24T16:47:10+00:00">
+							April 24, 2015 at 4:47 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thanks! Your table is super helpful as well as your project! Between what you just said and rereading everything I think I’ll be able to start ordering stuff! I really appreciate it! Exclamation mark!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541162"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541162&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541162&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541162#respond" onclick="return addComment.moveForm( &quot;div-comment-2541162&quot;, &quot;2541162&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Zeigren">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-2541097" class="comment odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2541097" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Noirwhal</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541097">
+						<time datetime="2015-04-24T15:36:19+00:00">
+							April 24, 2015 at 3:36 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>4017 step sequencer was one of my first ‘real’ projects.. This is a great series.</p>
+<p>One cool thing is that you can add MIDI sync to this sequencer with the addition of a component or two – <a href="http://www.blacet.com/MSfig4.gif" rel="nofollow" target="_blank">http://www.blacet.com/MSfig4.gif</a> – this being an ‘advanced’ version of the method.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541097"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541097&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541097&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541097#respond" onclick="return addComment.moveForm( &quot;div-comment-2541097&quot;, &quot;2541097&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Noirwhal">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2541824" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2541824" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Edward</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2541824">
+						<time datetime="2015-04-25T08:50:44+00:00">
+							April 25, 2015 at 8:50 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>GREAT article – proving why electronics magazines from dead trees are obsolete.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2541824"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2541824&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2541824&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2541824#respond" onclick="return addComment.moveForm( &quot;div-comment-2541824&quot;, &quot;2541824&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Edward">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2624327" class="comment odd alt thread-odd thread-alt depth-1   highlander-comment">
+		<article id="div-comment-2624327" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Seb</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2624327">
+						<time datetime="2015-06-26T21:14:16+00:00">
+							June 26, 2015 at 9:14 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Hey there! Im doing a circuit bending course at uni and im using this as a guidline for a project im doing. Im having a bit of trouble with getting the 40106 chip to play multiple notes from the 4017. I have 6 inverters running from the 40106 so i have 6 independent synths running with pots connected, exactly as it appears in the tutorial. Each independent synth is connected to a corresponding count from the 4017 and is working fine on their own, however my problem arises when i try to send all the outputs from the 40106 and mix them. I just get a clicking sound but no bleeps coming through? Any assistance would be amazing as ive tried trouble shooting and i cant find information anywhere else!</p>
+<p>Thanks</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2624327"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2624327&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2624327&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2624327#respond" onclick="return addComment.moveForm( &quot;div-comment-2624327&quot;, &quot;2624327&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to Seb">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-2859643" class="comment even thread-even depth-1   highlander-comment">
+		<article id="div-comment-2859643" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">daan</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-2859643">
+						<time datetime="2015-12-29T13:16:35+00:00">
+							December 29, 2015 at 1:16 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>hey there,</p>
+<p>i tried to hook more than three gate-inputs to the 2diode vca (i got it working, by the way) so i could play like each count a cymbal. after five it goes very quit and at a certain point you don’t here the extra inputs anymore. how does it come, and is there a solution? may be an opamp? but that is against the idea of logic noise, unless i use 4069, right?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-2859643"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( &#39;2859643&#39;, &#39;a254f434c8&#39;, &#39;safe-comments-result-2859643&#39;);">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/?replytocom=2859643#respond" onclick="return addComment.moveForm( &quot;div-comment-2859643&quot;, &quot;2859643&quot;, &quot;respond&quot;, &quot;153551&quot; )" aria-label="Reply to daan">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+
+        
+    
+    
+    				<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://hackaday.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="aa904be304"><input type="hidden" name="_wp_http_referer" value="/2015/04/24/logic-noise-sequencing-in-silicon/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 19.6px; width: 778px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 39px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+		</li></ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" scale="0">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://hackaday.com/2015/04/24/logic-noise-sequencing-in-silicon/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="153551" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4630b48ba2"></p>
+<input type="hidden" name="genseq" value="1456625286">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1456625287237"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+</div><!-- #comments -->
+
+        
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id428] 300x250 */
+            OA_show(428);
+        </script><a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=128759__zoneid=428__cb=cf88375c9f__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D128759%26value3%3D522%26zone%3D428%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Dcf88375c9f%7Ch_value%3D804f659f62b84bbc1456625286%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0.66153686144546%7Ccp%3D10%7Ch_i%3Dy%26zone%3D428%26url%3Dhttp%253A%252F%252Fwww.microchip.com%252Fwwwproducts%252FDevices.aspx%253Fproduct%253DMCP6N16%2523utm_source%253DSupply-Frame_Hack-A-Day%2526utm_medium%253D300x250%2526utm_term%253DFY16Q4%2526utm_content%253DMSLD%2526utm_campaign%253DPublisher-Display-Ad" target="_blank"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/a0701177d270dcd0c049abd2cff11f6b.jpg" width="300" height="250" alt="" title="" border="0" scale="0"></a><div id="beacon_cf88375c9f" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/lg(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(12)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+    <!-- store ad -->
+    <iframe class="sidebar-store-ad" scrolling="no" frameborder="0" align="top" marginwidth="0" marginheight="0" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/-search term-.html"></iframe>
+
+    <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="http://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/routerbot-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware/">FCC Locks Down Router Firmware</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/fcc-locks-down-router-firmware//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 89 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/detective-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars/">Dr Noirimetla, Private Failure Investigator and the Mystery of Galileo’s Pillars</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/dr-noirimetla-private-failure-investigator-and-the-mystery-of-galileos-pillars//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 111 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/internet_radio_wrt54g-shot0008_thumbnail.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker/">Frackers: Inside the Mind of the Junk Hacker</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/25/frackers-inside-the-mind-of-the-junk-hacker//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 103 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/rect4423.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas/">Hackaday Prize Worldwide: Dallas</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/hackaday-prize-worldwide-dallas//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 11 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/utilitypole-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole/">A Field Guide to the North American Utility Pole</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/22/a-field-guide-to-the-north-american-utility-pole//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 115 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><label class="screen-reader-text" for="cat">Categories</label><select name="cat" id="cat" class="postform">
+	<option value="-1">Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="33199679">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="23971598">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="24483654">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="78428">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="3923181">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="6310599">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="79">hardware</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="2708">how-to</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="10969055">laser hacks</option>
+	<option class="level-0" value="18020716">led hacks</option>
+	<option class="level-0" value="10626">lifehacks</option>
+	<option class="level-0" value="729674">linux hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">macs hacks</option>
+	<option class="level-0" value="2377605">major tom</option>
+	<option class="level-0" value="11284667">Medical hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">misc hacks</option>
+	<option class="level-0" value="18020730">multitouch hacks</option>
+	<option class="level-0" value="22652725">musical hacks</option>
+	<option class="level-0" value="18020722">netbook hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">news</option>
+	<option class="level-0" value="1861880">nintendo ds hacks</option>
+	<option class="level-0" value="114555425">nintendo gameboy hacks</option>
+	<option class="level-0" value="18020685">nintendo hacks</option>
+	<option class="level-0" value="4992726">nintendo wii hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="114556430">palm pre hacks</option>
+	<option class="level-0" value="245123">parts</option>
+	<option class="level-0" value="10969081">peripherals hacks</option>
+	<option class="level-0" value="16325149">phone hacks</option>
+	<option class="level-0" value="10969088">playstation hacks</option>
+	<option class="level-0" value="2060">podcasts</option>
+	<option class="level-0" value="10969096">portable audio hacks</option>
+	<option class="level-0" value="10969099">portable video hacks</option>
+	<option class="level-0" value="588444">psp hacks</option>
+	<option class="level-0" value="23971578">radio hacks</option>
+	<option class="level-0" value="47">rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">repair hacks</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="309">reviews</option>
+	<option class="level-0" value="10969101">robots hacks</option>
+	<option class="level-0" value="30302">roundup</option>
+	<option class="level-0" value="10969111">security hacks</option>
+	<option class="level-0" value="268522">slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">software hacks</option>
+	<option class="level-0" value="10969116">solar hacks</option>
+	<option class="level-0" value="10969121">tablet pcs hacks</option>
+	<option class="level-0" value="3075183">teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">tool hacks</option>
+	<option class="level-0" value="25277004">toy hacks</option>
+	<option class="level-0" value="10969134">transportation hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="3184456">video hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">weapons hacks</option>
+	<option class="level-0" value="12552193">wearable hacks</option>
+	<option class="level-0" value="39510952">Weekly roundup</option>
+	<option class="level-0" value="4891215">wireless hacks</option>
+	<option class="level-0" value="7079455">xbox hacks</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "http://hackaday.com/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/hacklet-thumb.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects/">Hacklet 97 – Camera Projects</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/hacklet-97-camera-projects//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/robot-scope-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench/">Adding Spice to Your Workbench</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/26/adding-spice-to-your-workbench//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 41 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/foldinglaundry-thumb.jpg" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot/">The Challenges of A Laundry Folding Robot</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/the-challenges-of-a-laundry-folding-robot//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 51 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/attiny45.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32/">When Are 8 Bits More Than 32?</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/24/when-are-8-bits-more-than-32//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 148 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/" class="recent-image">
+						<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/a32.png" alt="" originalw="300" originalh="300" scale="2">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu/">ARM Unveils New, High Efficency CPU</a>
+				</h2>
+				<a href="http://hackaday.com/2016/02/23/arm-unveils-new-high-efficency-cpu//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 40 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="http://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1>				<ul id="recentcomments">
+											<li class="recentcomments">
+							Andy on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936737">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							alxy on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936734">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							thoriumbr on <a href="http://hackaday.com/2016/02/27/directional-booklight-invisible-to-everyone-but-you/#comment-2936733">Directional Booklight Invisible to Everyone But You</a>						</li>
+
+												<li class="recentcomments">
+							DV82XL on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936731">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							Whatnot on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936730">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+												<li class="recentcomments">
+							DV82XL on <a href="http://hackaday.com/2016/02/27/trash-can-cnc-gets-a-stepper-upgrade/#comment-2936729">Trash Can CNC Gets a Stepper Upgrade</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://keithfromcanada.wordpress.com/" rel="external nofollow" class="url">keithfromcanada</a> on <a href="http://hackaday.com/2016/02/27/trash-can-cnc-gets-a-stepper-upgrade/#comment-2936719">Trash Can CNC Gets a Stepper Upgrade</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936717">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://www.etotheipiplusone.net/" rel="external nofollow" class="url">professor charles</a> on <a href="http://hackaday.com/2016/02/27/paydar-what-it-was-like-to-battle-bots-in-2002/#comment-2936716">Paydar: What It Was Like To Battle Bots in 2002</a>						</li>
+
+												<li class="recentcomments">
+							<a href="http://localroger.com/" rel="external nofollow" class="url">localroger</a> on <a href="http://hackaday.com/2016/02/27/an-internet-radio-in-a-classic-cathedral-case/#comment-2936714">An Internet Radio in a Classic Cathedral Case</a>						</li>
+
+										</ul>
+				</aside><aside id="hackadayfeed-2" class="widget widget-hackaday-feed"><h1 class="widget-title">Now on Hackaday.io</h1>
+			<ul>
+									<li><a href="http://www.hackaday.io/project/9876-Sunrise%20-%20DLP%203D%20Printer,%20printable.#j-discussion-48702">UkiyoWeee wrote a comment on Sunrise - DLP 3D Printer, printable..</a></li>
+										<li><a href="http://www.hackaday.io/project/7982-CAT%20Board">Simon Kirkby gave a skull to CAT Board.</a></li>
+										<li><a href="http://www.hackaday.io/project/6252-Open%20Wireless%20Capsule%20Endoscopy">friarbayliff has updated components for the project titled Open Wireless Capsule Endoscopy.</a></li>
+										<li><a href="http://www.hackaday.io/project/6252-Open%20Wireless%20Capsule%20Endoscopy">friarbayliff has updated the project titled Open Wireless Capsule Endoscopy.</a></li>
+										<li><a href="http://www.hackaday.io/project/8252/log/30470#j-discussion-48701">Alex Rich wrote a comment on project log MobileVise by SUF.</a></li>
+										<li><a href="http://www.hackaday.io/project/9557-PET%20Bottle%20Recycling%203D%20Printer">Reed Foster gave a skull to PET Bottle Recycling 3D Printer.</a></li>
+										<li><a href="http://www.hackaday.io/project/9775-StickScope#j-discussion-48699">Alex Rich wrote a comment on StickScope.</a></li>
+										<li><a href="http://www.hackaday.io/project/1742-Arduino%20rocket%20stabilization%20system%20%5BUD:%202/23/16%5D">J. M. Hopkins gave a skull to Arduino rocket stabilization system [UD: 2/23/16].</a></li>
+										<li><a href="http://www.hackaday.io/project/6381-High%20Power%20Experimental%20Rocket%20Platform">Reed Foster gave a skull to High Power Experimental Rocket Platform.</a></li>
+										<li><a href="http://www.hackaday.io/project/9636/log/32779">wgoforth has updated the log for DDR pad using Arduino Capacitive Sensors.</a></li>
+						</ul>
+	</aside>
+    <div class="sidebar-ads-holder">
+        <script type="text/javascript">
+            /* [id427] 160x600 */
+            OA_show(427);
+        </script><a href="http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=128760__zoneid=427__cb=ef11786e84__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D{taxonomy_enc}%26value2%3D128760%26value3%3D522%26zone%3D427%26extra%3Dcontextualmatch%3Dnolimitation%7Clivetax%3D0%7Ccookietax%3D413%7Ccb%3Def11786e84%7Ch_value%3D7cec951452e07ea71456625286%7Ch_crc%3D2485905944%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D0.22612677712833%7Cbpf%3D0.064901832976528%7Ccp%3D10%7Ch_i%3Dy%26zone%3D427%26url%3Dhttp%253A%252F%252Fwww.microchip.com%252Fwwwproducts%252FDevices.aspx%253Fproduct%253DMCP6N16%2523utm_source%253DSupply-Frame_Hack-A-Day%2526utm_medium%253D160x600%2526utm_term%253DFY16Q4%2526utm_content%253DMSLD%2526utm_campaign%253DPublisher-Display-Ad" target="_blank"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/4234370158430c9e5202df06c79ed388.jpg" width="160" height="600" alt="" title="" border="0" scale="0"></a><div id="beacon_ef11786e84" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/lg(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/ga.js"></script>
+<script type="text/javascript">
+var pageTracker;
+setTimeout('startGA();', 500);
+function startGA()
+{
+if (typeof(_gat) == 'object') {
+pageTracker = _gat._getTracker("UA-81436-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+}
+}
+</script>
+<script type="text/javascript">
+(function() {
+window._pa = window._pa || {};
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5266e87c5dd5ca039c00002d.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})();
+window.onload=function(){
+_pa.track('category_0');
+_pa.track('zone_427');
+if ('us'!='cn') {
+_pa.track('geo_notChina');
+} else {
+_pa.track('geo_isChina');
+}
+}
+</script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/fc.php"></script><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(13)" width="0" height="0" alt="" style="display:none">
+
+    </div>
+
+</div><!-- #secondary -->
+
+    </div><!-- #content -->
+
+</div><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="http://hackaday.com/" rel="home">
+            <img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/logo.png" alt="Logo" class="logo-img" scale="0">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141410"><a href="http://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="http://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io/">Hackaday.io</a></li>
+<li id="menu-item-141413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141413"><a href="http://store.hackaday.com/">Store</a></li>
+<li id="menu-item-141414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141414"><a title="Build Something that Matters" href="http://hackaday.io/prize">Hackaday Prize</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="http://hackaday.com/submit-a-tip/">Submit a tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackadaycom.wordpress.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="http://hackaday.com/contact-us/">Contact us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://plus.google.com/+hackaday/posts" target="_blank" class="icon-social icon-plusone">Follow on google+</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside>
+       <!-- Begin MailChimp Signup Form -->
+
+        <form role="subscribe" action="http://hackaday.us9.list-manage.com/subscribe/post?u=dfadb71b0b15629cef5abf016&amp;id=f37880df9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">
+                <span>Subscribe to newsletter</span>
+                <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required="">
+            </label>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dfadb71b0b15629cef5abf016_f37880df9f" tabindex="-1" value=""></div>
+            <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+            </div>
+        </form>
+
+        <!--End mc_embed_signup-->
+
+        <div class="site-info">
+            Copyright © 2016            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <br>Powered by <a href="https://vip.wordpress.com/" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/impression" id="hdTrack" class="trackImg" scale="0"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42734042-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-cc6zkdHuZwUDM"
+};
+</script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/quant.js"></script>
+<noscript>
+&lt;img src="//pixel.quantserve.com/pixel/p-cc6zkdHuZwUDM.gif"
+style="display: none;" border="0" height="1" width="1"
+alt="Quantcast"/&gt;
+</noscript>
+
+<!-- wpcom_wp_footer -->
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/hackadaycom.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/hackadaycom.wordpress.com\/wp-login.php?action=logout&_wpnonce=9527f3c43d","homeURL":"http:\/\/hackaday.com\/","postID":"153551","gravDefault":"mystery","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(14)"></script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(15)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'4779443','blog_tz':'-8','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'4779443','v':'wpcom','tz':'-8','user_id':'0','post':'153551','subd':'hackadaycom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=4779443&v=wpcomvt&tz=-8&user_id=0&post=153551&subd=hackadaycom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdkRXFNdWdRL28yNk8rbmNjbWVqU35PYUcuJnlOQ3EmcVpVVis9T2dqY0YmJnwtRz9iXU9lV2RWWHlYayVmMW5mS3QrX3QybjZfaHdwYk5YfFVNSTFmP2NEWmVxbl9WU1N2aE9RdyU/Jlo5eHlNZjEuL2Q3cGNCeCw0aWpufngsQ0RIVTEsenhbckYyNWg5eVR1b2VvZ1BGakVQJTZTV2g5NW1Bdnx0RnRxMmlOS0p5JXI/enhaLDhCLHM0U0E2c1lfbVM5cTdWWXByckwrJUt6UllhP1s0VkxhOU9MNg=='}]);
+_stq.push([ 'clickTrackerInit', '4779443', '153551' ]);
+	</script>
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+
+<img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/g.gif" id="wpstats" scale="0"><img src="./Logic Noise_07_ Sequencing in Silicon _ Hackaday_files/saved_resource(16)" width="1" height="1" style="display: none;" scale="0"></body></html>

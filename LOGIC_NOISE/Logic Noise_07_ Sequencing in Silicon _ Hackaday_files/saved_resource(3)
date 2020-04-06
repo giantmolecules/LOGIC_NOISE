@@ -1,0 +1,44 @@
+
+var delay = setTimeout(function(){
+var pixelDataObject = new Object();
+pixelDataObject.window_location_pathname = window.location.pathname;
+pixelDataObject.domain = document.domain;
+pixelDataObject.document_url = document.URL;
+
+if (document.domain == "ads.supplyframe.com") {
+	
+	if (document.URL.indexOf("part=") !== -1) {
+	
+		var cb_a = document.URL.split("&");
+		
+		for (var cb_i = 0; cb_i < cb_a.length; cb_i++) {
+			if (cb_a[cb_i].indexOf("part=") !== -1) {
+				var cb_b = cb_a[cb_i].replace("part=","");
+				cb_b = decodeURIComponent(cb_b);
+				cb_b = cb_cleanse(cb_b);
+				if (cb_b !== "") {
+					pixelDataObject.segment_ids = cb_b;
+				}
+			} 
+		}
+	} else if (typeof _pa.productId !== 'undefined') {
+		var cb_c = cb_cleanse(_pa.productId);
+		if (cb_c !== "") {
+			pixelDataObject.segment_ids = cb_c;
+		}
+	}
+}
+
+function cb_cleanse(cb_f) {var cb_g =["/","&","?","#","+","=",":",";","@"," ","%","{","}","'",","];var cb_r;for (cb_i = 0; cb_i < cb_g.length; cb_i++) {cb_r = new RegExp(cb_escapeRegExp(cb_g[cb_i]),"g");cb_f = cb_f.replace(cb_r,"");}return cb_f;}function cb_escapeRegExp(cb_g) {return cb_g.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')};
+pixelDataJsonString = JSON.stringify(pixelDataObject);
+show_pixel(location.protocol+"//dynamic.cannedbanners.com/pixel/?pixelData="+encodeURIComponent(pixelDataJsonString)+"&clientId=15&campaignId=1091",1,1);
+},500);
+function show_pixel(src, width, height) {
+	var pixel = document.createElement("img");
+    pixel.src = src;
+    pixel.width = width;
+    pixel.height = height;
+    pixel.style.display = "none";
+    document.body.appendChild(pixel);
+}
+

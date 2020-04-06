@@ -1,0 +1,16 @@
+var OX_3512e47a = '';
+OX_3512e47a += "<"+"a href=\'http://ads.supplyframe.com/openads/www/delivery/ck.php?oaparams=2__bannerid=119504__zoneid=464__cb=3ba74cb88f__oadest=http%3A%2F%2Fanalytics.supplyframe.com%2Ftrackingservlet%2Ftrack%2F%3Faction%3DadClick%26value1%3D%252FElectronic%2BComponents%252FInterconnect%2BProducts%252C%2BWire%2Band%2BCable%252FConnectors%2Band%2BAccessories%252FFiber%2BOptic%252C%2BOptical%2BConnectors%26value2%3D119504%26value3%3D3%26zone%3D464%26extra%3Dquery%3D%253Csearch%2Bterm%253E%7Ccontextualmatch%3Dnolimitation%7Clivetax%3D413%7Ccookietax%3D413%2C190%7Ccb%3D3ba74cb88f%7Ch_value%3Daa0b9e3024a85e061457141314%7Ch_crc%3D2518922424%7Cgeo%3Dus%7Ccnt%3Dna%7Cbp%3D1%7Cbpf%3D0%7Ccp%3D-1%7Ch_i%3Dy%26zone%3D464%26url%3Dhttp%253A%252F%252Fstore.hackaday.com%252Fproducts%252Fhackaday-omnibus-2015%253Futm_source%253DsupplyFrame%2526utm_medium%253DAds\' target=\'_blank\'><"+"img src=\'http://images.ads.supplyframe.com/07148e2f005fda10d9fce15d559870c0.gif\' width=\'300\' height=\'300\' alt=\'\' title=\'\' border=\'0\' /><"+"/a><"+"div id=\'beacon_3ba74cb88f\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://ads.supplyframe.com/openads/www/delivery/lg.php?bannerid=119504&amp;campaignid=5528&amp;zoneid=464&amp;loc=http%3A%2F%2Fsearch.supplyframe.com%2Fpartner%2F31%2F464%2F%253Csearch%2520term%253E&amp;cb=3ba74cb88f\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div><"+"script type=\"text/javascript\" src=\"http://www.google-analytics.com/ga.js\"><"+"/script>\n";
+OX_3512e47a += "<"+"script type=\"text/javascript\">\n";
+OX_3512e47a += "var pageTracker;\n";
+OX_3512e47a += "setTimeout(\'startGA();\', 500);\n";
+OX_3512e47a += "function startGA()\n";
+OX_3512e47a += "{\n";
+OX_3512e47a += "if (typeof(_gat) == \'object\') {\n";
+OX_3512e47a += "pageTracker = _gat._getTracker(\"UA-81436-2\");\n";
+OX_3512e47a += "pageTracker._initData();\n";
+OX_3512e47a += "pageTracker._trackPageview();\n";
+OX_3512e47a += "}\n";
+OX_3512e47a += "}\n";
+OX_3512e47a += "<"+"/script>\n";
+OX_3512e47a += "<"+"img src=\'http://analytics.supplyframe.com/trackingservlet/impression/?action=adImpression&amp;value1=%2FElectronic+Components%2FInterconnect+Products%2C+Wire+and+Cable%2FConnectors+and+Accessories%2FFiber+Optic%2C+Optical+Connectors&amp;value2=119504&amp;value3=3&amp;extra=query=%3Csearch+term%3E|contextualmatch=nolimitation|livetax=413|cookietax=413,190|cb=3ba74cb88f|h_value=aa0b9e3024a85e061457141314|h_crc=2518922424|geo=us|cnt=na|bp=1|bpf=0|cp=-1|h_i=y&amp;zone=464\' width=\'0\' height=\'0\' alt=\'\' style=\'display:none\' />\n";
+document.write(OX_3512e47a);
